@@ -3,20 +3,30 @@
     <entity name="DBMessage" representedClassName="DBMessage" syncable="YES" codeGenerationType="class">
         <attribute name="payload" attributeType="String" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="DBTag" inverseName="message" inverseEntity="DBTag" syncable="YES"/>
-        <relationship name="token" maxCount="1" deletionRule="Deny" destinationEntity="DBToken" inverseName="message" inverseEntity="DBToken" syncable="YES"/>
+        <relationship name="token" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="DBToken" inverseName="message" inverseEntity="DBToken" syncable="YES"/>
     </entity>
     <entity name="DBTag" representedClassName="DBTag" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="message" toMany="YES" deletionRule="Cascade" destinationEntity="DBMessage" inverseName="tags" inverseEntity="DBMessage" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="DBToken" representedClassName="DBToken" syncable="YES" codeGenerationType="class">
         <attribute name="format" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="message" toMany="YES" deletionRule="Cascade" destinationEntity="DBMessage" inverseName="token" inverseEntity="DBMessage" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="DBMessage" positionX="-81" positionY="-207" width="128" height="88"/>
         <element name="DBTag" positionX="187" positionY="-9" width="128" height="75"/>
-        <element name="DBToken" positionX="-360" positionY="-18" width="128" height="90"/>
+        <element name="DBToken" positionX="-360" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

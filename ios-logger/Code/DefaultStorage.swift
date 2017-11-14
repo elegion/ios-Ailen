@@ -59,7 +59,6 @@ public class DefaultStorage: Storaging {
     // MARK: - Private
     
     private func save(_ token: Token) {
-        //TODO: как-то организовать уникальность. Типа saveIfNeeded...
         let dbToken = NSEntityDescription.insertNewObject(forEntityName: Consts.tokenEntityName, into: configuration.writeManagedObjectContext) as! DBToken
         dbToken.name = token.name
         dbToken.format = token.format
@@ -67,7 +66,6 @@ public class DefaultStorage: Storaging {
     }
     
     private func save(_ tags: [Tag]) {
-        //TODO: как-то организовать уникальность. Типа saveIfNeeded...
         tags.forEach {
             [weak self] (tag) in
             guard let sSelf = self else { return }
@@ -95,30 +93,18 @@ public class DefaultStorage: Storaging {
     
     private func save(_ message: Message) {
         //TODO: это нужно оптимизировать!!!
+        
+        save(message.token)
+        save(message.tags)
+        
         do {
             let tokens = try fetchTokens(with: [message.token.name])
             let tags = try fetchTags(with: message.tags)
-            
-            if tokens.count == 0 {
-                save(message.token)
-                save(message)
-            } else {
-                guard tokens.count == 1 else { fatalError(StorageError.tokenUniquenessLost.localizedDescription) }
-                let fetchedCount = tags.count
-                let sourceCount = message.tags.count
-                guard fetchedCount >= sourceCount else { fatalError(StorageError.tagUniquenessLost.localizedDescription)}
-                
-                if fetchedCount != sourceCount {
-                    save(message.tags)
-                    save(message)
-                } else {
-                    let dbMessage = NSEntityDescription.insertNewObject(forEntityName: Consts.messageEntityName, into: configuration.writeManagedObjectContext) as! DBMessage
-                    dbMessage.token = tokens.first!
-                    dbMessage.tags = Set(tags) as NSSet
-                    dbMessage.payload = message.payload
-                    configuration.saveContext()
-                }
-            }
+            let dbMessage = NSEntityDescription.insertNewObject(forEntityName: Consts.messageEntityName, into: configuration.writeManagedObjectContext) as! DBMessage
+            dbMessage.token = tokens.first!
+            dbMessage.tags = Set(tags) as NSSet
+            dbMessage.payload = message.payload
+            configuration.saveContext()
         } catch {
             fatalError(error.localizedDescription)
         }
