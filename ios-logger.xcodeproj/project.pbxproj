@@ -14,7 +14,6 @@
 		EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */; };
 		EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */; };
 		EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */; };
-		EAE9CCC71FBAE0CE00C1B9F2 /* DefaultStorageDataModel copy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBD1FBAE0CE00C1B9F2 /* DefaultStorageDataModel copy.xcdatamodeld */; };
 		EAE9CCC81FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorageConfiguration.swift; sourceTree = "<group>"; };
-		EAE9CCBE1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EAE9CCC01FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */,
-				EAE9CCBD1FBAE0CE00C1B9F2 /* DefaultStorageDataModel copy.xcdatamodeld */,
 				EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -177,7 +174,6 @@
 				EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */,
 				EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */,
 				EAE9CCC21FBAE0CE00C1B9F2 /* DefaultLogger.swift in Sources */,
-				EAE9CCC71FBAE0CE00C1B9F2 /* DefaultStorageDataModel copy.xcdatamodeld in Sources */,
 				EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */,
 				EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */,
 			);
@@ -370,16 +366,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EAE9CCBD1FBAE0CE00C1B9F2 /* DefaultStorageDataModel copy.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EAE9CCBE1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */,
-			);
-			currentVersion = EAE9CCBE1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */;
-			path = "DefaultStorageDataModel copy.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
