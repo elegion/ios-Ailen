@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBMessage" representedClassName="DBMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="payload" attributeType="String" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DBTag" representedClassName="DBTag" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DBToken" representedClassName="DBToken" syncable="YES" codeGenerationType="class">
+        <attribute name="format" attributeType="String" syncable="YES"/>
+        <attribute name="isOn" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DBMessage" positionX="-164" positionY="-130" width="128" height="88"/>
+        <element name="DBTag" positionX="-74" positionY="5" width="128" height="58"/>
+        <element name="DBToken" positionX="-360" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
