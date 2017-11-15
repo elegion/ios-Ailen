@@ -12,8 +12,7 @@ public protocol Message {
 }
 
 public protocol Output {
-    func isDisplayAvailable(for token: Token, with tags: [Tag]) -> Bool
-    func display(_ message: Message, with tags: [Tag])
+    func display(_ message: Message)
 }
 
 public protocol Processor {

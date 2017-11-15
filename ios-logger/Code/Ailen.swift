@@ -41,10 +41,7 @@ public class Ailen {
     // MARK: - Private
     
     private func log(_ messages: [Message], in output: Output) {
-        messages.forEach {
-            guard output.isDisplayAvailable(for: $0.token, with: $0.tags) else { return }
-            output.display($0, with: $0.tags)
-        }
+        messages.forEach { output.display($0) }
     }
     
     private func queue(for qos: Token.Qos) -> DispatchQueue {
