@@ -16,7 +16,36 @@
 		EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */; };
 		EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */; };
 		EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */; };
+		EAFA38851FBC61C1007257E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA38841FBC61C1007257E5 /* AppDelegate.swift */; };
+		EAFA388C1FBC61C1007257E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA388B1FBC61C1007257E5 /* Assets.xcassets */; };
+		EAFA388F1FBC61C1007257E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFA388D1FBC61C1007257E5 /* LaunchScreen.storyboard */; };
+		EAFA38941FBC61C8007257E5 /* ios_logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */; };
+		EAFA38951FBC61C8007257E5 /* ios_logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAFA38961FBC61C8007257E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE9CCA11FBAE0A000C1B9F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE9CCA91FBAE0A000C1B9F2;
+			remoteInfo = "ios-logger";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAFA38981FBC61C8007257E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAFA38951FBC61C8007257E5 /* ios_logger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -30,6 +59,11 @@
 		EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorageConfiguration.swift; sourceTree = "<group>"; };
+		EAFA38821FBC61C1007257E5 /* ios-logger-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFA38841FBC61C1007257E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAFA388B1FBC61C1007257E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAFA388E1FBC61C1007257E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAFA38901FBC61C1007257E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +74,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAFA387F1FBC61C1007257E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA38941FBC61C8007257E5 /* ios_logger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCAC1FBAE0A000C1B9F2 /* ios-logger */,
+				EAFA38831FBC61C1007257E5 /* ios-logger-example */,
 				EAE9CCAB1FBAE0A000C1B9F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */,
+				EAFA38821FBC61C1007257E5 /* ios-logger-example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +136,17 @@
 			path = Persistent;
 			sourceTree = "<group>";
 		};
+		EAFA38831FBC61C1007257E5 /* ios-logger-example */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA38841FBC61C1007257E5 /* AppDelegate.swift */,
+				EAFA388B1FBC61C1007257E5 /* Assets.xcassets */,
+				EAFA388D1FBC61C1007257E5 /* LaunchScreen.storyboard */,
+				EAFA38901FBC61C1007257E5 /* Info.plist */,
+			);
+			path = "ios-logger-example";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -124,18 +179,42 @@
 			productReference = EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EAFA38811FBC61C1007257E5 /* ios-logger-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFA38931FBC61C1007257E5 /* Build configuration list for PBXNativeTarget "ios-logger-example" */;
+			buildPhases = (
+				EAFA387E1FBC61C1007257E5 /* Sources */,
+				EAFA387F1FBC61C1007257E5 /* Frameworks */,
+				EAFA38801FBC61C1007257E5 /* Resources */,
+				EAFA38981FBC61C8007257E5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFA38971FBC61C8007257E5 /* PBXTargetDependency */,
+			);
+			name = "ios-logger-example";
+			productName = "ios-logger-example";
+			productReference = EAFA38821FBC61C1007257E5 /* ios-logger-example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EAE9CCA11FBAE0A000C1B9F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "e-Legion";
 				TargetAttributes = {
 					EAE9CCA91FBAE0A000C1B9F2 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					EAFA38811FBC61C1007257E5 = {
+						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,6 +225,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EAE9CCA01FBAE0A000C1B9F2;
 			productRefGroup = EAE9CCAB1FBAE0A000C1B9F2 /* Products */;
@@ -153,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				EAE9CCA91FBAE0A000C1B9F2 /* ios-logger */,
+				EAFA38811FBC61C1007257E5 /* ios-logger-example */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +243,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFA38801FBC61C1007257E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA388F1FBC61C1007257E5 /* LaunchScreen.storyboard in Resources */,
+				EAFA388C1FBC61C1007257E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +273,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAFA387E1FBC61C1007257E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA38851FBC61C1007257E5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAFA38971FBC61C8007257E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE9CCA91FBAE0A000C1B9F2 /* ios-logger */;
+			targetProxy = EAFA38961FBC61C8007257E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAFA388D1FBC61C1007257E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFA388E1FBC61C1007257E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EAE9CCB01FBAE0A000C1B9F2 /* Debug */ = {
@@ -346,6 +463,40 @@
 			};
 			name = Release;
 		};
+		EAFA38911FBC61C1007257E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TWG7MTXRP;
+				INFOPLIST_FILE = "ios-logger-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ios-logger.ios-logger-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAFA38921FBC61C1007257E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TWG7MTXRP;
+				INFOPLIST_FILE = "ios-logger-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ios-logger.ios-logger-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,6 +514,15 @@
 			buildConfigurations = (
 				EAE9CCB31FBAE0A000C1B9F2 /* Debug */,
 				EAE9CCB41FBAE0A000C1B9F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFA38931FBC61C1007257E5 /* Build configuration list for PBXNativeTarget "ios-logger-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFA38911FBC61C1007257E5 /* Debug */,
+				EAFA38921FBC61C1007257E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
