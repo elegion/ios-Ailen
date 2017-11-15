@@ -20,8 +20,6 @@ public class Ailen {
     // MARK: - Public
     
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {
-        precondition(values.count > 0, "Messages are zero count. You should pass a least one message.")
-        
         queue(for: token.qos).async {
             let mapped = values.map { LogMessage(token: token, tags: tags, payload: $0) }
             self.outputs.forEach { self.log(mapped, in: $0) }
