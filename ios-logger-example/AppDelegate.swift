@@ -7,21 +7,18 @@ import UIKit
 import ios_logger
 
 class MyProcessor: Processor {
-    func handle(token: Token, object: Any) -> String? {
+    func process(token: Token, object: Any) -> String? {
         return "Wow..."
     }
 }
 
 class MyOutput: Output {
-    var processors: [Processor] = [MyProcessor()]
-    
-    func isDisplayAvailable(for token: Token, with tags: [Tag]) -> Bool {
-        return true
+    func set(enabled: Bool, for token: Token) {
+        // nothing
     }
     
-    func display(_ message: Message, with tags: [Tag]) {
-        let str = processors.first!.handle(token: message.token, object: message.payload)
-        print(str ?? "__no data__")
+    func display(_ message: Message) {
+        print(message.payload)
     }
 }
 
