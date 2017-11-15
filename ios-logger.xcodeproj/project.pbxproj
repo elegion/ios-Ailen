@@ -73,23 +73,23 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */,
-				EAE9CCBB1FBAE0CE00C1B9F2 /* CoreData */,
 				EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */,
 				EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */,
 				EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */,
 				EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */,
+				EAE9CCBB1FBAE0CE00C1B9F2 /* Persistent */,
 				EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
 		};
-		EAE9CCBB1FBAE0CE00C1B9F2 /* CoreData */ = {
+		EAE9CCBB1FBAE0CE00C1B9F2 /* Persistent */ = {
 			isa = PBXGroup;
 			children = (
-				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */,
 				EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */,
+				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */,
 			);
-			path = CoreData;
+			path = Persistent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
