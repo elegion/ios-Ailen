@@ -17,6 +17,18 @@ public class Ailen {
         self.outputs = outputs
     }
     
+    var processors: [Processor] {
+        set {
+            var value = newValue
+            value.append(DebugProcessor())
+            internalProcessors = value
+        }
+        get {
+            return Array(internalProcessors.dropLast())
+        }
+    }
+    private var internalProcessors: [Processor]
+    
     // MARK: - Public
     
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {

@@ -12,7 +12,6 @@ public protocol Message {
 }
 
 public protocol Output {
-    var processors: [Processor] { get }
     func isDisplayAvailable(for token: Token, with tags: [Tag]) -> Bool
     func display(_ message: Message, with tags: [Tag])
 }
