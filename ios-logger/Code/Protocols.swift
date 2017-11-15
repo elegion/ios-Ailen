@@ -18,5 +18,5 @@ public protocol Output {
 }
 
 public protocol Processor {
-    func handle(token: Token, object: Any) -> String?
+    func process(token: Token, object: Any) -> String?
 }
