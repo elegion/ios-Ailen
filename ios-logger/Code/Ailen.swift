@@ -9,7 +9,6 @@ public class Ailen {
     
     // MARK: - Properties
     
-    private lazy var _defaultOutput: Output = { DefaultOutput() }()
     public var outputs: [Output]
     
     // MARK: - Life cycle
