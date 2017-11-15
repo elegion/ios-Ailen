@@ -25,7 +25,8 @@ public class DefaultStorageConfiguration: MultipleContextsStorageConfiguration {
         self.parentManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         self.readManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         self.readManagedObjectContext.parent = self.parentManagedObjectContext
-        let urlString = Bundle.main.path(forResource: Consts.dataModelName, ofType: "momd")
+        let bundle = Bundle(for: DefaultStorageConfiguration.self)
+        let urlString = bundle.path(forResource: Consts.dataModelName, ofType: "momd")
         let url = URL(string: urlString!)!
         self.managedObjectModel = NSManagedObjectModel(contentsOf: url)!
         self.persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
