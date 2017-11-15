@@ -14,11 +14,7 @@ public class Ailen {
     // MARK: - Life cycle
     
     public init(outputs: [Output] = []) {
-        if outputs.count == 0 {
-            self.outputs = [DefaultOutput()]
-        } else {
-            self.outputs = outputs
-        }
+        self.outputs = (outputs.count != 0) ? outputs : [DefaultOutput()]
     }
     
     // MARK: - Public
