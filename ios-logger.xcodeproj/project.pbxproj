@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
+		EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* ios_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */; };
 		EAE9CCC21FBAE0CE00C1B9F2 /* DefaultLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB71FBAE0CE00C1B9F2 /* DefaultLogger.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
+		EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_logger.h; sourceTree = "<group>"; };
 		EAE9CCAE1FBAE0A000C1B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */,
 				EAE9CCBB1FBAE0CE00C1B9F2 /* CoreData */,
 				EAE9CCB71FBAE0CE00C1B9F2 /* DefaultLogger.swift */,
+				EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */,
 				EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */,
 				EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */,
 				EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */,
@@ -174,6 +177,7 @@
 				EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */,
 				EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
 				EAE9CCC21FBAE0CE00C1B9F2 /* DefaultLogger.swift in Sources */,
+				EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */,
 				EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */,
 				EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */,
 			);
