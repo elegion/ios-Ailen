@@ -9,13 +9,12 @@ public class Ailen {
     
     // MARK: - Properties
     
-    public static let shared = Ailen()
     public var outputs = [Output]()
     public var storage: Storaging?
     
     // MARK: - Life cycle
     
-    private init() {}
+    public init() {}
     
     // MARK: - Public
     
