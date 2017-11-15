@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Token: RawRepresentable {
+public struct Token: RawRepresentable, Hashable {
     
     // MARK: - Definitions
     
@@ -26,6 +26,12 @@ public struct Token: RawRepresentable {
     }
     
     public var rawValue: String
+    
+    // MARK: - Hashable
+    
+    public var hashValue: Int {
+        return rawValue.hashValue
+    }
 }
 
 extension Token {
