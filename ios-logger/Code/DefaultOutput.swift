@@ -7,6 +7,10 @@ import Foundation
 
 public class DefaultOutput: Output {
     
+    // MARK: - Properties
+    
+    private var blockedTokens = Set<Token>()
+    
     // MARK: - Life cycle
     
     public init() {}
@@ -14,7 +18,11 @@ public class DefaultOutput: Output {
     // MARK: - Output
     
     public func set(enabled: Bool, for token: Token) {
-        //TODO
+        if enabled {
+            blockedTokens.remove(token)
+        } else {
+            blockedTokens.insert(token)
+        }
     }
     
     public func display(_ message: Message) {
