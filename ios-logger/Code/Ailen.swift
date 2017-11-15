@@ -9,15 +9,9 @@ public class Ailen {
     
     // MARK: - Properties
     
+    private var internalProcessors = [Processor]()
     public var outputs: [Output]
-    
-    // MARK: - Life cycle
-    
-    public init(outputs: [Output] = [DefaultOutput()]) {
-        self.outputs = outputs
-    }
-    
-    var processors: [Processor] {
+    public var processors: [Processor] {
         set {
             var value = newValue
             value.append(DebugProcessor())
@@ -27,7 +21,12 @@ public class Ailen {
             return Array(internalProcessors.dropLast())
         }
     }
-    private var internalProcessors: [Processor]
+    
+    // MARK: - Life cycle
+    
+    public init(outputs: [Output] = [DefaultOutput()]) {
+        self.outputs = outputs
+    }
     
     // MARK: - Public
     
