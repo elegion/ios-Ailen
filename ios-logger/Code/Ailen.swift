@@ -30,6 +30,12 @@ public class Ailen {
     
     // MARK: - Public
     
+    public func set(enabled: Bool, for token: Token) {
+        queue(for: token.qos).async {
+            self.outputs.forEach { $0.set(enabled: enabled, for: token) }
+        }
+    }
+    
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {
         queue(for: token.qos).async {
             let mapped: [Message] = values.flatMap({

@@ -13,10 +13,8 @@ public class DefaultOutput: Output {
     
     // MARK: - Output
     
-    }
-    
-    public func isDisplayAvailable(for token: Token, with tags: [Tag]) -> Bool {
-        return true
+    public func set(enabled: Bool, for token: Token) {
+        //TODO
     }
     
     public func display(_ message: Message) {

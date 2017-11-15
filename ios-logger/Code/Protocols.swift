@@ -13,6 +13,8 @@ public protocol Message {
 
 public protocol Output {
     func display(_ message: Message)
+    
+    func set(enabled: Bool, for token: Token)
 }
 
 public protocol Processor {
