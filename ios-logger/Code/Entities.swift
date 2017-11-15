@@ -28,6 +28,12 @@ public struct Token: RawRepresentable {
     public var rawValue: String
 }
 
+extension Token {
+    //TODO: define default tokens here
+    
+    static let request = Token(rawValue: "Request")!
+}
+
 // MARK: -
 
 public struct Tag: RawRepresentable {
