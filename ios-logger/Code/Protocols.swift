@@ -8,7 +8,7 @@ import Foundation
 public protocol Message {
     var token: Token { get }
     var tags: [Tag] { get }
-    var payload: Any { get }
+    var payload: String { get }
 }
 
 public protocol Output {

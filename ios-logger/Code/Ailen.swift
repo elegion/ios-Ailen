@@ -33,7 +33,10 @@ public class Ailen {
     
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {
         queue(for: token.qos).async {
-            let mapped = values.map { LogMessage(token: token, tags: tags, payload: $0) }
+            let mapped: [Message] = values.flatMap({
+                guard let processed = self.convert($0, for: token) else { return nil }
+                return LogMessage(token: token, tags: tags, payload: processed)
+            })
             self.outputs.forEach { self.log(mapped, in: $0) }
         }
     }
@@ -51,6 +54,15 @@ public class Ailen {
         case .custom(let q):    return q
         }
     }
+    
+    private func convert(_ source: Any, for token: Token) -> String? {
+        for processor in internalProcessors {
+            if let processed = processor.process(token: token, object: source) {
+                return processed
+            }
+        }
+        return nil
+    }
 }
 
 // MARK: -
@@ -58,5 +70,5 @@ public class Ailen {
 internal struct LogMessage: Message {
     let token: Token
     let tags: [Tag]
-    let payload: Any
+    let payload: String
 }
