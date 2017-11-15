@@ -9,7 +9,7 @@ import CoreData
 public class DefaultStorageConfiguration: MultipleContextsStorageConfiguration {
     
     private struct Consts {
-        static let dataModelName = "DefaultStorageDataModel"
+        static let dataModelName = "com.e-legion.DefaultStorageDataModel"
     }
     
     // MARK: - Properties

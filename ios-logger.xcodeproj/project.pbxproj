@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* ios_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */; };
 		EAE9CCC21FBAE0CE00C1B9F2 /* DefaultLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB71FBAE0CE00C1B9F2 /* DefaultLogger.swift */; };
@@ -14,10 +15,10 @@
 		EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */; };
 		EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */; };
 		EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */; };
-		EAE9CCC81FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_logger.h; sourceTree = "<group>"; };
 		EAE9CCAE1FBAE0A000C1B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorageConfiguration.swift; sourceTree = "<group>"; };
-		EAE9CCC01FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */,
-				EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */,
+				EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */,
-				EAE9CCC81FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld in Sources */,
 				EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */,
 				EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */,
+				EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
 				EAE9CCC21FBAE0CE00C1B9F2 /* DefaultLogger.swift in Sources */,
 				EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */,
 				EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */,
@@ -366,13 +366,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EAE9CCBF1FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodeld */ = {
+		EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EAE9CCC01FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */,
+				EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */,
 			);
-			currentVersion = EAE9CCC01FBAE0CE00C1B9F2 /* DefaultStorageDataModel.xcdatamodel */;
-			path = DefaultStorageDataModel.xcdatamodeld;
+			currentVersion = EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */;
+			path = "com.e-legion.DefaultStorageDataModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
