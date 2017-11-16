@@ -15,7 +15,7 @@
 		EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */; };
 		EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */; };
 		EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */; };
-		EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */; };
+		EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageCore.swift */; };
 		EAFA38851FBC61C1007257E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFA38841FBC61C1007257E5 /* AppDelegate.swift */; };
 		EAFA388C1FBC61C1007257E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA388B1FBC61C1007257E5 /* Assets.xcassets */; };
 		EAFA388F1FBC61C1007257E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFA388D1FBC61C1007257E5 /* LaunchScreen.storyboard */; };
@@ -58,7 +58,7 @@
 		EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
-		EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorageConfiguration.swift; sourceTree = "<group>"; };
+		EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorageCore.swift; sourceTree = "<group>"; };
 		EAFA38821FBC61C1007257E5 /* ios-logger-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFA38841FBC61C1007257E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFA388B1FBC61C1007257E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */,
-				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift */,
+				EAE9CCBC1FBAE0CE00C1B9F2 /* DefaultStorageCore.swift */,
 			);
 			path = Persistent;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageConfiguration.swift in Sources */,
+				EAE9CCC61FBAE0CE00C1B9F2 /* DefaultStorageCore.swift in Sources */,
 				EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */,
 				EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */,
 				EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
