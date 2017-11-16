@@ -5,7 +5,7 @@
 
 import CoreData
 
-public class DefaultStorage: Storaging {
+public class DefaultStorage: Storaging, CountdownDelegate {
     
     // MARK: - Definitions
     
@@ -49,50 +49,54 @@ public class DefaultStorage: Storaging {
     // MARK: - Properties
     
     private let core: PersistentStoreCore
-    private let settings: Settings
+    private let autosaveCount: Int
+    private let autosaveTimer: Countdown?
+    private let storeInterval: TimeInterval?
     private var accumulator: [Message]?
-    private var autosaveTimer: Timer?
     
     // MARK: - Life cycle
     
     public init(core: PersistentStoreCore, settings: Settings) {
         self.core = core
-        self.settings = settings
+        
+        self.autosaveCount = settings.autosaveCount
+        self.storeInterval = settings.storeInterval
+        
+        if let interval = settings.autosaveInterval {
+            self.autosaveTimer = Countdown(interval: interval)
+        } else {
+            self.autosaveTimer = nil
+        }
+        
         setupAccumulator()
-        setupTimer()
-    }
-    
-    deinit {
-        autosaveTimer?.invalidate()
+        setupAutosaveTimer()
     }
     
     // MARK: - Private
     
     private func setupAccumulator() {
-        if settings.autosaveCount > 0 {
+        if autosaveCount > 0 {
             accumulator = [Message]()
         }
     }
     
-    private func setupTimer() {
-        if let interval = settings.autosaveInterval {
-            autosaveTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(autosaveTimerLapHandler), userInfo: nil, repeats: true)
-        }
+    private func setupAutosaveTimer() {
+        autosaveTimer?.delegate = self
+        autosaveTimer?.activate()
     }
     
-    @objc private func autosaveTimerLapHandler() {
+    private func savePersistentIfNeeded() {
+        guard let count = accumulator?.count, count >= autosaveCount else { return }
+        
+        saveAccumulatedMessages()
+    }
+    
+    private func saveAccumulatedMessages() {
         guard let _accumulator = accumulator else { return }
         guard _accumulator.count > 0 else { return }
         
         save(_accumulator)
         accumulator?.removeAll()
-    }
-    
-    private func savePersistentIfNeeded() {
-        guard let count = accumulator?.count,
-            count >= settings.autosaveCount else { return }
-        
-        autosaveTimerLapHandler()
     }
     
     private func save(_ messages: [Message]) {
@@ -111,6 +115,12 @@ public class DefaultStorage: Storaging {
     }
     
     public func set(enabled: Bool, for token: Token) {
-        //
+        //TODO
+    }
+    
+    // MARK: - CountdownDelegate
+    
+    func countdownDidFinishLap(_ countdown: Countdown) {
+        saveAccumulatedMessages()
     }
 }
