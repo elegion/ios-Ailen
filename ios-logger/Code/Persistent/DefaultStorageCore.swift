@@ -100,7 +100,7 @@ public class DefaultStorageCore {
         guard context.hasChanges else { return }
         do {
             try context.save()
-            //TODO: try context.parent?.save()
+            try context.parent?.save()
         } catch {
             errorLogger?.display(error)
         }
