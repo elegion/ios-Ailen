@@ -3,7 +3,6 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
 //public class DefaultStorage: Storaging {

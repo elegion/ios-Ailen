@@ -3,14 +3,9 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
-public protocol ErrorLogger {
-    func display(_ error: Error)
-}
-
-public class DefaultStorageCore {
+public class DefaultStorageCore: PersistentStoreCore {
     
     // MARK: - Definitions
     
@@ -40,22 +35,6 @@ public class DefaultStorageCore {
     }()
     
     public var errorLogger: ErrorLogger?
-    public var currentMoc: NSManagedObjectContext {
-        return Thread.isMainThread ? readMoc : writeMoc
-    }
-    public let mom: NSManagedObjectModel
-    public let psc: NSPersistentStoreCoordinator
-    
-    public lazy var readMoc: NSManagedObjectContext = {
-        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        context.parent = parentMoc
-        return context
-    }()
-    public var writeMoc: NSManagedObjectContext {
-        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        context.parent = parentMoc
-        return context
-    }
     
     // MARK: - Life cycle
     
@@ -94,7 +73,33 @@ public class DefaultStorageCore {
         }
     }
     
-    // MARK: - Public
+    // MARK: - Private
+    
+    private func setupPersistentStore(storeURL: URL) throws {
+        try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+    }
+    
+    private func removePersistentModel(storeURL: URL) throws {
+        try FileManager.default.removeItem(at: storeURL)
+    }
+    
+    // MARK: - PersistentStoreCore
+    
+    public let mom: NSManagedObjectModel
+    public let psc: NSPersistentStoreCoordinator
+    public lazy var readMoc: NSManagedObjectContext = {
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.parent = parentMoc
+        return context
+    }()
+    public var writeMoc: NSManagedObjectContext {
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        context.parent = parentMoc
+        return context
+    }
+    public var currentMoc: NSManagedObjectContext {
+        return Thread.isMainThread ? readMoc : writeMoc
+    }
     
     public func saveContext(_ context: NSManagedObjectContext) {
         guard context.hasChanges else { return }
@@ -104,15 +109,5 @@ public class DefaultStorageCore {
         } catch {
             errorLogger?.display(error)
         }
-    }
-    
-    // MARK: - Private
-    
-    private func setupPersistentStore(storeURL: URL) throws {
-        try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
-    }
-    
-    private func removePersistentModel(storeURL: URL) throws {
-        try FileManager.default.removeItem(at: storeURL)
     }
 }
