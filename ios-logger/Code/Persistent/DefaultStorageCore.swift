@@ -14,10 +14,6 @@ public class DefaultStorageCore {
     
     // MARK: - Definitions
     
-    private struct Consts {
-        static let dataModelName = "com.e-legion.DefaultStorageDataModel"
-    }
-    
     enum StorageError: Error {
         case applicationDocumentsDirectory
         case dataModelPath
@@ -63,9 +59,9 @@ public class DefaultStorageCore {
     
     // MARK: - Life cycle
     
-    public init?() {
+    public init?(dataModelName: String) {
         let bundle = Bundle(for: type(of: self))
-        guard let urlString = bundle.path(forResource: Consts.dataModelName, ofType: "momd"),
+        guard let urlString = bundle.path(forResource: dataModelName, ofType: "momd"),
             let url = URL(string: urlString) else {
                 errorLogger?.display(StorageError.dataModelPath)
                 return nil
@@ -79,7 +75,7 @@ public class DefaultStorageCore {
         self.mom = mom
         self.psc = NSPersistentStoreCoordinator(managedObjectModel: self.mom)
         
-        guard let storeURL = applicationDocumentsDirectory?.appendingPathComponent(Consts.dataModelName + ".sqllite") else {
+        guard let storeURL = applicationDocumentsDirectory?.appendingPathComponent(dataModelName + ".sqllite") else {
             errorLogger?.display(StorageError.applicationDocumentsDirectory)
             return nil
         }
@@ -104,6 +100,7 @@ public class DefaultStorageCore {
         guard context.hasChanges else { return }
         do {
             try context.save()
+            //TODO: try context.parent?.save()
         } catch {
             errorLogger?.display(error)
         }
