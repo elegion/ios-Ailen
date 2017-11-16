@@ -100,7 +100,32 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     }
     
     private func save(_ messages: [Message]) {
-        //TODO
+        let context = core.writeMoc
+        
+        messages.forEach {
+            (current) in
+            
+            let tokenObj: ELNToken = managedObject(for: Consts.tokenEntityName, in: context)
+            tokenObj.value = current.token.rawValue
+            
+            let tagEntities: [ELNTag] = current.tags.map({
+                let tagObj: ELNTag = managedObject(for: Consts.tagEntityName, in: context)
+                tagObj.value = $0.rawValue
+                return tagObj
+            })
+            
+            let messageObj: ELNMessage = managedObject(for: Consts.messageEntityName, in: context)
+            
+            messageObj.token = tokenObj
+            messageObj.addToTag(NSSet(array: tagEntities))
+            messageObj.payload = current.payload
+        }
+        
+        core.saveContext(context)
+    }
+    
+    private func managedObject<Result>(for name: String, in context: NSManagedObjectContext) -> Result {
+        return NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Result
     }
     
     // MARK: - Storaging
