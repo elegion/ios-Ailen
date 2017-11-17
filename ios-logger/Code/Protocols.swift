@@ -38,3 +38,9 @@ public protocol Storaging: Output {
 public protocol ErrorLogger {
     func display(_ error: Error)
 }
+
+public protocol TokenLocking {
+    func lock(token: Token)
+    func unlock(token: Token)
+    func isLocked(token: Token) -> Bool
+}

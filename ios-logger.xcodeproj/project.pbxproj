@@ -13,6 +13,7 @@
 		EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */; };
 		EA5393B11FBC5F78001C4063 /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */; };
 		EA8A24351FBEEA3200596702 /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A24341FBEEA3200596702 /* DefaultDataConverter.swift */; };
+		EA8A24371FBF180200596702 /* DefaultBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A24361FBF180200596702 /* DefaultBlocker.swift */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* ios_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */; };
 		EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */; };
@@ -57,6 +58,7 @@
 		EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
 		EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
 		EA8A24341FBEEA3200596702 /* DefaultDataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
+		EA8A24361FBF180200596702 /* DefaultBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBlocker.swift; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_logger.h; sourceTree = "<group>"; };
 		EAE9CCAE1FBAE0A000C1B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				EA46256B1FBDC3CF00D5E217 /* Countdown.swift */,
 				EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */,
 				EA8A24341FBEEA3200596702 /* DefaultDataConverter.swift */,
+				EA8A24361FBF180200596702 /* DefaultBlocker.swift */,
 				EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */,
 				EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */,
 				EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */,
@@ -281,6 +284,7 @@
 				EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */,
 				EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */,
 				EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */,
+				EA8A24371FBF180200596702 /* DefaultBlocker.swift in Sources */,
 				EA46256C1FBDC3CF00D5E217 /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
