@@ -54,6 +54,7 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     private let storeInterval: TimeInterval?
     private var accumulator: [Message]?
     public var errorLogger: ErrorLogger?
+    public var tokenBlocker: TokenLocking?
     
     // MARK: - Life cycle
     
@@ -180,7 +181,13 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     }
     
     public func set(enabled: Bool, for token: Token) {
-        //TODO
+        guard let blocker = tokenBlocker else { return }
+        
+        if enabled {
+            blocker.unlock(token: token)
+        } else {
+            blocker.lock(token: token)
+        }
     }
     
     // MARK: - CountdownDelegate

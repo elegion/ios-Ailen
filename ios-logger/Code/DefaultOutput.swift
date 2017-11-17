@@ -9,7 +9,7 @@ public class DefaultOutput: Output {
     
     // MARK: - Properties
     
-    private var blockedTokens = Set<Token>()
+    private let blocker = DefaultTokenBlocker()
     
     // MARK: - Life cycle
     
@@ -19,13 +19,15 @@ public class DefaultOutput: Output {
     
     public func set(enabled: Bool, for token: Token) {
         if enabled {
-            blockedTokens.remove(token)
+            blocker.unlock(token: token)
         } else {
-            blockedTokens.insert(token)
+            blocker.lock(token: token)
         }
     }
     
     public func display(_ message: Message) {
+        guard !blocker.isLocked(token: message.token) else { return }
+        
         print("Token: \(message.token) | Payload: \(message.payload)")
     }
 }
