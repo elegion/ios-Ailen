@@ -31,6 +31,10 @@ public protocol PersistentStoreCore {
     func saveContext(_ context: NSManagedObjectContext)
 }
 
+public protocol Storaging: Output {
+    var filter: FilterStore { get }
+}
+
 public protocol ErrorLogger {
     func display(_ error: Error)
 }

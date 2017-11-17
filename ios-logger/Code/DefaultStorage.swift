@@ -53,6 +53,7 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     private let autosaveTimer: Countdown?
     private let storeInterval: TimeInterval?
     private var accumulator: [Message]?
+    public var errorLogger: ErrorLogger?
     
     // MARK: - Life cycle
     
@@ -128,7 +129,27 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         return NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Result
     }
     
+    private func fetchAll() -> [ELNMessage] {
+        let context = core.readMoc
+        
+        let request = NSFetchRequest<ELNMessage>(entityName: Consts.messageEntityName)
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        
+        do {
+            return try context.fetch(request)
+        } catch {
+            errorLogger?.display(error)
+            return [ELNMessage]()
+        }
+    }
+        
     // MARK: - Storaging
+    
+    public var filter: FilterStore {
+        let fetched = fetchAll()
+        let mapped = fetched.flatMap { DefaultDataConverter.convert($0) }
+        return FilterStore(data: mapped)
+    }
     
     public func display(_ message: Message) {
         if accumulator != nil {
