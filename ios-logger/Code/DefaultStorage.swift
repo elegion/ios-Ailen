@@ -129,11 +129,12 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         return NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Result
     }
     
-    private func fetchAll() -> [ELNMessage] {
+    private func fetchMessages(predicate: NSPredicate?) -> [ELNMessage] {
         let context = core.readMoc
         
         let request = NSFetchRequest<ELNMessage>(entityName: Consts.messageEntityName)
         request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        request.predicate = predicate
         
         do {
             return try context.fetch(request)
@@ -142,7 +143,25 @@ public class DefaultStorage: Storaging, CountdownDelegate {
             return [ELNMessage]()
         }
     }
+    
+    private func fetchAll() -> [ELNMessage] {
+        removeOldRecordsIfNeeded()
+        return fetchMessages(predicate: nil)
+    }
+    
+    private func removeOldRecordsIfNeeded() {
+        guard let interval = storeInterval else { return }
         
+        let date = Date(timeIntervalSinceNow: -interval)
+        let predicate = NSPredicate(format: "date < \(date)")
+        let messages = fetchMessages(predicate: predicate)
+        
+        let context = core.writeMoc
+        
+        messages.forEach { context.delete($0) }
+        
+        core.saveContext(context)
+    }
     // MARK: - Storaging
     
     public var filter: FilterStore {
