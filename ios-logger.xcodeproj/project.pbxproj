@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0176711FBD873900741BB8 /* FilterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0176701FBD873900741BB8 /* FilterStore.swift */; };
 		EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
 		EA46256C1FBDC3CF00D5E217 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46256B1FBDC3CF00D5E217 /* Countdown.swift */; };
 		EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA0176701FBD873900741BB8 /* FilterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStore.swift; sourceTree = "<group>"; };
 		EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EA46256B1FBDC3CF00D5E217 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */,
 				EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */,
 				EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */,
+				EA0176701FBD873900741BB8 /* FilterStore.swift */,
 				EAE9CCBB1FBAE0CE00C1B9F2 /* Persistent */,
 				EAE9CCB91FBAE0CE00C1B9F2 /* Protocols.swift */,
 			);
@@ -272,6 +275,7 @@
 				EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */,
 				EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */,
 				EA8A24351FBEEA3200596702 /* DefaultDataConverter.swift in Sources */,
+				EA0176711FBD873900741BB8 /* FilterStore.swift in Sources */,
 				EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
 				EA5393B11FBC5F78001C4063 /* DefaultOutput.swift in Sources */,
 				EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */,
