@@ -27,9 +27,9 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     }
     
     private struct Consts {
-        static let messageEntityName = "ENLMessage"
-        static let tokenEntityName = "ENLToken"
-        static let tagEntityName = "ENLTag"
+        static let messageEntityName = "ELNMessage"
+        static let tokenEntityName = "ELNToken"
+        static let tagEntityName = "ELNTag"
     }
     
     //    enum StorageError: Error {
@@ -163,6 +163,7 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         
         core.saveContext(context)
     }
+    
     // MARK: - Storaging
     
     public var filter: FilterStore {
