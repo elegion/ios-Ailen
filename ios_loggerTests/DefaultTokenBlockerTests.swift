@@ -4,17 +4,23 @@
 //
 
 import XCTest
-import ios_logger
+@testable import ios_logger
 
 class DefaultTokenBlockerTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        
-    }
+    private let blocker = DefaultTokenBlocker()
     
-    override func tearDown() {
+    func testBlocking() {
+        let token = Token.request
         
-        super.tearDown()
+        XCTAssertFalse(blocker.isLocked(token: token))
+        
+        blocker.lock(token: token)
+        
+        XCTAssertTrue(blocker.isLocked(token: token))
+        
+        blocker.unlock(token: token)
+        
+        XCTAssertFalse(blocker.isLocked(token: token))
     }
 }
