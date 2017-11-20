@@ -8,13 +8,17 @@ import ios_logger
 
 class DebugProcessorTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        
-    }
+    let processor = DebugProcessor()
     
-    override func tearDown() {
-        
-        super.tearDown()
+    func testObjectRepresentation() {
+        let source = "Pharetra Tortor Lorem"
+        guard let processed = processor.process(token: .response, object: source) else { return XCTFail() }
+        XCTAssertEqual(source, processed)
+    }
+
+    func testPrimitiveRepresentation() {
+        let source = 154
+        guard let processed = processor.process(token: .response, object: source) else { return XCTFail() }
+        XCTAssertEqual("154", processed)
     }
 }
