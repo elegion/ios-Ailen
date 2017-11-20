@@ -20,6 +20,10 @@ public class FilterStore {
     }
     
     public func containing(tag: String) -> FilterStore {
-        return filter { $0.0.contains(tag) }
+        if tag.isEmpty {
+            return self
+        } else {
+            return filter { $0.0.contains(tag) }
+        }
     }
 }
