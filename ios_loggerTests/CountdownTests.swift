@@ -4,17 +4,74 @@
 //
 
 import XCTest
-import ios_logger
+@testable import ios_logger
 
 class CountdownTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        
+    private struct Constants {
+        static let defaultInterval: TimeInterval = 2
+        static let multipleLapsCount = 5
     }
     
-    override func tearDown() {
+    private class Destination: CountdownDelegate {
+        var didFinishLap: (() -> Void)?
         
-        super.tearDown()
+        func countdownDidFinishLap(_ countdown: Countdown) {
+            didFinishLap?()
+        }
+    }
+    
+    private let delegate = Destination()
+    
+    func testSingleLap() {
+        var counter = 0
+        
+        delegate.didFinishLap = {
+            counter += 1
+        }
+        
+        let lapsExpectation = expectation(description: "SingleLap.Measurement")
+        let timer = Countdown(interval: Constants.defaultInterval, repeats: false)
+        timer.delegate = delegate
+        timer.activate()
+        
+        let timeout: TimeInterval = Constants.defaultInterval * TimeInterval(Constants.multipleLapsCount)
+        let deadline = DispatchTime.now() + timeout
+        
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            lapsExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: Constants.defaultInterval * TimeInterval(Constants.multipleLapsCount))
+        XCTAssertEqual(counter, 1)
+        
+        timer.deactivate()
+        delegate.didFinishLap = nil
+    }
+    
+    func testMultipleLaps() {
+        var counter = 0
+        
+        delegate.didFinishLap = {
+            counter += 1
+        }
+        
+        let lapsExpectation = expectation(description: "MultipleLaps.Measurement")
+        let timer = Countdown(interval: Constants.defaultInterval)
+        timer.delegate = delegate
+        timer.activate()
+        
+        let timeout: TimeInterval = Constants.defaultInterval * TimeInterval(Constants.multipleLapsCount)
+        let deadline = DispatchTime.now() + timeout
+        
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            lapsExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: timeout + 2)
+        XCTAssertEqual(counter, Constants.multipleLapsCount)
+        
+        timer.deactivate()
+        delegate.didFinishLap = nil
     }
 }
