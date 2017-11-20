@@ -7,11 +7,11 @@ import Foundation
 
 public class FilterStore {
     
-    typealias Message = (tags: [String], token: String, date: Date, message: String)
+    public typealias Message = (tags: [String], token: String, date: Date, message: String)
     
-    var data: [Message]
+    public var data: [Message]
     
-    init(data: [Message]) {
+    public init(data: [Message]) {
         self.data = data
     }
     
@@ -19,7 +19,7 @@ public class FilterStore {
         return FilterStore(data: self.data.filter(predicate))
     }
     
-    func containing(tag: String) -> FilterStore {
+    public func containing(tag: String) -> FilterStore {
         return filter { $0.0.contains(tag) }
     }
 }
