@@ -32,13 +32,13 @@ public class Ailen {
     // MARK: - Public
     
     public func set(enabled: Bool, for token: Token) {
-        queue(for: token.qos).async {
+        token.qos.queue.async {
             self.outputs.forEach { $0.set(enabled: enabled, for: token) }
         }
     }
     
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {
-        queue(for: token.qos).async {
+        token.qos.queue.async {
             let mapped: [Message] = values.flatMap({
                 guard let processed = self.convert($0, for: token) else { return nil }
                 return LogMessage(token: token, tags: tags, payload: processed)
@@ -52,15 +52,7 @@ public class Ailen {
     private func log(_ messages: [Message], in output: Output) {
         messages.forEach { output.display($0) }
     }
-    
-    private func queue(for qos: Token.Qos) -> DispatchQueue {
-        switch qos {
-        case .main:             return .main
-        case .global:           return .global(qos: .utility)
-        case .custom(let q):    return q
-        }
-    }
-    
+        
     private func convert(_ source: Any, for token: Token) -> String? {
         for processor in internalProcessors {
             if let processed = processor.process(token: token, object: source) {

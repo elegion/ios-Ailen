@@ -11,6 +11,14 @@ public struct Token: RawRepresentable, Hashable {
     
     public enum Qos {
         case global, main, custom(DispatchQueue)
+        
+        var queue: DispatchQueue {
+            switch self {
+            case .main:             return .main
+            case .global:           return .global(qos: .utility)
+            case .custom(let q):    return q
+            }
+        }
     }
     
     // MARK: - Properties
