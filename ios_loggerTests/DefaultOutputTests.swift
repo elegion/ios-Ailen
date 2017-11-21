@@ -39,19 +39,34 @@ class DefaultOutputTests: XCTestCase {
     }
     
     func testFullDisplaying() {
+        let logExpectation = expectation(description: "Messages displaying expectation")
+        
         let output = TestingDefaultOutput()
         
         messages.forEach { output.display($0) }
         
-        XCTAssertEqual(output.messagesDisplayed, messages.count)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssertEqual(output.messagesDisplayed, self.messages.count)
+            logExpectation.fulfill()
+        }
+        
+        wait(for: [logExpectation], timeout: 10)
     }
     
     func testBlockingMessages() {
+        let logExpectation = expectation(description: "Messages displaying expectation")
+        
         let output = TestingDefaultOutput()
         output.set(enabled: false, for: .request)
         
         messages.forEach { output.display($0) }
         
-        XCTAssertEqual(output.messagesDisplayed, messages.count - 2)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            //  5 is not equal 3
+            XCTAssertEqual(output.messagesDisplayed, self.messages.count - 2)
+            logExpectation.fulfill()
+        }
+        
+        wait(for: [logExpectation], timeout: 10)
     }
 }
