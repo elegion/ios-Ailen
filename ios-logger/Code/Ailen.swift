@@ -24,8 +24,9 @@ public class Ailen {
     
     // MARK: - Life cycle
     
-    public init(outputs: [Output] = [DefaultOutput()]) {
+    public init(outputs: [Output] = [DefaultOutput()], processors: [Processor] = []) {
         self.outputs = outputs
+        self.processors = processors
     }
     
     // MARK: - Public
