@@ -13,18 +13,7 @@ class DefaultOutputTests: XCTestCase {
         let tags: [Tag]
         let payload: String
     }
-    
-    private class TestingDefaultOutput: DefaultOutput {
         
-        private(set) var messagesDisplayed = 0
-        
-        override func display(_ message: Message) {
-            super.display(message)
-            
-            messagesDisplayed += 1
-        }
-    }
-    
     private struct Constants {
         enum Message: String {
             case msg1 = "UnitTest.DefaultOutputTests.msg1"
