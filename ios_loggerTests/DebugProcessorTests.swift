@@ -12,13 +12,21 @@ class DebugProcessorTests: XCTestCase {
     
     func testObjectRepresentation() {
         let source = "Pharetra Tortor Lorem"
-        guard let processed = processor.process(token: .response, object: source) else { return XCTFail() }
+        guard let processed = processor.process(token: .response, object: source) else {
+            XCTFail()
+            return
+            
+        }
         XCTAssertEqual(source, processed)
     }
 
     func testPrimitiveRepresentation() {
         let source = 154
-        guard let processed = processor.process(token: .response, object: source) else { return XCTFail() }
+        guard let processed = processor.process(token: .response, object: source) else {
+            XCTFail()
+            return
+            
+        }
         XCTAssertEqual("154", processed)
     }
 }
