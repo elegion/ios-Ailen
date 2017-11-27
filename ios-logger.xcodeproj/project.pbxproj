@@ -25,7 +25,6 @@
 		EAE6633E1FC2DEE20047F285 /* DefaultOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */; };
 		EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */; };
 		EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */; };
-		EAE663441FC2DEF90047F285 /* DefaultStorageCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663431FC2DEF90047F285 /* DefaultStorageCoreTests.swift */; };
 		EAE663471FC2E2BE0047F285 /* TokenTags+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */; };
 		EAE663491FC325DB0047F285 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663481FC325DB0047F285 /* ConsoleOutput.swift */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* ios_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +65,6 @@
 		EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultOutputTests.swift; sourceTree = "<group>"; };
 		EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageTests.swift; sourceTree = "<group>"; };
 		EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStoreTests.swift; sourceTree = "<group>"; };
-		EAE663431FC2DEF90047F285 /* DefaultStorageCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageCoreTests.swift; sourceTree = "<group>"; };
 		EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenTags+Tests.swift"; sourceTree = "<group>"; };
 		EAE663481FC325DB0047F285 /* ConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +104,6 @@
 				EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */,
 				EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */,
 				EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */,
-				EAE663431FC2DEF90047F285 /* DefaultStorageCoreTests.swift */,
 				EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */,
 				EAE663391FC2DECD0047F285 /* DefaultTokenBlockerTests.swift */,
 				EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */,
@@ -297,7 +294,6 @@
 				EAE6633C1FC2DED60047F285 /* DefaultDataConverterTests.swift in Sources */,
 				EA523D381FCC080600F82690 /* StorageTestCase.swift in Sources */,
 				EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */,
-				EAE663441FC2DEF90047F285 /* DefaultStorageCoreTests.swift in Sources */,
 				EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */,
 				EAE663471FC2E2BE0047F285 /* TokenTags+Tests.swift in Sources */,
 				EAE6633E1FC2DEE20047F285 /* DefaultOutputTests.swift in Sources */,
