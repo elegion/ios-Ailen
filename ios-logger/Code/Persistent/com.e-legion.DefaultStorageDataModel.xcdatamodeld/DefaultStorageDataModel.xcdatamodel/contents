@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ELNMessage" representedClassName="ELNMessage" syncable="YES" codeGenerationType="class">
+    <entity name="ELNMessage" representedClassName="ELNMessage" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="payload" attributeType="String" syncable="YES"/>
         <relationship name="tag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ELNTag" inverseName="message" inverseEntity="ELNTag" syncable="YES"/>
         <relationship name="token" maxCount="1" deletionRule="Nullify" destinationEntity="ELNToken" inverseName="message" inverseEntity="ELNToken" syncable="YES"/>
     </entity>
-    <entity name="ELNTag" representedClassName="ELNTag" syncable="YES" codeGenerationType="class">
+    <entity name="ELNTag" representedClassName="ELNTag" syncable="YES">
         <attribute name="value" attributeType="String" syncable="YES"/>
         <relationship name="message" toMany="YES" deletionRule="Nullify" destinationEntity="ELNMessage" inverseName="tag" inverseEntity="ELNMessage" syncable="YES"/>
         <uniquenessConstraints>
@@ -15,7 +15,7 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="ELNToken" representedClassName="ELNToken" syncable="YES" codeGenerationType="class">
+    <entity name="ELNToken" representedClassName="ELNToken" syncable="YES">
         <attribute name="value" attributeType="String" syncable="YES"/>
         <relationship name="message" toMany="YES" deletionRule="Nullify" destinationEntity="ELNMessage" inverseName="token" inverseEntity="ELNMessage" syncable="YES"/>
     </entity>

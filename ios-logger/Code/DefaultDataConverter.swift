@@ -17,6 +17,6 @@ struct DefaultDataConverter {
             tags = _tags.flatMap({ $0.value })
         }
         
-        return (tags, token, date, payload)
+        return (tags, token, date as Date, payload)
     }
 }

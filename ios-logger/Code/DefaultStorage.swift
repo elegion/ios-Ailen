@@ -121,7 +121,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             
             messageObj.token = tokenObj
             messageObj.addToTag(NSSet(array: tagEntities))
-            messageObj.date = Date()
+            messageObj.date = NSDate()
             messageObj.payload = current.payload
         }
         
