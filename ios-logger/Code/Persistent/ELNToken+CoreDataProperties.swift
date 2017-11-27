@@ -17,8 +17,8 @@ extension ELNToken {
         return NSFetchRequest<ELNToken>(entityName: "ELNToken")
     }
 
-    @NSManaged public var value: String?
-    @NSManaged public var message: NSSet?
+    @NSManaged public var value: String
+    @NSManaged public var message: NSSet
 
 }
 

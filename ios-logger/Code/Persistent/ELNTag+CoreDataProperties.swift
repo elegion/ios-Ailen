@@ -17,8 +17,8 @@ extension ELNTag {
         return NSFetchRequest<ELNTag>(entityName: "ELNTag")
     }
 
-    @NSManaged public var value: String?
-    @NSManaged public var message: NSSet?
+    @NSManaged public var value: String
+    @NSManaged public var message: NSSet
 
 }
 

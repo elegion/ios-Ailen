@@ -17,10 +17,10 @@ extension ELNMessage {
         return NSFetchRequest<ELNMessage>(entityName: "ELNMessage")
     }
 
-    @NSManaged public var date: NSDate?
-    @NSManaged public var payload: String?
-    @NSManaged public var tag: NSSet?
-    @NSManaged public var token: ELNToken?
+    @NSManaged public var date: NSDate
+    @NSManaged public var payload: String
+    @NSManaged public var tag: NSSet
+    @NSManaged public var token: ELNToken
 
 }
 
