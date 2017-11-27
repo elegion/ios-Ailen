@@ -83,6 +83,16 @@ public class DefaultStorageCore: PersistentStoreCore {
         try FileManager.default.removeItem(at: storeURL)
     }
     
+    private func saveParentContext() {
+        DispatchQueue.main.async {
+            do {
+                try self.parentMoc.save()
+            } catch {
+                self.errorLogger?.display(error)
+            }
+        }
+    }
+    
     // MARK: - PersistentStoreCore
     
     public let mom: NSManagedObjectModel
@@ -105,7 +115,7 @@ public class DefaultStorageCore: PersistentStoreCore {
         guard context.hasChanges else { return }
         do {
             try context.save()
-            try context.parent?.save()
+            saveParentContext()
         } catch {
             errorLogger?.display(error)
         }
