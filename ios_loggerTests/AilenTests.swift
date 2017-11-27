@@ -50,7 +50,7 @@ class AilenTests: XCTestCase {
             return
         }
         
-        let logExpectation = expectation(description: "Async logging waiting")
+        let logExpectation = expectation(description: "Async logging wait")
         
         let output = TestingDefaultOutput()
         logger.outputs = [output]

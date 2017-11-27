@@ -62,7 +62,6 @@ class DefaultOutputTests: XCTestCase {
         messages.forEach { output.display($0) }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            //  5 is not equal 3
             XCTAssertEqual(output.messagesDisplayed, self.messages.count - 2)
             logExpectation.fulfill()
         }
