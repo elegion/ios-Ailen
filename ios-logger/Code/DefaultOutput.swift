@@ -25,7 +25,7 @@ public class DefaultOutput: Output {
         }
     }
     
-    public func display(_ message: Message) {
+    public func proccess(_ message: Message) {
         guard !blocker.isLocked(token: message.token) else { return }
         
         print("Token: \(message.token) | Payload: \(message.payload)")
