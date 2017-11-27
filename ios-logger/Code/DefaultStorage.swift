@@ -120,6 +120,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             
             messageObj.token = tokenObj
             messageObj.addToTag(NSSet(array: tagEntities))
+            messageObj.date = Date()
             messageObj.payload = current.payload
         }
         
@@ -130,8 +131,8 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         return NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Result
     }
     
-    private func fetchMessages(predicate: NSPredicate?) -> [ELNMessage] {
-        let context = core.readMoc
+    private func fetchMessages(predicate: NSPredicate?, in context: NSManagedObjectContext? = nil) -> [ELNMessage] {
+        let context = context ?? core.readMoc
         
         let request = NSFetchRequest<ELNMessage>(entityName: Consts.messageEntityName)
         request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
