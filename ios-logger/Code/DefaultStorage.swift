@@ -147,6 +147,16 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         }
     }
     
+    private func removeMessages(predicate: NSPredicate? = nil) {
+        let context = core.writeMoc
+        
+        let messages = fetchMessages(predicate: predicate, in: context)
+        
+        messages.forEach { context.delete($0) }
+        
+        core.saveContext(context)
+    }
+    
     private func fetchAll() -> [ELNMessage] {
         removeOldRecordsIfNeeded()
         return fetchMessages(predicate: nil)
@@ -156,14 +166,9 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         guard let interval = storeInterval else { return }
         
         let date = Date(timeIntervalSinceNow: -interval)
-        let predicate = NSPredicate(format: "date < \(date)")
-        let messages = fetchMessages(predicate: predicate)
+        let predicate = NSPredicate(format: "date < %@", argumentArray: [date])
         
-        let context = core.writeMoc
-        
-        messages.forEach { context.delete($0) }
-        
-        core.saveContext(context)
+        removeMessages(predicate: predicate)
     }
     
     // MARK: - Storaging
