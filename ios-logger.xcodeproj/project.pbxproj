@@ -10,6 +10,7 @@
 		EA0176711FBD873900741BB8 /* FilterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0176701FBD873900741BB8 /* FilterStore.swift */; };
 		EA1717711FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA17176F1FBC35B200097CC4 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
 		EA46256C1FBDC3CF00D5E217 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46256B1FBDC3CF00D5E217 /* Countdown.swift */; };
+		EA523D381FCC080600F82690 /* StorageTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA523D371FCC080600F82690 /* StorageTestCase.swift */; };
 		EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */; };
 		EA5393B11FBC5F78001C4063 /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */; };
 		EA8A24351FBEEA3200596702 /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A24341FBEEA3200596702 /* DefaultDataConverter.swift */; };
@@ -74,6 +75,7 @@
 		EA0176701FBD873900741BB8 /* FilterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStore.swift; sourceTree = "<group>"; };
 		EA1717701FBC35B200097CC4 /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EA46256B1FBDC3CF00D5E217 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		EA523D371FCC080600F82690 /* StorageTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTestCase.swift; sourceTree = "<group>"; };
 		EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
 		EA5393B01FBC5F78001C4063 /* DefaultOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
 		EA8A24341FBEEA3200596702 /* DefaultDataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE663351FC2DEBE0047F285 /* AilenTests.swift */,
+				EA523D371FCC080600F82690 /* StorageTestCase.swift */,
 				EAE663331FC2DEB30047F285 /* CountdownTests.swift */,
 				EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */,
 				EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */,
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE6633C1FC2DED60047F285 /* DefaultDataConverterTests.swift in Sources */,
+				EA523D381FCC080600F82690 /* StorageTestCase.swift in Sources */,
 				EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */,
 				EAE663441FC2DEF90047F285 /* DefaultStorageCoreTests.swift in Sources */,
 				EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */,
