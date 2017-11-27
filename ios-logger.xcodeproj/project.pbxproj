@@ -102,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				EAE663351FC2DEBE0047F285 /* AilenTests.swift */,
-				EA523D371FCC080600F82690 /* StorageTestCase.swift */,
 				EAE663331FC2DEB30047F285 /* CountdownTests.swift */,
 				EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */,
 				EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */,
@@ -120,6 +119,7 @@
 		EAE663451FC2E2A20047F285 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EA523D371FCC080600F82690 /* StorageTestCase.swift */,
 				EAD8CCDF1FC40C6300CF0A58 /* TestingHelperClasses.swift */,
 				EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */,
 			);
