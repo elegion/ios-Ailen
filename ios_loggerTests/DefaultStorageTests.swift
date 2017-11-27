@@ -101,8 +101,8 @@ class DefaultStorageTests: StorageTestCase {
         }
         
         guard let _core = core else {
-                XCTFail()
-                fatalError()
+            XCTFail("CoreData stack uninitialized")
+            fatalError()
         }
         
         let storage = DefaultStorage(core: _core, settings: settings)

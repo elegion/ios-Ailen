@@ -28,7 +28,7 @@ class AilenTests: XCTestCase {
     
     func testDefaultOutput() {
         guard let logger = logger else {
-            XCTFail()
+            XCTFail("Logger uninitialized")
             return
         }
         
@@ -46,7 +46,7 @@ class AilenTests: XCTestCase {
     
     func testDefaultProcessor() {
         guard let logger = logger else {
-            XCTFail()
+            XCTFail("Logger uninitialized")
             return
         }
         
@@ -84,7 +84,7 @@ class AilenTests: XCTestCase {
     
     func testEnablingDisablingToken() {
         guard let logger = logger else {
-            XCTFail()
+            XCTFail("Logger uninitialized")
             return
         }
         

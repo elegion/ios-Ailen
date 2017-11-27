@@ -20,8 +20,8 @@ class DefaultDataConverterTests: StorageTestCase {
         super.setUp()
         
         guard let _core = core else {
-            XCTFail()
-            fatalError()
+            XCTFail("CoreData stack uninitialized")
+            return
         }
         
         let settings = DefaultStorage.Settings(autosaveCount: 0)
@@ -31,9 +31,13 @@ class DefaultDataConverterTests: StorageTestCase {
     }
     
     func testConverting() {
-        guard let _logger = logger, let _output = output else {
-            XCTFail()
-            fatalError()
+        guard let _logger = logger else {
+            XCTFail("Logger uninitialized")
+            return
+        }
+        guard let _output = output else {
+            XCTFail("Storage output uninitialized")
+            return
         }
         
         XCTAssertEqual(_output.filter.data.count, 0)
