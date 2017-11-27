@@ -180,8 +180,6 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     public override func display(_ message: Message) {
-        super.display(message)
-        
         if accumulator != nil {
             accumulator!.append(message)
             savePersistentIfNeeded()

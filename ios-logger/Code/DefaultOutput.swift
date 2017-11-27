@@ -19,7 +19,7 @@ public class DefaultOutput: Output {
     
     
     open func display(_ message: Message) {
-        fatalError("Abstract")
+        preconditionFailure("Abstract")
     }
     
     // MARK: - Output

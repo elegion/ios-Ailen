@@ -11,8 +11,6 @@ internal class TestingDefaultOutput: DefaultOutput {
     private(set) var messagesDisplayed = 0
     
     override func display(_ message: Message) {
-        super.display(message)
-        
         DispatchQueue.main.async {
             self.messagesDisplayed += 1
         }

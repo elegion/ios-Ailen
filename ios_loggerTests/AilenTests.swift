@@ -34,7 +34,7 @@ class AilenTests: XCTestCase {
         
         XCTAssertEqual(logger.outputs.count, 1)
         
-        let newOutput = DefaultOutput()
+        let newOutput = ConsoleOutput()
         logger.outputs = [newOutput]
         
         XCTAssertEqual(logger.outputs.count, 1)
