@@ -27,6 +27,7 @@
 		EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */; };
 		EAE663441FC2DEF90047F285 /* DefaultStorageCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663431FC2DEF90047F285 /* DefaultStorageCoreTests.swift */; };
 		EAE663471FC2E2BE0047F285 /* TokenTags+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */; };
+		EAE663491FC325DB0047F285 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663481FC325DB0047F285 /* ConsoleOutput.swift */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* ios_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAE9CCC11FBAE0CE00C1B9F2 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB61FBAE0CE00C1B9F2 /* DefaultStorage.swift */; };
 		EAE9CCC31FBAE0CE00C1B9F2 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9CCB81FBAE0CE00C1B9F2 /* Entities.swift */; };
@@ -67,6 +68,7 @@
 		EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStoreTests.swift; sourceTree = "<group>"; };
 		EAE663431FC2DEF90047F285 /* DefaultStorageCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageCoreTests.swift; sourceTree = "<group>"; };
 		EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenTags+Tests.swift"; sourceTree = "<group>"; };
+		EAE663481FC325DB0047F285 /* ConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE9CCAD1FBAE0A000C1B9F2 /* ios_logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_logger.h; sourceTree = "<group>"; };
 		EAE9CCAE1FBAE0A000C1B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE9CCBA1FBAE0CE00C1B9F2 /* Ailen.swift */,
+				EAE663481FC325DB0047F285 /* ConsoleOutput.swift */,
 				EA46256B1FBDC3CF00D5E217 /* Countdown.swift */,
 				EA5393AE1FBC5F37001C4063 /* DebugProcessor.swift */,
 				EA8A24361FBF180200596702 /* DefaultBlocker.swift */,
@@ -319,6 +322,7 @@
 				EA5393B11FBC5F78001C4063 /* DefaultOutput.swift in Sources */,
 				EA5393AF1FBC5F37001C4063 /* DebugProcessor.swift in Sources */,
 				EAE9CCC41FBAE0CE00C1B9F2 /* Protocols.swift in Sources */,
+				EAE663491FC325DB0047F285 /* ConsoleOutput.swift in Sources */,
 				EAE9CCC51FBAE0CE00C1B9F2 /* Ailen.swift in Sources */,
 				EA8A24371FBF180200596702 /* DefaultBlocker.swift in Sources */,
 				EA46256C1FBDC3CF00D5E217 /* Countdown.swift in Sources */,

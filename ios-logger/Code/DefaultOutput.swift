@@ -15,6 +15,13 @@ public class DefaultOutput: Output {
     
     public init() {}
     
+    // MARK: - Public
+    
+    
+    open func display(_ message: Message) {
+        fatalError("Abstract")
+    }
+    
     // MARK: - Output
     
     public func set(enabled: Bool, for token: Token) {
@@ -28,6 +35,6 @@ public class DefaultOutput: Output {
     public func proccess(_ message: Message) {
         guard !blocker.isLocked(token: message.token) else { return }
         
-        print("Token: \(message.token) | Payload: \(message.payload)")
+        display(message)
     }
 }

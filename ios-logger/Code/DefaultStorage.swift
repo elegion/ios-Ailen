@@ -5,7 +5,7 @@
 
 import CoreData
 
-public class DefaultStorage: Storaging, CountdownDelegate {
+public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     // MARK: - Definitions
     
@@ -172,7 +172,9 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         return FilterStore(data: mapped)
     }
     
-    public func display(_ message: Message) {
+    public override func display(_ message: Message) {
+        super.display(message)
+        
         if accumulator != nil {
             accumulator!.append(message)
             savePersistentIfNeeded()
