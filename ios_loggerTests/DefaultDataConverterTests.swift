@@ -4,17 +4,60 @@
 //
 
 import XCTest
-import ios_logger
+import CoreData
+@testable import ios_logger
 
-class DefaultDataConverterTests: XCTestCase {
+class DefaultDataConverterTests: StorageTestCase {
+    
+    private struct Constants {
+        static let msg = "DefaultDataConverterTests.message"
+    }
+    
+    private var output: DefaultStorage?
+    private var logger: Ailen?
     
     override func setUp() {
         super.setUp()
         
+        guard let _core = core else {
+            XCTFail()
+            fatalError()
+        }
+        
+        let settings = DefaultStorage.Settings(autosaveCount: 0)
+        output = DefaultStorage(core: _core, settings: settings)
+        
+        logger = Ailen(outputs: [output!], processors: [])
     }
     
-    override func tearDown() {
+    func testConverting() {
+        guard let _logger = logger, let _output = output else {
+            XCTFail()
+            fatalError()
+        }
         
-        super.tearDown()
+        XCTAssertEqual(_output.filter.data.count, 0)
+        
+        let logExpectation = expectation(description: "Save data wait")
+        
+        _logger.log(as: .UI, tags: [.client, .internal], values: Constants.msg)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssertEqual(_output.filter.data.count, 1)
+            
+            let message = _output.filter.data.first!
+            
+            XCTAssertEqual(message.token, "UI.Token")
+            XCTAssertEqual(message.message, Constants.msg)
+            XCTAssertEqual(message.tags.count, 2)
+            
+            let storedTags = message.tags.sorted()
+            let requestedTags = ["Client.Tag", "Internal.Tag"].sorted()
+            
+            XCTAssertEqual(storedTags, requestedTags)
+            
+            logExpectation.fulfill()
+        }
+        
+        wait(for: [logExpectation], timeout: 10)
     }
 }
