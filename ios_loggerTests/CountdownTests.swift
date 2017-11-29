@@ -53,7 +53,9 @@ class CountdownTests: XCTestCase {
         var counter = 0
         
         delegate.didFinishLap = {
-            counter += 1
+            DispatchQueue.main.async {
+                counter += 1
+            }
         }
         
         let lapsExpectation = expectation(description: "MultipleLaps.Measurement")
@@ -65,13 +67,13 @@ class CountdownTests: XCTestCase {
         let deadline = DispatchTime.now() + timeout
         
         DispatchQueue.main.asyncAfter(deadline: deadline) {
+            XCTAssertEqual(counter, Constants.multipleLapsCount)
             lapsExpectation.fulfill()
+            
+            timer.deactivate()
+            self.delegate.didFinishLap = nil
         }
         
         waitForExpectations(timeout: timeout + 2)
-        XCTAssertEqual(counter, Constants.multipleLapsCount)
-        
-        timer.deactivate()
-        delegate.didFinishLap = nil
     }
 }
