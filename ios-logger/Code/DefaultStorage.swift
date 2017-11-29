@@ -32,20 +32,6 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         static let tagEntityName = "ELNTag"
     }
     
-    //    enum StorageError: Error {
-    //        case pullLogsFileCreation(String)
-    //        case tokenUniquenessLost
-    //        case tagUniquenessLost
-    //
-    //        var localizedDescription: String {
-    //            switch self {
-    //            case .pullLogsFileCreation(let path):   return "Can't create file at \(path)"
-    //            case .tokenUniquenessLost:              return "There are non unique token in data base"
-    //            case .tagUniquenessLost:                return "There are non unique tag in data base"
-    //            }
-    //        }
-    //    }
-    
     // MARK: - Properties
     
     private let core: PersistentStoreCore
