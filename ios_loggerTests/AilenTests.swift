@@ -107,9 +107,11 @@ class AilenTests: XCTestCase {
 
                 logger.set(enabled: true, for: token)
                 logger.log(as: token, values: [Constants.msg])
-
-                XCTAssertEqual(output.messagesDisplayed, 2)
-                logExpectation.fulfill()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    XCTAssertEqual(output.messagesDisplayed, 2)
+                    logExpectation.fulfill()
+                }
             }
         }
         
