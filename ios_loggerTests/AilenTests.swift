@@ -7,7 +7,7 @@ import XCTest
 @testable import ios_logger
 
 class AilenTests: XCTestCase {
-        
+    
     private struct Constants {
         static let msg = "Mock testing string"
     }
@@ -40,7 +40,7 @@ class AilenTests: XCTestCase {
         XCTAssertEqual(logger.outputs.count, 1)
         
         logger.outputs.removeAll()
-
+        
         XCTAssertEqual(logger.outputs.count, 0)
     }
     
@@ -59,17 +59,17 @@ class AilenTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertEqual(logger.processors.count, 0)
             XCTAssertEqual(output.messagesDisplayed, 1)
-
+            
             let processor = TestingProcessor()
             logger.processors = [processor]
-
+            
             logger.log(as: .UI, values: [Constants.msg])
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 XCTAssertEqual(logger.processors.count, 1)
                 XCTAssertEqual(output.messagesDisplayed, 2)
-
+                
                 logger.processors.removeAll()
-
+                
                 logger.log(as: .UI, values: [Constants.msg])
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     XCTAssertEqual(logger.processors.count, 0)
@@ -78,7 +78,7 @@ class AilenTests: XCTestCase {
                 }
             }
         }
-
+        
         wait(for: [logExpectation], timeout: 10)
     }
     
@@ -101,10 +101,10 @@ class AilenTests: XCTestCase {
             
             logger.set(enabled: false, for: token)
             logger.log(as: token, values: [Constants.msg])
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 XCTAssertEqual(output.messagesDisplayed, 1)
-
+                
                 logger.set(enabled: true, for: token)
                 logger.log(as: token, values: [Constants.msg])
                 
