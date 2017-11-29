@@ -58,8 +58,7 @@ class DefaultOutputTests: XCTestCase {
         
         let output = TestingDefaultOutput()
         output.set(enabled: false, for: .request)
-        
-        messages.forEach { output.display($0) }
+        messages.forEach { output.proccess($0) }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertEqual(output.messagesDisplayed, self.messages.count - 2)
