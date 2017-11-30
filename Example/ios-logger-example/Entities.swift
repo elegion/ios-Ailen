@@ -33,21 +33,10 @@ class ExampleProcessor: Processor {
     }
 }
 
-class ExampleOutput: Output {
-    func set(enabled: Bool, for token: Token) {
-        // nothing
-    }
-    
-    func proccess(_ message: Message) {
+class ExampleOutput: DefaultOutput {
+    override func display(_ message: Message) {
+        super.display(message)
+        
         print(message.payload)
     }
 }
-/*
- class ExampleOutput: DefaultOutput {
- override func display(_ message: Message) {
- super.display(message)
- 
- print(message.payload)
- }
- }
- */
