@@ -1,0 +1,16 @@
+PODS:
+  - ios-logger (1.0.0.alpha.1)
+
+DEPENDENCIES:
+  - ios-logger (from `../`)
+
+EXTERNAL SOURCES:
+  ios-logger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ios-logger: 014bf4c47910d91db23bbcb77b96d6c3f96ff84e
+
+PODFILE CHECKSUM: 20ca3fe8fedaa0ba6594293d53d1153443e848c2
+
+COCOAPODS: 1.1.1
