@@ -13,7 +13,7 @@ class DefaultOutputTests: XCTestCase {
         let tags: [Tag]
         let payload: String
     }
-        
+    
     private struct Constants {
         enum Message: String {
             case msg1 = "UnitTest.DefaultOutputTests.msg1"
@@ -50,7 +50,7 @@ class DefaultOutputTests: XCTestCase {
             logExpectation.fulfill()
         }
         
-        wait(for: [logExpectation], timeout: 10)
+        waitForExpectations(timeout: 10)
     }
     
     func testBlockingMessages() {
@@ -65,6 +65,6 @@ class DefaultOutputTests: XCTestCase {
             logExpectation.fulfill()
         }
         
-        wait(for: [logExpectation], timeout: 10)
+        waitForExpectations(timeout: 10)
     }
 }

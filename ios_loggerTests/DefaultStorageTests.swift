@@ -39,7 +39,8 @@ class DefaultStorageTests: StorageTestCase {
             XCTAssertEqual(storage.filter.data.count, 2)
             savingExpectation.fulfill()
         }
-        wait(for: [savingExpectation], timeout: 3)
+        
+        waitForExpectations(timeout: 3)
     }
     
     func testAutosaveInterval() {
@@ -61,7 +62,7 @@ class DefaultStorageTests: StorageTestCase {
             autosaveExpectation.fulfill()
         }
         
-        wait(for: [autosaveExpectation], timeout: Constants.autosaveInterval * 3)
+        waitForExpectations(timeout: Constants.autosaveInterval * 3)
     }
     
     func testStoreInterval() {
@@ -84,7 +85,7 @@ class DefaultStorageTests: StorageTestCase {
             }
         }
         
-        wait(for: [storeIntervalExpectation], timeout: Constants.storeInterval * 3)
+        waitForExpectations(timeout: Constants.storeInterval * 3)
     }
     
     // MARK: - Private

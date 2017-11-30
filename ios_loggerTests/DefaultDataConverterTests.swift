@@ -62,6 +62,6 @@ class DefaultDataConverterTests: StorageTestCase {
             logExpectation.fulfill()
         }
         
-        wait(for: [logExpectation], timeout: 10)
+        waitForExpectations(timeout: 10)
     }
 }
