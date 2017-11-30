@@ -12,7 +12,7 @@ public protocol Message {
 }
 
 public protocol Output {
-    func display(_ message: Message)
+    func proccess(_ message: Message)
     
     func set(enabled: Bool, for token: Token)
 }

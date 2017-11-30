@@ -5,7 +5,7 @@
 
 import CoreData
 
-public class DefaultStorage: Storaging, CountdownDelegate {
+public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     // MARK: - Definitions
     
@@ -32,20 +32,6 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         static let tagEntityName = "ELNTag"
     }
     
-    //    enum StorageError: Error {
-    //        case pullLogsFileCreation(String)
-    //        case tokenUniquenessLost
-    //        case tagUniquenessLost
-    //
-    //        var localizedDescription: String {
-    //            switch self {
-    //            case .pullLogsFileCreation(let path):   return "Can't create file at \(path)"
-    //            case .tokenUniquenessLost:              return "There are non unique token in data base"
-    //            case .tagUniquenessLost:                return "There are non unique tag in data base"
-    //            }
-    //        }
-    //    }
-    
     // MARK: - Properties
     
     private let core: PersistentStoreCore
@@ -54,7 +40,6 @@ public class DefaultStorage: Storaging, CountdownDelegate {
     private let storeInterval: TimeInterval?
     private var accumulator: [Message]?
     public var errorLogger: ErrorLogger?
-    public var tokenBlocker: TokenLocking?
     
     // MARK: - Life cycle
     
@@ -69,6 +54,8 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         } else {
             self.autosaveTimer = nil
         }
+        
+        super.init()
         
         setupAccumulator()
         setupAutosaveTimer()
@@ -120,6 +107,7 @@ public class DefaultStorage: Storaging, CountdownDelegate {
             
             messageObj.token = tokenObj
             messageObj.addToTag(NSSet(array: tagEntities))
+            messageObj.date = NSDate()
             messageObj.payload = current.payload
         }
         
@@ -130,8 +118,8 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         return NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Result
     }
     
-    private func fetchMessages(predicate: NSPredicate?) -> [ELNMessage] {
-        let context = core.readMoc
+    private func fetchMessages(predicate: NSPredicate?, in context: NSManagedObjectContext? = nil) -> [ELNMessage] {
+        let context = context ?? core.readMoc
         
         let request = NSFetchRequest<ELNMessage>(entityName: Consts.messageEntityName)
         request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
@@ -145,6 +133,16 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         }
     }
     
+    private func removeMessages(predicate: NSPredicate? = nil) {
+        let context = core.writeMoc
+        
+        let messages = fetchMessages(predicate: predicate, in: context)
+        
+        messages.forEach { context.delete($0) }
+        
+        core.saveContext(context)
+    }
+    
     private func fetchAll() -> [ELNMessage] {
         removeOldRecordsIfNeeded()
         return fetchMessages(predicate: nil)
@@ -154,14 +152,9 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         guard let interval = storeInterval else { return }
         
         let date = Date(timeIntervalSinceNow: -interval)
-        let predicate = NSPredicate(format: "date < \(date)")
-        let messages = fetchMessages(predicate: predicate)
+        let predicate = NSPredicate(format: "date < %@", argumentArray: [date])
         
-        let context = core.writeMoc
-        
-        messages.forEach { context.delete($0) }
-        
-        core.saveContext(context)
+        removeMessages(predicate: predicate)
     }
     
     // MARK: - Storaging
@@ -172,22 +165,12 @@ public class DefaultStorage: Storaging, CountdownDelegate {
         return FilterStore(data: mapped)
     }
     
-    public func display(_ message: Message) {
+    public override func display(_ message: Message) {
         if accumulator != nil {
             accumulator!.append(message)
             savePersistentIfNeeded()
         } else {
             save([message])
-        }
-    }
-    
-    public func set(enabled: Bool, for token: Token) {
-        guard let blocker = tokenBlocker else { return }
-        
-        if enabled {
-            blocker.unlock(token: token)
-        } else {
-            blocker.lock(token: token)
         }
     }
     

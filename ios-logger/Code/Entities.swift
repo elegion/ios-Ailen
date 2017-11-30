@@ -11,15 +11,28 @@ public struct Token: RawRepresentable, Hashable {
     
     public enum Qos {
         case global, main, custom(DispatchQueue)
+        
+        var queue: DispatchQueue {
+            switch self {
+            case .main:             return .main
+            case .global:           return .global(qos: .utility)
+            case .custom(let q):    return q
+            }
+        }
     }
     
     // MARK: - Properties
     
     public var qos = Qos.global
     
-    // MARK: - RawRepresentable
+    // MARK: - Life cycle
     
-    public typealias RawValue = String
+    public init?(rawValue: String, qos: Qos) {
+        self.init(rawValue: rawValue)
+        self.qos = qos
+    }
+    
+    // MARK: - RawRepresentable
     
     public init?(rawValue: String) {
         self.rawValue = rawValue
@@ -45,8 +58,6 @@ extension Token {
 public struct Tag: RawRepresentable {
     
     // MARK: - RawRepresentable
-    
-    public typealias RawValue = String
     
     public init?(rawValue: String) {
         self.rawValue = rawValue

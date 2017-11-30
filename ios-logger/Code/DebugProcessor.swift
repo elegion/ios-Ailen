@@ -7,6 +7,10 @@ import Foundation
 
 public class DebugProcessor: Processor {
     
+    // MARK: - Life cycle
+    
+    public init() {}
+    
     // MARK: - Processor
     
     public func process(token: Token, object: Any) -> String? {

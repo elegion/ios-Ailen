@@ -9,6 +9,10 @@ public class DefaultStorageCore: PersistentStoreCore {
     
     // MARK: - Definitions
     
+    private struct Constants {
+        static let dataModelName = "com.e-legion.DefaultStorageDataModel"
+    }
+    
     enum StorageError: Error {
         case applicationDocumentsDirectory
         case dataModelPath
@@ -38,9 +42,9 @@ public class DefaultStorageCore: PersistentStoreCore {
     
     // MARK: - Life cycle
     
-    public init?(dataModelName: String) {
+    public init?(storeURL: URL? = nil) {
         let bundle = Bundle(for: type(of: self))
-        guard let urlString = bundle.path(forResource: dataModelName, ofType: "momd"),
+        guard let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
             let url = URL(string: urlString) else {
                 errorLogger?.display(StorageError.dataModelPath)
                 return nil
@@ -54,18 +58,19 @@ public class DefaultStorageCore: PersistentStoreCore {
         self.mom = mom
         self.psc = NSPersistentStoreCoordinator(managedObjectModel: self.mom)
         
-        guard let storeURL = applicationDocumentsDirectory?.appendingPathComponent(dataModelName + ".sqllite") else {
+        let _storeURL = storeURL ?? applicationDocumentsDirectory?.appendingPathComponent(Constants.dataModelName + ".sqlite")
+        guard let storeLocation = _storeURL else {
             errorLogger?.display(StorageError.applicationDocumentsDirectory)
             return nil
         }
         
         do {
-            try setupPersistentStore(storeURL: storeURL)
+            try setupPersistentStore(storeURL: storeLocation)
         } catch {
             errorLogger?.display(error)
             do {
-                try removePersistentModel(storeURL: storeURL)
-                try setupPersistentStore(storeURL: storeURL)
+                try removePersistentModel(storeURL: storeLocation)
+                try setupPersistentStore(storeURL: storeLocation)
             } catch  {
                 errorLogger?.display(error)
                 return nil
@@ -81,6 +86,16 @@ public class DefaultStorageCore: PersistentStoreCore {
     
     private func removePersistentModel(storeURL: URL) throws {
         try FileManager.default.removeItem(at: storeURL)
+    }
+    
+    private func saveParentContext() {
+        DispatchQueue.main.async {
+            do {
+                try self.parentMoc.save()
+            } catch {
+                self.errorLogger?.display(error)
+            }
+        }
     }
     
     // MARK: - PersistentStoreCore
@@ -105,7 +120,7 @@ public class DefaultStorageCore: PersistentStoreCore {
         guard context.hasChanges else { return }
         do {
             try context.save()
-            try context.parent?.save()
+            saveParentContext()
         } catch {
             errorLogger?.display(error)
         }
