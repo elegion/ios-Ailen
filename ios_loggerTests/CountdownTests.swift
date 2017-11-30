@@ -63,10 +63,12 @@ class CountdownTests: XCTestCase {
         timer.delegate = delegate
         timer.activate()
         
-        let timeout: TimeInterval = Constants.defaultInterval * TimeInterval(Constants.multipleLapsCount)
-        let deadline = DispatchTime.now() + timeout
+        XCTAssertEqual(counter, 0)
         
-        DispatchQueue.main.asyncAfter(deadline: deadline) {
+        let fullCycle = Constants.defaultInterval * TimeInterval(Constants.multipleLapsCount) * 1.1
+        let timeout: TimeInterval = fullCycle * 2
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + fullCycle) {
             XCTAssertEqual(counter, Constants.multipleLapsCount)
             lapsExpectation.fulfill()
             
@@ -74,6 +76,6 @@ class CountdownTests: XCTestCase {
             self.delegate.didFinishLap = nil
         }
         
-        waitForExpectations(timeout: timeout + 2)
+        waitForExpectations(timeout: timeout)
     }
 }
