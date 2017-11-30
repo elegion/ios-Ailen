@@ -5,7 +5,7 @@
 
 import Foundation
 
-public class DefaultOutput: Output {
+open class DefaultOutput: Output {
     
     // MARK: - Properties
     
