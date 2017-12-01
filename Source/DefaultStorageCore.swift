@@ -43,9 +43,13 @@ public class DefaultStorageCore: PersistentStoreCore {
     // MARK: - Life cycle
     
     public init?(storeURL: URL? = nil) {
-        let bundle = Bundle(for: type(of: self))
-        guard let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
-            let url = URL(string: urlString) else {
+        let podBundle = Bundle(for: DefaultStorageCore.self)
+        guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
+            let bundle = Bundle(url: bundleURL),
+            let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
+            let url = URL(string: urlString)
+            
+            else {
                 errorLogger?.display(StorageError.dataModelPath)
                 return nil
         }

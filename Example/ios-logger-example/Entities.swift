@@ -35,7 +35,6 @@ class ExampleProcessor: Processor {
 
 class ExampleOutput: DefaultOutput {
     override func display(_ message: Message) {
-        super.display(message)
         
         print(message.payload)
     }

@@ -27,12 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        guard let core = DefaultStorageCore() else { return false }
+        guard let core = DefaultStorageCore() else { fatalError() }
         
         let settings = DefaultStorage.Settings(autosaveCount: 2)
         let coreDataOutput = DefaultStorage(core: core, settings: settings)
         core.errorLogger = errorLogger
-        let consoleOutput = DefaultOutput()
+        let consoleOutput = ConsoleOutput()
         logger = Ailen()
         logger!.outputs = [coreDataOutput, consoleOutput]
         

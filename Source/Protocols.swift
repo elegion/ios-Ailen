@@ -13,7 +13,6 @@ public protocol Message {
 
 public protocol Output {
     func proccess(_ message: Message)
-    
     func set(enabled: Bool, for token: Token)
 }
 

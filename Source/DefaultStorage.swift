@@ -165,12 +165,14 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         return FilterStore(data: mapped)
     }
     
-    public override func display(_ message: Message) {
-        if accumulator != nil {
-            accumulator!.append(message)
-            savePersistentIfNeeded()
-        } else {
-            save([message])
+    open override func display(_ message: Message) {
+        DispatchQueue.main.async {
+            if self.accumulator != nil {
+                self.accumulator!.append(message)
+                self.savePersistentIfNeeded()
+            } else {
+                self.save([message])
+            }
         }
     }
     
