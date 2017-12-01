@@ -105,7 +105,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             
             let messageObj: ELNMessage = managedObject(for: Consts.messageEntityName, in: context)
             
-            messageObj.token = tokenObj
+            messageObj.token = NSSet(object: tokenObj)
             messageObj.addToTag(NSSet(array: tagEntities))
             messageObj.date = NSDate()
             messageObj.payload = current.payload

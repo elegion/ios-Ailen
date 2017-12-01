@@ -17,7 +17,6 @@ open class DefaultOutput: Output {
     
     // MARK: - Public
     
-    
     open func display(_ message: Message) {
         preconditionFailure("Abstract")
     }

@@ -12,5 +12,10 @@ import CoreData
 
 @objc(ELNTag)
 public class ELNTag: NSManagedObject {
-
+    
+    override public func prepareForDeletion() {
+        guard message.count == 0 else { return }
+        
+        super.prepareForDeletion()
+    }
 }

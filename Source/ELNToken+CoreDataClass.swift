@@ -12,5 +12,10 @@ import CoreData
 
 @objc(ELNToken)
 public class ELNToken: NSManagedObject {
-
+    
+    override public func prepareForDeletion() {
+        guard message.count == 0 else { return }
+        
+        super.prepareForDeletion()
+    }
 }
