@@ -29,9 +29,8 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     // MARK: - Properties
     
     private let core: PersistentStoreCore
-    private let autosaveCount: Int
     private let autosaveTimer: Countdown?
-    private let storeInterval: TimeInterval?
+    private let settings: Settings
     private var accumulator: [Message]?
     public var errorLogger: ErrorLogger?
     
@@ -39,11 +38,9 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     public init(core: PersistentStoreCore, settings: Settings) {
         self.core = core
+        self.settings = settings
         
-        self.autosaveCount = settings.autosaveCount
-        self.storeInterval = settings.storeInterval
-        
-        if let interval = settings.autosaveInterval {
+        if let interval = self.settings.autosaveInterval {
             self.autosaveTimer = Countdown(interval: interval)
         } else {
             self.autosaveTimer = nil
@@ -58,7 +55,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     // MARK: - Private
     
     private func setupAccumulator() {
-        if autosaveCount > 0 {
+        if settings.autosaveCount > 0 {
             accumulator = [Message]()
         }
     }
@@ -69,7 +66,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func savePersistentIfNeeded() {
-        guard let count = accumulator?.count, count >= autosaveCount else { return }
+        guard let count = accumulator?.count, count >= settings.autosaveCount else { return }
         
         saveAccumulatedMessages()
     }
@@ -143,7 +140,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func removeOldRecordsIfNeeded() {
-        guard let interval = storeInterval else { return }
+        guard let interval = settings.storeInterval else { return }
         
         let date = Date(timeIntervalSinceNow: -interval)
         let predicate = NSPredicate(format: "date < %@", argumentArray: [date])
