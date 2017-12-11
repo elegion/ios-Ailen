@@ -124,8 +124,8 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         }
     }
     
-    private func removeMessages(predicate: NSPredicate? = nil) {
-        let context = core.writeMoc
+    private func removeMessages(predicate: NSPredicate? = nil, in context: NSManagedObjectContext? = nil) {
+        let context = context ?? core.writeMoc
         
         let messages = fetchMessages(predicate: predicate, in: context)
         
