@@ -68,5 +68,6 @@ public class Ailen {
 internal struct LogMessage: Message {
     let token: Token
     let tags: [Tag]
+    let date: Date = Date()
     let payload: String
 }

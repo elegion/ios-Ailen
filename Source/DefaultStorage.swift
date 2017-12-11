@@ -98,7 +98,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             
             messageObj.token = NSSet(object: tokenObj)
             messageObj.addToTag(NSSet(array: tagEntities))
-            messageObj.date = NSDate()
+            messageObj.date = current.date as NSDate
             messageObj.payload = current.payload
         }
         

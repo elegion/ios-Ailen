@@ -8,6 +8,7 @@ import CoreData
 public protocol Message {
     var token: Token { get }
     var tags: [Tag] { get }
+    var date: Date { get }
     var payload: String { get }
 }
 
