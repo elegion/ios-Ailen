@@ -11,6 +11,7 @@ public class DefaultStorageCore: PersistentStoreCore {
     
     private struct Constants {
         static let dataModelName = "com.e-legion.DefaultStorageDataModel"
+        static let testLaunchArguments = "com.e-legion.TestLaunchArguments"
     }
     
     enum StorageError: Error {
@@ -43,12 +44,23 @@ public class DefaultStorageCore: PersistentStoreCore {
     // MARK: - Life cycle
     
     public init?(storeURL: URL? = nil) {
-        let podBundle = Bundle(for: DefaultStorageCore.self)
-        guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
-            let bundle = Bundle(url: bundleURL),
-            let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
-            let url = URL(string: urlString)
+        let bundle: Bundle
+        
+        if ProcessInfo.processInfo.arguments.contains(Constants.testLaunchArguments) {
+            bundle = Bundle(for: DefaultStorageCore.self)
             
+        } else {
+            let podBundle = Bundle(for: DefaultStorageCore.self)
+            guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
+                let _bundle = Bundle(url: bundleURL) else {
+                    errorLogger?.display(StorageError.dataModelPath)
+                    return nil
+            }
+            bundle = _bundle
+        }
+        
+        guard let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
+            let url = URL(string: urlString)
             else {
                 errorLogger?.display(StorageError.dataModelPath)
                 return nil

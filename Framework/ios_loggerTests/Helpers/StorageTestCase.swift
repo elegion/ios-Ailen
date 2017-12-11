@@ -23,7 +23,6 @@ class StorageTestCase: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        print(NSTemporaryDirectory())
         cleanStore()
         
         let path = NSTemporaryDirectory().appending(Constants.dataStorageName + ".sqlite")
