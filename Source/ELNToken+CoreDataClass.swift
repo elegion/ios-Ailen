@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 @objc(ELNToken)
-public class ELNToken: NSManagedObject {
+public class ELNToken: NSManagedObject, EntityDescribing {
     
     override public func prepareForDeletion() {
         guard message.count == 0 else { return }

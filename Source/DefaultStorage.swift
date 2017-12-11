@@ -26,12 +26,6 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         }
     }
     
-    private struct Consts {
-        static let messageEntityName = "ELNMessage"
-        static let tokenEntityName = "ELNToken"
-        static let tagEntityName = "ELNTag"
-    }
-    
     // MARK: - Properties
     
     private let core: PersistentStoreCore
@@ -94,16 +88,16 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         messages.forEach {
             (current) in
             
-            let tokenObj: ELNToken = managedObject(for: Consts.tokenEntityName, in: context)
+            let tokenObj: ELNToken = managedObject(for: ELNToken.entityName, in: context)
             tokenObj.value = current.token.rawValue
             
             let tagEntities: [ELNTag] = current.tags.map({
-                let tagObj: ELNTag = managedObject(for: Consts.tagEntityName, in: context)
+                let tagObj: ELNTag = managedObject(for: ELNTag.entityName, in: context)
                 tagObj.value = $0.rawValue
                 return tagObj
             })
             
-            let messageObj: ELNMessage = managedObject(for: Consts.messageEntityName, in: context)
+            let messageObj: ELNMessage = managedObject(for: ELNMessage.entityName, in: context)
             
             messageObj.token = NSSet(object: tokenObj)
             messageObj.addToTag(NSSet(array: tagEntities))
@@ -121,7 +115,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     private func fetchMessages(predicate: NSPredicate?, in context: NSManagedObjectContext? = nil) -> [ELNMessage] {
         let context = context ?? core.readMoc
         
-        let request = NSFetchRequest<ELNMessage>(entityName: Consts.messageEntityName)
+        let request = NSFetchRequest<ELNMessage>(entityName: ELNMessage.entityName)
         request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         request.predicate = predicate
         

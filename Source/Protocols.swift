@@ -43,3 +43,13 @@ public protocol TokenLocking {
     func unlock(token: Token)
     func isLocked(token: Token) -> Bool
 }
+
+protocol EntityDescribing {
+    static var entityName: String { get }
+}
+
+extension EntityDescribing {
+    static var entityName: String {
+        return String(describing: Self.self)
+    }
+}

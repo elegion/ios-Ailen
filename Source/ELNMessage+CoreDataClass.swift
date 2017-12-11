@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(ELNMessage)
-public class ELNMessage: NSManagedObject {
+public class ELNMessage: NSManagedObject, EntityDescribing {
 
 }
