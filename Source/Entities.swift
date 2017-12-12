@@ -10,20 +10,30 @@ public struct Token: RawRepresentable, Hashable {
     // MARK: - Definitions
     
     public enum Qos {
-        case global, main, custom(DispatchQueue)
+        case global(async: Bool)
+        case main(async: Bool)
+        case custom(queue: DispatchQueue, async: Bool)
         
         var queue: DispatchQueue {
             switch self {
-            case .main:             return .main
-            case .global:           return .global(qos: .utility)
-            case .custom(let q):    return q
+            case .main:                 return .main
+            case .global:               return .global(qos: .utility)
+            case .custom(let params):   return params.queue
+            }
+        }
+        
+        var isAsync: Bool {
+            switch self {
+            case .main(async: let _isAsync):                return _isAsync
+            case .global(async: let _isAsync):              return _isAsync
+            case .custom(queue: _, async: let _isAsync):    return _isAsync
             }
         }
     }
     
     // MARK: - Properties
     
-    public var qos = Qos.global
+    public var qos = Qos.global(async: true)
     
     // MARK: - Life cycle
     
