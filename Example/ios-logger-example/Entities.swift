@@ -9,7 +9,7 @@ import ios_logger
 extension Token {
     static let request = Token(rawValue: "Token.Sample.Request")
     static let response = Token(rawValue: "Token.Sample.Response")
-    static let UI = Token(rawValue: "Token.Sample.UI", qos: .main)
+    static let UI = Token(rawValue: "Token.Sample.UI", qos: .main(async: false))
 }
 
 extension Tag {
