@@ -28,10 +28,15 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     // MARK: - Properties
     
+    private let queue = DispatchQueue(label: "com.e-legion.DefaultStorage.queue")
     private let core: PersistentStoreCore
     private let autosaveTimer: Countdown?
     private let settings: Settings
-    private var accumulator: [Message]?
+    private var _accumulator: [Message]?
+    private var accumulator: [Message]? {
+        get { return queue.sync { self._accumulator } }
+        set { queue.async { self._accumulator = newValue } }
+    }
     public var errorLogger: ErrorLogger?
     
     // MARK: - Life cycle
@@ -157,13 +162,11 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     open override func display(_ message: Message) {
-        DispatchQueue.main.async {
-            if self.accumulator != nil {
-                self.accumulator!.append(message)
-                self.savePersistentIfNeeded()
-            } else {
-                self.save([message])
-            }
+        if self.accumulator != nil {
+            self.accumulator!.append(message)
+            self.savePersistentIfNeeded()
+        } else {
+            self.save([message])
         }
     }
     
