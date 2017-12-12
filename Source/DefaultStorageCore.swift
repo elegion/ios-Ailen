@@ -105,7 +105,7 @@ public class DefaultStorageCore: PersistentStoreCore {
     }
     
     private func saveParentContext() {
-        DispatchQueue.main.async {
+        parentMoc.perform {
             do {
                 try self.parentMoc.save()
             } catch {
@@ -119,7 +119,7 @@ public class DefaultStorageCore: PersistentStoreCore {
     public let mom: NSManagedObjectModel
     public let psc: NSPersistentStoreCoordinator
     public lazy var readMoc: NSManagedObjectContext = {
-        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.parent = parentMoc
         return context
     }()
