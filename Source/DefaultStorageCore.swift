@@ -35,10 +35,9 @@ public class DefaultStorageCore: PersistentStoreCore {
     }
     private lazy var parentMoc: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        context.persistentStoreCoordinator = psc
+        context.persistentStoreCoordinator = persistentStoreCoordinator
         return context
     }()
-    
     public var errorLogger: ErrorLogger?
     
     // MARK: - Life cycle
@@ -71,8 +70,8 @@ public class DefaultStorageCore: PersistentStoreCore {
             return nil
         }
         
-        self.mom = mom
-        self.psc = NSPersistentStoreCoordinator(managedObjectModel: self.mom)
+        self.managedObjectModel = mom
+        self.persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         let _storeURL = storeURL ?? applicationDocumentsDirectory?.appendingPathComponent(Constants.dataModelName + ".sqlite")
         guard let storeLocation = _storeURL else {
@@ -97,7 +96,7 @@ public class DefaultStorageCore: PersistentStoreCore {
     // MARK: - Private
     
     private func setupPersistentStore(storeURL: URL) throws {
-        try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
     }
     
     private func removePersistentModel(storeURL: URL) throws {
@@ -116,20 +115,20 @@ public class DefaultStorageCore: PersistentStoreCore {
     
     // MARK: - PersistentStoreCore
     
-    public let mom: NSManagedObjectModel
-    public let psc: NSPersistentStoreCoordinator
-    public lazy var readMoc: NSManagedObjectContext = {
+    public let managedObjectModel: NSManagedObjectModel
+    public let persistentStoreCoordinator: NSPersistentStoreCoordinator
+    public lazy var readManagedObjectContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.parent = parentMoc
         return context
     }()
-    public var writeMoc: NSManagedObjectContext {
+    public var writeManagedObjectContext: NSManagedObjectContext {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.parent = parentMoc
         return context
     }
-    public var currentMoc: NSManagedObjectContext {
-        return Thread.isMainThread ? readMoc : writeMoc
+    public var currentManagedObjectContext: NSManagedObjectContext {
+        return Thread.isMainThread ? readManagedObjectContext : writeManagedObjectContext
     }
     
     public func saveContext(_ context: NSManagedObjectContext) {

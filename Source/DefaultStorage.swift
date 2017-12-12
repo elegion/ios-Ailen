@@ -85,7 +85,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func save(_ messages: [Message]) {
-        let context = core.writeMoc
+        let context = core.writeManagedObjectContext
         
         messages.forEach {
             (current) in
@@ -115,7 +115,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func fetchMessages(predicate: NSPredicate?, in context: NSManagedObjectContext? = nil) -> [ELNMessage] {
-        let context = context ?? core.readMoc
+        let context = context ?? core.readManagedObjectContext
         
         let request = NSFetchRequest<ELNMessage>(entityName: ELNMessage.entityName)
         request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
@@ -130,7 +130,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func removeMessages(predicate: NSPredicate? = nil, in context: NSManagedObjectContext? = nil) {
-        let context = context ?? core.writeMoc
+        let context = context ?? core.writeManagedObjectContext
         
         let messages = fetchMessages(predicate: predicate, in: context)
         

@@ -22,11 +22,11 @@ public protocol Processor {
 }
 
 public protocol PersistentStoreCore {
-    var mom: NSManagedObjectModel { get }
-    var psc: NSPersistentStoreCoordinator { get }
-    var readMoc: NSManagedObjectContext { get }
-    var writeMoc: NSManagedObjectContext { get }
-    var currentMoc: NSManagedObjectContext { get }
+    var managedObjectModel: NSManagedObjectModel { get }
+    var persistentStoreCoordinator: NSPersistentStoreCoordinator { get }
+    var readManagedObjectContext: NSManagedObjectContext { get }
+    var writeManagedObjectContext: NSManagedObjectContext { get }
+    var currentManagedObjectContext: NSManagedObjectContext { get }
     
     func saveContext(_ context: NSManagedObjectContext)
 }
