@@ -1,0 +1,29 @@
+{
+  "name": "Ailen",
+  "version": "1.0.0.alpha.1",
+  "summary": "iOS logger",
+  "description": "Flexible debug logger for your iOS applications",
+  "homepage": "https://gitlab.e-legion.com/e-legion-ios/ios-logger",
+  "license": "MIT",
+  "authors": {
+    "e-Legion Ltd.": "evgeniy.akhmerov@e-legion.com"
+  },
+  "source": {
+    "git": "https://gitlab.e-legion.com/e-legion-ios/ios-logger.git",
+    "branch": "Review_fixes"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source_files": "Source",
+  "resource_bundles": {
+    "Ailen": [
+      "Resources/*.{xcdatamodeld}"
+    ]
+  },
+  "frameworks": [
+    "Foundation",
+    "CoreData"
+  ]
+}

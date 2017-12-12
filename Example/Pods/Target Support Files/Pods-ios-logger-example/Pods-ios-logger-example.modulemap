@@ -1,6 +1,0 @@
-framework module Pods_ios_logger_example {
-  umbrella header "Pods-ios-logger-example-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,125 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37AC6FE7D5763B127E222804AF1F3609 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EDC821E6F6F1B29CA4C7461C450A8 /* ConsoleOutput.swift */; };
-		3C0592883410041CC550E0E3292ED930 /* ELNTag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA72B3F24C2C1015FB6E96A4D64C48 /* ELNTag+CoreDataClass.swift */; };
-		3EDD9A22568E38E4A52DD1DCBA74A674 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
-		5F0E03E291E617E3536CC3A0EAD0ACC9 /* ios-logger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0F062072414B6B8D30FD54D9B835C447 /* ios-logger.bundle */; };
-		672855844CDDF6477B7154115733974A /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A6D518CCA897569173B71C46F9A0DF16 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
-		70C5A1B8B8C8A7EFB51AB0771EF9BE3F /* Pods-ios-logger-example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 689ABCCB148A38695B72CADE719E329C /* Pods-ios-logger-example-dummy.m */; };
-		72562BFB5DCE977EDD9D701AE9928733 /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF470FAF8CE1450D9881A7A94A962820 /* DefaultOutput.swift */; };
-		87318D93F4DD1DE1F03088E98C02DD98 /* ELNTag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D00055C5DCF78C6B84D9A887CED90FA /* ELNTag+CoreDataProperties.swift */; };
-		875401AF65933C8500723581E39D7C73 /* DefaultBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF270B439B522B468E57515881F653 /* DefaultBlocker.swift */; };
-		877321F90BACE913B9D883AA3EE221A2 /* ELNToken+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F985EB27BF56DA7FC09D9BBA0D6ADB00 /* ELNToken+CoreDataProperties.swift */; };
-		895703A0DBE983D4E25C948D781857DC /* ios-logger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D6D6E4FC9783AAAC6368E88C0258A3 /* ios-logger-dummy.m */; };
-		8AE94EAC13E0933EE0E170E5C54AE07E /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA902708B64C80E3A2363B0E51A8B0 /* DefaultStorage.swift */; };
-		8BE47211A19BFFD2DB123FC650385CC8 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6463AF50C471DFBDA5F55BC61168BA /* DebugProcessor.swift */; };
-		8C3037B7A0CAE0D91B50B4B631012491 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA80C456D77311311E213F5E4D9498 /* Countdown.swift */; };
-		902087130F2656AE392F76522ABDB20C /* ELNToken+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16975E30338A8D8C09CFAEBD407430D2 /* ELNToken+CoreDataClass.swift */; };
-		96DE0CF6DFBBE48342DF9316DA95562C /* FilterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA540C0C784D5A5F990069A81D4942 /* FilterStore.swift */; };
-		A19AA5947BC1A86E45190EBD9F87FC12 /* ELNMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97016D2AB12028AA24B24D5488C8D8D9 /* ELNMessage+CoreDataProperties.swift */; };
-		AB9381C94F4021D858AA538D22329F8E /* ELNMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD48F39FEF820BD105B03FB0C60901 /* ELNMessage+CoreDataClass.swift */; };
-		B2B48834B5C606A0DA450A38B27E9E6D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244D5339956254FA7524D9C44936804 /* Protocols.swift */; };
-		BC10F87FAD33860C42147F626EFC4AA2 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BB908DF479567207D88BE69519450 /* Ailen.swift */; };
-		DF3FB38EFCF2E4544982F93339613731 /* ios-logger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA6C31ABC7D4CE4001FD8D65BFBA3B8 /* ios-logger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E178225031B76C6A90E6B16FD28C8E9C /* DefaultStorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE70284265CFFA889D0ED45195FA62 /* DefaultStorageCore.swift */; };
-		E20BDB5D333AF39530C26FD52E5EB3E4 /* Pods-ios-logger-example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA755615682CBC09F211845C3F0BCB3 /* Pods-ios-logger-example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E515A7934BB7DD6D7116256AEE13B162 /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C01F8891A1842461A2C171620FD80FF /* DefaultDataConverter.swift */; };
-		F2A3E80A7D74A46BF25D52BE08A5F068 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619F33224E5B82E4F5D0CB5451527B3 /* Entities.swift */; };
-		F2CD44C88E61C69FC359D87B98D0987C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
-		FF1F602ABB1679BD10CF5C1ED8A3DD4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		063EC11178D1253E21796347C71C4BE4 /* ELNToken+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4A52025E518A93725DC01795DB65B /* ELNToken+CoreDataProperties.swift */; };
+		0E80094DD96ABB7F173BC24EB1AF4BB1 /* ELNMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D507770927B3BD12893CC36055D6642 /* ELNMessage+CoreDataClass.swift */; };
+		331BB6A99F0FCCAFE85BE0EF567A4D5C /* Ailen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B2D84BE9A1A39F2C9A026A49FFA7F /* Ailen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35C0551094159CBC6E69131AE2C24EE4 /* ELNTag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96911D9F93A92595619FDF3A5457AEA1 /* ELNTag+CoreDataClass.swift */; };
+		539D16C11816005BBEBB7ED4BFEA9328 /* FilterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D4AB6A0C2FB0ED4872579A1BBCADD /* FilterStore.swift */; };
+		541D75A32EE149A410BF6AFD554DBADA /* DefaultBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD589D84D14BA2F48BAE5537BEA455A /* DefaultBlocker.swift */; };
+		576909C466D726A92B82446CE13A7690 /* Ailen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C80F32F0C2B95BED9FA6376E84B822 /* Ailen-dummy.m */; };
+		6A55E449DAC8050D3D0CF90A92794058 /* Pods-Ailen-example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E25F472006D88882B1DC4064B683262 /* Pods-Ailen-example-dummy.m */; };
+		6ACD1C39B7D3CC20B8D8FA289F691C77 /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD58BACDFD9A5A0140BC7E46B45D20 /* DefaultOutput.swift */; };
+		79F4E0424C76498DD1EE2BD304A3D7D9 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A52CB6FCB9B3F03657FCD1DB5FC9A4 /* Countdown.swift */; };
+		8608C6A504D634B22316162B930D2D47 /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F90D27C461084D435734629194F85 /* DebugProcessor.swift */; };
+		9004D5947F00336A1D2321A6E320873F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		90BA037A7917C79EA1ED7AEE1FFC4611 /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F68EB7F686F1ACF2E1141C47C2EADB /* DefaultDataConverter.swift */; };
+		95786FFB075242DF30359969050A0431 /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA8187210AB49061015B46E55AD6C9 /* Ailen.swift */; };
+		A7798641D2FBA890AF2F3601BAEE7453 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BE8F2B0AFFF24682B10EFFB52DB7F /* Entities.swift */; };
+		AE200C5D3BC975234713F4134D21F001 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 89A1544CDE4D92FABEA9AB226072B15B /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
+		B01BB9F0CB9FC812E1FF122A738310CB /* Pods-Ailen-example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B912CFF25985A756680A59053F4DCC84 /* Pods-Ailen-example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1F6C0D64621B53B65AE14079E486DB5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A6648F807066CCF5CD67F3D07ECE /* Protocols.swift */; };
+		BCD560F8067FE45061B00B7A31E76C14 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257568D0FBD8804F9CA5709A4E5482BB /* DefaultStorage.swift */; };
+		C5EE2A50D2C862271424A39AACC86B6D /* DefaultStorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2867F75F09BBC35D400DDAEF09DFCAF /* DefaultStorageCore.swift */; };
+		D24505C6EBBDC4B76881B3357CAD7C70 /* ELNToken+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31E41BC7AC8F3B7FF4CF2B6C2BB6DE /* ELNToken+CoreDataClass.swift */; };
+		D31E3B91E649B5B77DA5F07D351B004B /* ELNTag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A615EFC7899C4C03E982F89D5983551 /* ELNTag+CoreDataProperties.swift */; };
+		D58066ED39914F7497D09E70300F5838 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06407D33F28C72B41C3F54FDE912048 /* ConsoleOutput.swift */; };
+		D6C30F09A5174E0C2951FACE4268E89F /* ELNMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E486F12857307A304E3D480EF5039 /* ELNMessage+CoreDataProperties.swift */; };
+		DD42AB7876F9B74B85B3F0C7C2C73026 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
+		ED7F25AD1316D2F4CCAA0C866EEF74DF /* Ailen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29B1C4835AD7C914311660A0AA6BFBCE /* Ailen.bundle */; };
+		EF9F199EA6DE22FF8366B8094BE44F4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B6F958D7B59ACA3B453C9755735E2275 /* PBXContainerItemProxy */ = {
+		1BFEAC93EA685A87295200F6095606A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0F61D9AA6FC7A9FEDC2FA5354C819DE7;
-			remoteInfo = "ios-logger-ios-logger";
+			remoteGlobalIDString = 9978A0A1363C77984478D14DC4849364;
+			remoteInfo = "Ailen-Ailen";
 		};
-		F951088F761811FDD299B6ACC3C4C846 /* PBXContainerItemProxy */ = {
+		C9EF5C27C368A5624DA6E5AB1EEF9D12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 432FEDCBD1305FB0A85EBBEA11E3B0B7;
-			remoteInfo = "ios-logger";
+			remoteGlobalIDString = 3ECC1C36624D073F74486E930B16D4A3;
+			remoteInfo = Ailen;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04261AA19552483174C4855C1D7D1375 /* ios-logger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ios-logger-prefix.pch"; sourceTree = "<group>"; };
-		06BED66C94E16992E3B09388756F036B /* ios-logger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "ios-logger.modulemap"; sourceTree = "<group>"; };
-		08BE70284265CFFA889D0ED45195FA62 /* DefaultStorageCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultStorageCore.swift; sourceTree = "<group>"; };
-		0EEE2EF569D679098C600AAAA798AC21 /* ResourceBundle-ios-logger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ios-logger-Info.plist"; sourceTree = "<group>"; };
-		0F062072414B6B8D30FD54D9B835C447 /* ios-logger.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "ios-logger.bundle"; path = "ios-logger.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16975E30338A8D8C09CFAEBD407430D2 /* ELNToken+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1CBD48F39FEF820BD105B03FB0C60901 /* ELNMessage+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
-		229EDC821E6F6F1B29CA4C7461C450A8 /* ConsoleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
-		2D00055C5DCF78C6B84D9A887CED90FA /* ELNTag+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3D0BB908DF479567207D88BE69519450 /* Ailen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
-		3E8D67C0DF2C3E3C0A738C1E8EF1400E /* Pods-ios-logger-example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ios-logger-example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ios-logger.xcconfig"; sourceTree = "<group>"; };
-		5A6463AF50C471DFBDA5F55BC61168BA /* DebugProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
-		5DA755615682CBC09F211845C3F0BCB3 /* Pods-ios-logger-example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ios-logger-example-umbrella.h"; sourceTree = "<group>"; };
-		689ABCCB148A38695B72CADE719E329C /* Pods-ios-logger-example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ios-logger-example-dummy.m"; sourceTree = "<group>"; };
-		6A876F7A360D591B2C011CDD0E367E90 /* Pods_ios_logger_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ios_logger_example.framework; path = "Pods-ios-logger-example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C85AC1B1D6B5BF9F2B2A75CFDE7C96C /* Pods-ios-logger-example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ios-logger-example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7429366DC7BCAF961DDC9AEE7FBB4F3E /* ios_logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ios_logger.framework; path = "ios-logger.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74755800C9FAA7A30DB76F70CA61FCAF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75731BC0CFA24DEAD9596E2692AA1700 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7619F33224E5B82E4F5D0CB5451527B3 /* Entities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
-		79D9D0D89331CDA71237463F0C856EC2 /* Pods-ios-logger-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ios-logger-example.debug.xcconfig"; sourceTree = "<group>"; };
-		80FA72B3F24C2C1015FB6E96A4D64C48 /* ELNTag+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8244D5339956254FA7524D9C44936804 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		8C01F8891A1842461A2C171620FD80FF /* DefaultDataConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
-		92624F55580F410F0EE4C615D1598BCC /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
+		02C80F32F0C2B95BED9FA6376E84B822 /* Ailen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ailen-dummy.m"; sourceTree = "<group>"; };
+		0A615EFC7899C4C03E982F89D5983551 /* ELNTag+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0E25F472006D88882B1DC4064B683262 /* Pods-Ailen-example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ailen-example-dummy.m"; sourceTree = "<group>"; };
+		0F8BE8F2B0AFFF24682B10EFFB52DB7F /* Entities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		19F68EB7F686F1ACF2E1141C47C2EADB /* DefaultDataConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
+		22E4A52025E518A93725DC01795DB65B /* ELNToken+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		257568D0FBD8804F9CA5709A4E5482BB /* DefaultStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
+		270B2D84BE9A1A39F2C9A026A49FFA7F /* Ailen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ailen-umbrella.h"; sourceTree = "<group>"; };
+		29B1C4835AD7C914311660A0AA6BFBCE /* Ailen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Ailen.bundle; path = Ailen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AD589D84D14BA2F48BAE5537BEA455A /* DefaultBlocker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultBlocker.swift; sourceTree = "<group>"; };
+		316228CF39BAAD1AA28009344050CC84 /* Pods-Ailen-example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ailen-example-resources.sh"; sourceTree = "<group>"; };
+		3E31E41BC7AC8F3B7FF4CF2B6C2BB6DE /* ELNToken+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataClass.swift"; sourceTree = "<group>"; };
+		40A52CB6FCB9B3F03657FCD1DB5FC9A4 /* Countdown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		4912CE108C20AD97650FCC60B3073E36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A3DC2C13069C2FAD7A1328058DAFDC6 /* Ailen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ailen.framework; path = Ailen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D004C9157F2EAE2AD3DA7A850267240 /* Pods-Ailen-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ailen-example.release.xcconfig"; sourceTree = "<group>"; };
+		520D4AB6A0C2FB0ED4872579A1BBCADD /* FilterStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilterStore.swift; sourceTree = "<group>"; };
+		5CC2E7DECDF72CD0B7EF56E3642D90A7 /* Ailen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Ailen.modulemap; sourceTree = "<group>"; };
+		675FE78FC0CC730594A3950E9080F16C /* Pods-Ailen-example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ailen-example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6C3F90D27C461084D435734629194F85 /* DebugProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
+		6C805944DB0D13D567B861C0E6B60E5F /* Pods_Ailen_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Ailen_example.framework; path = "Pods-Ailen-example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DDE1EA0330E4302FBE23D131B51BD0 /* Pods-Ailen-example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ailen-example-frameworks.sh"; sourceTree = "<group>"; };
+		831B46ECEAD17CB1AE24AB0889979759 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C57A4844364888E93F2FFEDBBF7CA70 /* Ailen-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ailen-prefix.pch"; sourceTree = "<group>"; };
+		8D507770927B3BD12893CC36055D6642 /* ELNMessage+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95D6D6E4FC9783AAAC6368E88C0258A3 /* ios-logger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ios-logger-dummy.m"; sourceTree = "<group>"; };
-		97016D2AB12028AA24B24D5488C8D8D9 /* ELNMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AF470FAF8CE1450D9881A7A94A962820 /* DefaultOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
-		BC8EF32EE44CB37DC74624E686E026E3 /* Pods-ios-logger-example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ios-logger-example-frameworks.sh"; sourceTree = "<group>"; };
-		BFA6C31ABC7D4CE4001FD8D65BFBA3B8 /* ios-logger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ios-logger-umbrella.h"; sourceTree = "<group>"; };
-		C93DDA9D38731CAA997BA94E8B99CAB3 /* Pods-ios-logger-example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ios-logger-example-resources.sh"; sourceTree = "<group>"; };
-		CCBA902708B64C80E3A2363B0E51A8B0 /* DefaultStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
-		D0FA80C456D77311311E213F5E4D9498 /* Countdown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
-		D2FA540C0C784D5A5F990069A81D4942 /* FilterStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FilterStore.swift; sourceTree = "<group>"; };
-		DAAF270B439B522B468E57515881F653 /* DefaultBlocker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultBlocker.swift; sourceTree = "<group>"; };
-		E0704ECFB6A06BA4D186CC3F9251D66A /* Pods-ios-logger-example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ios-logger-example.modulemap"; sourceTree = "<group>"; };
+		96911D9F93A92595619FDF3A5457AEA1 /* ELNTag+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9DDD58BACDFD9A5A0140BC7E46B45D20 /* DefaultOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
+		A06407D33F28C72B41C3F54FDE912048 /* ConsoleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
+		A10E486F12857307A304E3D480EF5039 /* ELNMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2867F75F09BBC35D400DDAEF09DFCAF /* DefaultStorageCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultStorageCore.swift; sourceTree = "<group>"; };
+		B912CFF25985A756680A59053F4DCC84 /* Pods-Ailen-example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ailen-example-umbrella.h"; sourceTree = "<group>"; };
+		BBB6A6648F807066CCF5CD67F3D07ECE /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		C1862356A6F24F767110EA4879311A23 /* Pods-Ailen-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ailen-example.debug.xcconfig"; sourceTree = "<group>"; };
+		C4EA8187210AB49061015B46E55AD6C9 /* Ailen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
+		C738E02FD1009F339800989BCEB063A9 /* ResourceBundle-Ailen-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Ailen-Info.plist"; sourceTree = "<group>"; };
+		CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ailen.xcconfig; sourceTree = "<group>"; };
+		D6F0330B7508B761BD8ECA01E0C5FA59 /* Pods-Ailen-example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Ailen-example.modulemap"; sourceTree = "<group>"; };
+		DB8E40A6DD8113FB66EECB641F3843E2 /* Pods-Ailen-example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ailen-example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E0054226BACA1784A3021D8A134A644E /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
-		F985EB27BF56DA7FC09D9BBA0D6ADB00 /* ELNToken+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FB6D50EFB5DA7E73F16D3A83F3B303B5 /* Pods-ios-logger-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ios-logger-example.release.xcconfig"; sourceTree = "<group>"; };
 		FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1600B4976EE7C58D2911719367D04FA3 /* Frameworks */ = {
+		21891265B10A7BA04FA22A135B83B3D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1F602ABB1679BD10CF5C1ED8A3DD4F /* Foundation.framework in Frameworks */,
+				DD42AB7876F9B74B85B3F0C7C2C73026 /* CoreData.framework in Frameworks */,
+				EF9F199EA6DE22FF8366B8094BE44F4C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B106EF3FC9BDD15AB577F364CDBF291 /* Frameworks */ = {
+		624F81B602B39A1EF4BF21B2DA5AE9C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFE650023A16A0B992BA007F30E11DAA /* Frameworks */ = {
+		C7C29FFEB0362BF35D07B1F4F77E3339 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDD9A22568E38E4A52DD1DCBA74A674 /* CoreData.framework in Frameworks */,
-				F2CD44C88E61C69FC359D87B98D0987C /* Foundation.framework in Frameworks */,
+				9004D5947F00336A1D2321A6E320873F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187AB9A593D025753261B470D10DD5F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89A1544CDE4D92FABEA9AB226072B15B /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		18C31505F53BCD0CB0F85AB659963013 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,12 +144,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3D1FF3BDD73E4E061F51B08938F00476 /* Development Pods */ = {
+		426791E25D01AD66772321EEC0F00ADB /* Ailen */ = {
 			isa = PBXGroup;
 			children = (
-				DA3145141A157912EBD9FB166CE99F09 /* ios-logger */,
+				67F638AF6BA8FDDC5F167AE299EC394C /* Resources */,
+				D2D2F610D45DA8CC7983555A2FDBF169 /* Source */,
+				F77825CECACCF34AF1D011527C370356 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = Ailen;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -151,197 +163,185 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6702A0DEF67B1B307610739FAC39F31E /* Resources */ = {
+		546CD93910E8C3ED5648A854145C5163 /* Pods-Ailen-example */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BC260C19EE02B27C75321AD80904C /* Resources */,
+				831B46ECEAD17CB1AE24AB0889979759 /* Info.plist */,
+				D6F0330B7508B761BD8ECA01E0C5FA59 /* Pods-Ailen-example.modulemap */,
+				675FE78FC0CC730594A3950E9080F16C /* Pods-Ailen-example-acknowledgements.markdown */,
+				DB8E40A6DD8113FB66EECB641F3843E2 /* Pods-Ailen-example-acknowledgements.plist */,
+				0E25F472006D88882B1DC4064B683262 /* Pods-Ailen-example-dummy.m */,
+				75DDE1EA0330E4302FBE23D131B51BD0 /* Pods-Ailen-example-frameworks.sh */,
+				316228CF39BAAD1AA28009344050CC84 /* Pods-Ailen-example-resources.sh */,
+				B912CFF25985A756680A59053F4DCC84 /* Pods-Ailen-example-umbrella.h */,
+				C1862356A6F24F767110EA4879311A23 /* Pods-Ailen-example.debug.xcconfig */,
+				4D004C9157F2EAE2AD3DA7A850267240 /* Pods-Ailen-example.release.xcconfig */,
 			);
-			name = Resources;
+			name = "Pods-Ailen-example";
+			path = "Target Support Files/Pods-Ailen-example";
 			sourceTree = "<group>";
 		};
-		752DF3E6ED7AFEC102D6B6A6C9A87AAD /* Support Files */ = {
+		5A5E5EFC8B576AF96EF0F227CE8B6D5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74755800C9FAA7A30DB76F70CA61FCAF /* Info.plist */,
-				06BED66C94E16992E3B09388756F036B /* ios-logger.modulemap */,
-				4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */,
-				95D6D6E4FC9783AAAC6368E88C0258A3 /* ios-logger-dummy.m */,
-				04261AA19552483174C4855C1D7D1375 /* ios-logger-prefix.pch */,
-				BFA6C31ABC7D4CE4001FD8D65BFBA3B8 /* ios-logger-umbrella.h */,
-				0EEE2EF569D679098C600AAAA798AC21 /* ResourceBundle-ios-logger-Info.plist */,
+				29B1C4835AD7C914311660A0AA6BFBCE /* Ailen.bundle */,
+				4A3DC2C13069C2FAD7A1328058DAFDC6 /* Ailen.framework */,
+				6C805944DB0D13D567B861C0E6B60E5F /* Pods_Ailen_example.framework */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ios-logger";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67F638AF6BA8FDDC5F167AE299EC394C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				187AB9A593D025753261B470D10DD5F1 /* Resources */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3D1FF3BDD73E4E061F51B08938F00476 /* Development Pods */,
+				CB3A00A4CB68FFC1906D61C593ACFAC0 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				CC34EB61759973E500EB00CCFFBBFD4F /* Products */,
-				9DFF8904A642176CB739351754BACEFC /* Targets Support Files */,
+				5A5E5EFC8B576AF96EF0F227CE8B6D5A /* Products */,
+				7EEC2EEF9BC4EB9223BD4D79E6676714 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9DFF8904A642176CB739351754BACEFC /* Targets Support Files */ = {
+		7EEC2EEF9BC4EB9223BD4D79E6676714 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9FBB0C271866AC27D486FCE9A4A5F13E /* Pods-ios-logger-example */,
+				546CD93910E8C3ED5648A854145C5163 /* Pods-Ailen-example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9FBB0C271866AC27D486FCE9A4A5F13E /* Pods-ios-logger-example */ = {
+		CB3A00A4CB68FFC1906D61C593ACFAC0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75731BC0CFA24DEAD9596E2692AA1700 /* Info.plist */,
-				E0704ECFB6A06BA4D186CC3F9251D66A /* Pods-ios-logger-example.modulemap */,
-				6C85AC1B1D6B5BF9F2B2A75CFDE7C96C /* Pods-ios-logger-example-acknowledgements.markdown */,
-				3E8D67C0DF2C3E3C0A738C1E8EF1400E /* Pods-ios-logger-example-acknowledgements.plist */,
-				689ABCCB148A38695B72CADE719E329C /* Pods-ios-logger-example-dummy.m */,
-				BC8EF32EE44CB37DC74624E686E026E3 /* Pods-ios-logger-example-frameworks.sh */,
-				C93DDA9D38731CAA997BA94E8B99CAB3 /* Pods-ios-logger-example-resources.sh */,
-				5DA755615682CBC09F211845C3F0BCB3 /* Pods-ios-logger-example-umbrella.h */,
-				79D9D0D89331CDA71237463F0C856EC2 /* Pods-ios-logger-example.debug.xcconfig */,
-				FB6D50EFB5DA7E73F16D3A83F3B303B5 /* Pods-ios-logger-example.release.xcconfig */,
+				426791E25D01AD66772321EEC0F00ADB /* Ailen */,
 			);
-			name = "Pods-ios-logger-example";
-			path = "Target Support Files/Pods-ios-logger-example";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		CC34EB61759973E500EB00CCFFBBFD4F /* Products */ = {
+		D2D2F610D45DA8CC7983555A2FDBF169 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0F062072414B6B8D30FD54D9B835C447 /* ios-logger.bundle */,
-				7429366DC7BCAF961DDC9AEE7FBB4F3E /* ios_logger.framework */,
-				6A876F7A360D591B2C011CDD0E367E90 /* Pods_ios_logger_example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CF1BC260C19EE02B27C75321AD80904C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A6D518CCA897569173B71C46F9A0DF16 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */,
-			);
-			name = Resources;
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		DA3145141A157912EBD9FB166CE99F09 /* ios-logger */ = {
-			isa = PBXGroup;
-			children = (
-				6702A0DEF67B1B307610739FAC39F31E /* Resources */,
-				EB58CE31F4434687B89E9A2756A2E4F5 /* Source */,
-				752DF3E6ED7AFEC102D6B6A6C9A87AAD /* Support Files */,
-			);
-			name = "ios-logger";
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		EB58CE31F4434687B89E9A2756A2E4F5 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				3D0BB908DF479567207D88BE69519450 /* Ailen.swift */,
-				229EDC821E6F6F1B29CA4C7461C450A8 /* ConsoleOutput.swift */,
-				D0FA80C456D77311311E213F5E4D9498 /* Countdown.swift */,
-				5A6463AF50C471DFBDA5F55BC61168BA /* DebugProcessor.swift */,
-				DAAF270B439B522B468E57515881F653 /* DefaultBlocker.swift */,
-				8C01F8891A1842461A2C171620FD80FF /* DefaultDataConverter.swift */,
-				AF470FAF8CE1450D9881A7A94A962820 /* DefaultOutput.swift */,
-				CCBA902708B64C80E3A2363B0E51A8B0 /* DefaultStorage.swift */,
-				08BE70284265CFFA889D0ED45195FA62 /* DefaultStorageCore.swift */,
-				1CBD48F39FEF820BD105B03FB0C60901 /* ELNMessage+CoreDataClass.swift */,
-				97016D2AB12028AA24B24D5488C8D8D9 /* ELNMessage+CoreDataProperties.swift */,
-				80FA72B3F24C2C1015FB6E96A4D64C48 /* ELNTag+CoreDataClass.swift */,
-				2D00055C5DCF78C6B84D9A887CED90FA /* ELNTag+CoreDataProperties.swift */,
-				16975E30338A8D8C09CFAEBD407430D2 /* ELNToken+CoreDataClass.swift */,
-				F985EB27BF56DA7FC09D9BBA0D6ADB00 /* ELNToken+CoreDataProperties.swift */,
-				7619F33224E5B82E4F5D0CB5451527B3 /* Entities.swift */,
-				D2FA540C0C784D5A5F990069A81D4942 /* FilterStore.swift */,
-				8244D5339956254FA7524D9C44936804 /* Protocols.swift */,
+				C4EA8187210AB49061015B46E55AD6C9 /* Ailen.swift */,
+				A06407D33F28C72B41C3F54FDE912048 /* ConsoleOutput.swift */,
+				40A52CB6FCB9B3F03657FCD1DB5FC9A4 /* Countdown.swift */,
+				6C3F90D27C461084D435734629194F85 /* DebugProcessor.swift */,
+				2AD589D84D14BA2F48BAE5537BEA455A /* DefaultBlocker.swift */,
+				19F68EB7F686F1ACF2E1141C47C2EADB /* DefaultDataConverter.swift */,
+				9DDD58BACDFD9A5A0140BC7E46B45D20 /* DefaultOutput.swift */,
+				257568D0FBD8804F9CA5709A4E5482BB /* DefaultStorage.swift */,
+				A2867F75F09BBC35D400DDAEF09DFCAF /* DefaultStorageCore.swift */,
+				8D507770927B3BD12893CC36055D6642 /* ELNMessage+CoreDataClass.swift */,
+				A10E486F12857307A304E3D480EF5039 /* ELNMessage+CoreDataProperties.swift */,
+				96911D9F93A92595619FDF3A5457AEA1 /* ELNTag+CoreDataClass.swift */,
+				0A615EFC7899C4C03E982F89D5983551 /* ELNTag+CoreDataProperties.swift */,
+				3E31E41BC7AC8F3B7FF4CF2B6C2BB6DE /* ELNToken+CoreDataClass.swift */,
+				22E4A52025E518A93725DC01795DB65B /* ELNToken+CoreDataProperties.swift */,
+				0F8BE8F2B0AFFF24682B10EFFB52DB7F /* Entities.swift */,
+				520D4AB6A0C2FB0ED4872579A1BBCADD /* FilterStore.swift */,
+				BBB6A6648F807066CCF5CD67F3D07ECE /* Protocols.swift */,
 			);
 			name = Source;
 			path = Source;
 			sourceTree = "<group>";
 		};
+		F77825CECACCF34AF1D011527C370356 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CC2E7DECDF72CD0B7EF56E3642D90A7 /* Ailen.modulemap */,
+				CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */,
+				02C80F32F0C2B95BED9FA6376E84B822 /* Ailen-dummy.m */,
+				8C57A4844364888E93F2FFEDBBF7CA70 /* Ailen-prefix.pch */,
+				270B2D84BE9A1A39F2C9A026A49FFA7F /* Ailen-umbrella.h */,
+				4912CE108C20AD97650FCC60B3073E36 /* Info.plist */,
+				C738E02FD1009F339800989BCEB063A9 /* ResourceBundle-Ailen-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Ailen";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9560298E4A01A3081B3010457234D485 /* Headers */ = {
+		28A4105D7209195D2101A6FF62076984 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20BDB5D333AF39530C26FD52E5EB3E4 /* Pods-ios-logger-example-umbrella.h in Headers */,
+				B01BB9F0CB9FC812E1FF122A738310CB /* Pods-Ailen-example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE7D7667CD4D447F41843255C0D2A5EE /* Headers */ = {
+		444039A60DE6D5F0B934965994304159 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3FB38EFCF2E4544982F93339613731 /* ios-logger-umbrella.h in Headers */,
+				331BB6A99F0FCCAFE85BE0EF567A4D5C /* Ailen-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0F61D9AA6FC7A9FEDC2FA5354C819DE7 /* ios-logger-ios-logger */ = {
+		3ECC1C36624D073F74486E930B16D4A3 /* Ailen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0AA654600FC545DCD4B6851769536AC /* Build configuration list for PBXNativeTarget "ios-logger-ios-logger" */;
+			buildConfigurationList = 0B53480FAB1D732D39B926AFCE5B2569 /* Build configuration list for PBXNativeTarget "Ailen" */;
 			buildPhases = (
-				938F18C69AD3D26A153157A09DD11D4A /* Sources */,
-				7B106EF3FC9BDD15AB577F364CDBF291 /* Frameworks */,
-				F80B659007F698EB214F53F70C2FB57F /* Resources */,
+				6C8ED1BC518ABD18EEBF1A1B6F452D4E /* Sources */,
+				21891265B10A7BA04FA22A135B83B3D8 /* Frameworks */,
+				E2552ADE57B67C4F9D096185DD79DA95 /* Resources */,
+				444039A60DE6D5F0B934965994304159 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A637A565CCF97233418C93C0BB1C0814 /* PBXTargetDependency */,
+			);
+			name = Ailen;
+			productName = Ailen;
+			productReference = 4A3DC2C13069C2FAD7A1328058DAFDC6 /* Ailen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4AB380B44A3776A3A8AC299E87275DC1 /* Pods-Ailen-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22850BA1810E3508FE36D41C244D3BF5 /* Build configuration list for PBXNativeTarget "Pods-Ailen-example" */;
+			buildPhases = (
+				61653E66CCA646F10CABE810F3C53B61 /* Sources */,
+				C7C29FFEB0362BF35D07B1F4F77E3339 /* Frameworks */,
+				28A4105D7209195D2101A6FF62076984 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				351E93B722A694E0E967B9875794DCFF /* PBXTargetDependency */,
+			);
+			name = "Pods-Ailen-example";
+			productName = "Pods-Ailen-example";
+			productReference = 6C805944DB0D13D567B861C0E6B60E5F /* Pods_Ailen_example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9978A0A1363C77984478D14DC4849364 /* Ailen-Ailen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E226CF13F0BB074DEE6AAB9A4743A37 /* Build configuration list for PBXNativeTarget "Ailen-Ailen" */;
+			buildPhases = (
+				B92311C757F82F1C06F36C1208578476 /* Sources */,
+				624F81B602B39A1EF4BF21B2DA5AE9C6 /* Frameworks */,
+				766CD4ACDE6C88AA958C31EFE0919AB5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ios-logger-ios-logger";
-			productName = "ios-logger-ios-logger";
-			productReference = 0F062072414B6B8D30FD54D9B835C447 /* ios-logger.bundle */;
+			name = "Ailen-Ailen";
+			productName = "Ailen-Ailen";
+			productReference = 29B1C4835AD7C914311660A0AA6BFBCE /* Ailen.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		432FEDCBD1305FB0A85EBBEA11E3B0B7 /* ios-logger */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C1F46B16B90B835F9CC9EDA623A9164 /* Build configuration list for PBXNativeTarget "ios-logger" */;
-			buildPhases = (
-				784900B1EF349805851505F9685B8DBC /* Sources */,
-				FFE650023A16A0B992BA007F30E11DAA /* Frameworks */,
-				641ABA294F2DDE6244CBAD6C56D4CA6E /* Resources */,
-				EE7D7667CD4D447F41843255C0D2A5EE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				25FA51DEE226B940B815759F22864136 /* PBXTargetDependency */,
-			);
-			name = "ios-logger";
-			productName = "ios-logger";
-			productReference = 7429366DC7BCAF961DDC9AEE7FBB4F3E /* ios_logger.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FCA3CCBAE5BD485F821149EE65800C35 /* Pods-ios-logger-example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E6FB77322D0B4DB585F8A9F951D82D2 /* Build configuration list for PBXNativeTarget "Pods-ios-logger-example" */;
-			buildPhases = (
-				F13923F9546F8FEAABE057BA3BDE912E /* Sources */,
-				1600B4976EE7C58D2911719367D04FA3 /* Frameworks */,
-				9560298E4A01A3081B3010457234D485 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				01532E5F687C37E16EF258AD1EF9EE3A /* PBXTargetDependency */,
-			);
-			name = "Pods-ios-logger-example";
-			productName = "Pods-ios-logger-example";
-			productReference = 6A876F7A360D591B2C011CDD0E367E90 /* Pods_ios_logger_example.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -360,132 +360,99 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CC34EB61759973E500EB00CCFFBBFD4F /* Products */;
+			productRefGroup = 5A5E5EFC8B576AF96EF0F227CE8B6D5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				432FEDCBD1305FB0A85EBBEA11E3B0B7 /* ios-logger */,
-				0F61D9AA6FC7A9FEDC2FA5354C819DE7 /* ios-logger-ios-logger */,
-				FCA3CCBAE5BD485F821149EE65800C35 /* Pods-ios-logger-example */,
+				3ECC1C36624D073F74486E930B16D4A3 /* Ailen */,
+				9978A0A1363C77984478D14DC4849364 /* Ailen-Ailen */,
+				4AB380B44A3776A3A8AC299E87275DC1 /* Pods-Ailen-example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		641ABA294F2DDE6244CBAD6C56D4CA6E /* Resources */ = {
+		766CD4ACDE6C88AA958C31EFE0919AB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0E03E291E617E3536CC3A0EAD0ACC9 /* ios-logger.bundle in Resources */,
+				AE200C5D3BC975234713F4134D21F001 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F80B659007F698EB214F53F70C2FB57F /* Resources */ = {
+		E2552ADE57B67C4F9D096185DD79DA95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				672855844CDDF6477B7154115733974A /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Resources */,
+				ED7F25AD1316D2F4CCAA0C866EEF74DF /* Ailen.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		784900B1EF349805851505F9685B8DBC /* Sources */ = {
+		61653E66CCA646F10CABE810F3C53B61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC10F87FAD33860C42147F626EFC4AA2 /* Ailen.swift in Sources */,
-				37AC6FE7D5763B127E222804AF1F3609 /* ConsoleOutput.swift in Sources */,
-				8C3037B7A0CAE0D91B50B4B631012491 /* Countdown.swift in Sources */,
-				8BE47211A19BFFD2DB123FC650385CC8 /* DebugProcessor.swift in Sources */,
-				875401AF65933C8500723581E39D7C73 /* DefaultBlocker.swift in Sources */,
-				E515A7934BB7DD6D7116256AEE13B162 /* DefaultDataConverter.swift in Sources */,
-				72562BFB5DCE977EDD9D701AE9928733 /* DefaultOutput.swift in Sources */,
-				8AE94EAC13E0933EE0E170E5C54AE07E /* DefaultStorage.swift in Sources */,
-				E178225031B76C6A90E6B16FD28C8E9C /* DefaultStorageCore.swift in Sources */,
-				AB9381C94F4021D858AA538D22329F8E /* ELNMessage+CoreDataClass.swift in Sources */,
-				A19AA5947BC1A86E45190EBD9F87FC12 /* ELNMessage+CoreDataProperties.swift in Sources */,
-				3C0592883410041CC550E0E3292ED930 /* ELNTag+CoreDataClass.swift in Sources */,
-				87318D93F4DD1DE1F03088E98C02DD98 /* ELNTag+CoreDataProperties.swift in Sources */,
-				902087130F2656AE392F76522ABDB20C /* ELNToken+CoreDataClass.swift in Sources */,
-				877321F90BACE913B9D883AA3EE221A2 /* ELNToken+CoreDataProperties.swift in Sources */,
-				F2A3E80A7D74A46BF25D52BE08A5F068 /* Entities.swift in Sources */,
-				96DE0CF6DFBBE48342DF9316DA95562C /* FilterStore.swift in Sources */,
-				895703A0DBE983D4E25C948D781857DC /* ios-logger-dummy.m in Sources */,
-				B2B48834B5C606A0DA450A38B27E9E6D /* Protocols.swift in Sources */,
+				6A55E449DAC8050D3D0CF90A92794058 /* Pods-Ailen-example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		938F18C69AD3D26A153157A09DD11D4A /* Sources */ = {
+		6C8ED1BC518ABD18EEBF1A1B6F452D4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576909C466D726A92B82446CE13A7690 /* Ailen-dummy.m in Sources */,
+				95786FFB075242DF30359969050A0431 /* Ailen.swift in Sources */,
+				D58066ED39914F7497D09E70300F5838 /* ConsoleOutput.swift in Sources */,
+				79F4E0424C76498DD1EE2BD304A3D7D9 /* Countdown.swift in Sources */,
+				8608C6A504D634B22316162B930D2D47 /* DebugProcessor.swift in Sources */,
+				541D75A32EE149A410BF6AFD554DBADA /* DefaultBlocker.swift in Sources */,
+				90BA037A7917C79EA1ED7AEE1FFC4611 /* DefaultDataConverter.swift in Sources */,
+				6ACD1C39B7D3CC20B8D8FA289F691C77 /* DefaultOutput.swift in Sources */,
+				BCD560F8067FE45061B00B7A31E76C14 /* DefaultStorage.swift in Sources */,
+				C5EE2A50D2C862271424A39AACC86B6D /* DefaultStorageCore.swift in Sources */,
+				0E80094DD96ABB7F173BC24EB1AF4BB1 /* ELNMessage+CoreDataClass.swift in Sources */,
+				D6C30F09A5174E0C2951FACE4268E89F /* ELNMessage+CoreDataProperties.swift in Sources */,
+				35C0551094159CBC6E69131AE2C24EE4 /* ELNTag+CoreDataClass.swift in Sources */,
+				D31E3B91E649B5B77DA5F07D351B004B /* ELNTag+CoreDataProperties.swift in Sources */,
+				D24505C6EBBDC4B76881B3357CAD7C70 /* ELNToken+CoreDataClass.swift in Sources */,
+				063EC11178D1253E21796347C71C4BE4 /* ELNToken+CoreDataProperties.swift in Sources */,
+				A7798641D2FBA890AF2F3601BAEE7453 /* Entities.swift in Sources */,
+				539D16C11816005BBEBB7ED4BFEA9328 /* FilterStore.swift in Sources */,
+				B1F6C0D64621B53B65AE14079E486DB5 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F13923F9546F8FEAABE057BA3BDE912E /* Sources */ = {
+		B92311C757F82F1C06F36C1208578476 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C5A1B8B8C8A7EFB51AB0771EF9BE3F /* Pods-ios-logger-example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01532E5F687C37E16EF258AD1EF9EE3A /* PBXTargetDependency */ = {
+		351E93B722A694E0E967B9875794DCFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ios-logger";
-			target = 432FEDCBD1305FB0A85EBBEA11E3B0B7 /* ios-logger */;
-			targetProxy = F951088F761811FDD299B6ACC3C4C846 /* PBXContainerItemProxy */;
+			name = Ailen;
+			target = 3ECC1C36624D073F74486E930B16D4A3 /* Ailen */;
+			targetProxy = C9EF5C27C368A5624DA6E5AB1EEF9D12 /* PBXContainerItemProxy */;
 		};
-		25FA51DEE226B940B815759F22864136 /* PBXTargetDependency */ = {
+		A637A565CCF97233418C93C0BB1C0814 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ios-logger-ios-logger";
-			target = 0F61D9AA6FC7A9FEDC2FA5354C819DE7 /* ios-logger-ios-logger */;
-			targetProxy = B6F958D7B59ACA3B453C9755735E2275 /* PBXContainerItemProxy */;
+			name = "Ailen-Ailen";
+			target = 9978A0A1363C77984478D14DC4849364 /* Ailen-Ailen */;
+			targetProxy = 1BFEAC93EA685A87295200F6095606A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03122CDADD4BD3FF84FCC02E81D4E59C /* Debug */ = {
+		2F53DCE1AFE0FB593E522528EBF99AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ios-logger/ios-logger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ios-logger/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ios-logger/ios-logger.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ios_logger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1030357A4F3EACFA9934235A734B5998 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */;
+			baseConfigurationReference = CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -498,14 +465,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ios-logger/ios-logger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ios-logger/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Ailen/Ailen-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ailen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ios-logger/ios-logger.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Ailen/Ailen.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ios_logger;
+				PRODUCT_NAME = Ailen;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -515,9 +482,9 @@
 			};
 			name = Release;
 		};
-		1FD4B6DE882415937DC1919778B4F6FA /* Debug */ = {
+		473DD0544A076C5A0B8658A9CB6B1197 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79D9D0D89331CDA71237463F0C856EC2 /* Pods-ios-logger-example.debug.xcconfig */;
+			baseConfigurationReference = CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -530,21 +497,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ios-logger-example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Ailen/Ailen-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ailen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ios-logger-example/Pods-ios-logger-example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Ailen/Ailen.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ios_logger_example;
+				PRODUCT_NAME = Ailen;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -595,16 +559,16 @@
 			};
 			name = Debug;
 		};
-		7AD4D764F075C44C07C9AF7CF065FDAE /* Debug */ = {
+		61D8547324B699067C03F13C729525F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */;
+			baseConfigurationReference = CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ios-logger";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Ailen";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/ios-logger/ResourceBundle-ios-logger-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Ailen/ResourceBundle-Ailen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = "ios-logger";
+				PRODUCT_NAME = Ailen;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,9 +576,9 @@
 			};
 			name = Debug;
 		};
-		82B9F10EB507F215CEB275A6BB7AF9CB /* Release */ = {
+		B54E567F36EBC2B6DC2DC9E05DB41BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB6D50EFB5DA7E73F16D3A83F3B303B5 /* Pods-ios-logger-example.release.xcconfig */;
+			baseConfigurationReference = 4D004C9157F2EAE2AD3DA7A850267240 /* Pods-Ailen-example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -627,40 +591,23 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ios-logger-example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ailen-example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ios-logger-example/Pods-ios-logger-example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Ailen-example/Pods-Ailen-example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ios_logger_example;
+				PRODUCT_NAME = Pods_Ailen_example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A6FF6936AFFCE242699A5612B969E387 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4392CC860DD50216D4368E4BACD41994 /* ios-logger.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ios-logger";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/ios-logger/ResourceBundle-ios-logger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = "ios-logger";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -704,9 +651,80 @@
 			};
 			name = Release;
 		};
+		DBE3766D4572EBFAFC184612B919CD49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1862356A6F24F767110EA4879311A23 /* Pods-Ailen-example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Ailen-example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ailen-example/Pods-Ailen-example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Ailen_example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3CA330953086E7DDB3CC17CD5D8C723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA24480F147D48408E2181620F7CFEE1 /* Ailen.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Ailen";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Ailen/ResourceBundle-Ailen-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Ailen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B53480FAB1D732D39B926AFCE5B2569 /* Build configuration list for PBXNativeTarget "Ailen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473DD0544A076C5A0B8658A9CB6B1197 /* Debug */,
+				2F53DCE1AFE0FB593E522528EBF99AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22850BA1810E3508FE36D41C244D3BF5 /* Build configuration list for PBXNativeTarget "Pods-Ailen-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE3766D4572EBFAFC184612B919CD49 /* Debug */,
+				B54E567F36EBC2B6DC2DC9E05DB41BC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -716,29 +734,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E6FB77322D0B4DB585F8A9F951D82D2 /* Build configuration list for PBXNativeTarget "Pods-ios-logger-example" */ = {
+		6E226CF13F0BB074DEE6AAB9A4743A37 /* Build configuration list for PBXNativeTarget "Ailen-Ailen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FD4B6DE882415937DC1919778B4F6FA /* Debug */,
-				82B9F10EB507F215CEB275A6BB7AF9CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C1F46B16B90B835F9CC9EDA623A9164 /* Build configuration list for PBXNativeTarget "ios-logger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03122CDADD4BD3FF84FCC02E81D4E59C /* Debug */,
-				1030357A4F3EACFA9934235A734B5998 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C0AA654600FC545DCD4B6851769536AC /* Build configuration list for PBXNativeTarget "ios-logger-ios-logger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7AD4D764F075C44C07C9AF7CF065FDAE /* Debug */,
-				A6FF6936AFFCE242699A5612B969E387 /* Release */,
+				61D8547324B699067C03F13C729525F8 /* Debug */,
+				F3CA330953086E7DDB3CC17CD5D8C723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -746,10 +746,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A6D518CCA897569173B71C46F9A0DF16 /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */ = {
+		89A1544CDE4D92FABEA9AB226072B15B /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				92624F55580F410F0EE4C615D1598BCC /* DefaultStorageDataModel.xcdatamodel */,
+				E0054226BACA1784A3021D8A134A644E /* DefaultStorageDataModel.xcdatamodel */,
 			);
 			path = "com.e-legion.DefaultStorageDataModel.xcdatamodeld";
 			sourceTree = "<group>";

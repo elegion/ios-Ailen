@@ -1,16 +1,16 @@
 PODS:
-  - ios-logger (1.0.0.alpha.1)
+  - Ailen (1.0.0.alpha.1)
 
 DEPENDENCIES:
-  - ios-logger (from `../`)
+  - Ailen (from `../`)
 
 EXTERNAL SOURCES:
-  ios-logger:
+  Ailen:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ios-logger: 014bf4c47910d91db23bbcb77b96d6c3f96ff84e
+  Ailen: e471ca7067d8970e1beed1f8d75e730dbbb3d3a2
 
-PODFILE CHECKSUM: 20ca3fe8fedaa0ba6594293d53d1153443e848c2
+PODFILE CHECKSUM: 97f755bfb5130f0f26965350ec27cadb401d056e
 
 COCOAPODS: 1.1.1

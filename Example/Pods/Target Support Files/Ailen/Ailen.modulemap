@@ -1,0 +1,6 @@
+framework module Ailen {
+  umbrella header "Ailen-umbrella.h"
+
+  export *
+  module * { export * }
+}
