@@ -37,14 +37,14 @@ public struct Token: RawRepresentable, Hashable {
     
     // MARK: - Life cycle
     
-    public init?(rawValue: String, qos: Qos) {
+    public init(rawValue: String, qos: Qos) {
         self.init(rawValue: rawValue)
         self.qos = qos
     }
     
     // MARK: - RawRepresentable
     
-    public init?(rawValue: String) {
+    public init(rawValue: String) {
         self.rawValue = rawValue
     }
     
@@ -60,7 +60,7 @@ public struct Token: RawRepresentable, Hashable {
 extension Token {
     //TODO: define default tokens here
     
-    static let request = Token(rawValue: "Request")!
+    static let request = Token(rawValue: "Request")
 }
 
 // MARK: -
@@ -69,7 +69,7 @@ public struct Tag: RawRepresentable {
     
     // MARK: - RawRepresentable
     
-    public init?(rawValue: String) {
+    public init(rawValue: String) {
         self.rawValue = rawValue
     }
     
@@ -81,5 +81,5 @@ public extension Tag {
     
     //TODO: define default tags here
     
-    static let response = Tag(rawValue: "Response")!
+    static let response = Tag(rawValue: "Response")
 }
