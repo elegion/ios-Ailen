@@ -38,6 +38,11 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         set { queue.async { self._accumulator = newValue } }
     }
     public var errorLogger: ErrorLogger?
+    public var filter: FilterStore {
+        let fetched = fetchAll()
+        let mapped = fetched.flatMap { DefaultDataConverter.convert($0) }
+        return FilterStore(data: mapped)
+    }
     
     // MARK: - Life cycle
     
@@ -153,13 +158,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         removeMessages(predicate: predicate)
     }
     
-    // MARK: - Storaging
-    
-    public var filter: FilterStore {
-        let fetched = fetchAll()
-        let mapped = fetched.flatMap { DefaultDataConverter.convert($0) }
-        return FilterStore(data: mapped)
-    }
+    // MARK: - Output
     
     open override func display(_ message: Message) {
         if self.accumulator != nil {
