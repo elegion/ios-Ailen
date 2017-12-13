@@ -32,7 +32,7 @@ internal class Countdown {
     // MARK: - Public
     
     func activate() {
-        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(handleTimerLoop), userInfo: nil, repeats: repeats)
+        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(timerFireMethod(_:)), userInfo: nil, repeats: repeats)
         RunLoop.current.add(timer!, forMode: .defaultRunLoopMode)
     }
     
@@ -43,7 +43,7 @@ internal class Countdown {
     
     // MARK: - Private
     
-    @objc private func handleTimerLoop() {
+    @objc private func timerFireMethod(_ timer: Timer) {
         delegate?.countdownDidFinishLap(self)
     }
 }
