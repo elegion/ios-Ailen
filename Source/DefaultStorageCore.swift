@@ -15,15 +15,17 @@ public class DefaultStorageCore: PersistentStoreCore {
     }
     
     enum StorageError: Error {
-        case applicationDocumentsDirectory
-        case dataModelPath
-        case managedObjectModel
+        case unableToLocateDataBase
+        case unableToLocateDataModel
+        case unableToInstantiateManagedObjectModel
+        case unableToLocateBundle
         
         var localizedDescription: String {
             switch self {
-            case .applicationDocumentsDirectory:    return "Failure to instantiate app documents directory URL"
-            case .dataModelPath:                    return "Failure to instantiate data model path"
-            case .managedObjectModel:               return "Failure to instantiate managed object model"
+            case .unableToLocateDataBase:                   return "Failure to instantiate data base URL"
+            case .unableToLocateDataModel:                  return "Failure to instantiate data model path"
+            case .unableToInstantiateManagedObjectModel:    return "Failure to instantiate managed object model"
+            case .unableToLocateBundle:                     return "Failure to locate bundle"
             }
         }
     }
@@ -52,7 +54,7 @@ public class DefaultStorageCore: PersistentStoreCore {
             let podBundle = Bundle(for: DefaultStorageCore.self)
             guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
                 let _bundle = Bundle(url: bundleURL) else {
-                    errorLogger?.display(StorageError.dataModelPath)
+                    errorLogger?.display(StorageError.unableToLocateBundle)
                     return nil
             }
             bundle = _bundle
@@ -61,12 +63,12 @@ public class DefaultStorageCore: PersistentStoreCore {
         guard let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
             let url = URL(string: urlString)
             else {
-                errorLogger?.display(StorageError.dataModelPath)
+                errorLogger?.display(StorageError.unableToLocateDataModel)
                 return nil
         }
         
         guard let mom = NSManagedObjectModel(contentsOf: url) else {
-            errorLogger?.display(StorageError.managedObjectModel)
+            errorLogger?.display(StorageError.unableToInstantiateManagedObjectModel)
             return nil
         }
         
@@ -75,7 +77,7 @@ public class DefaultStorageCore: PersistentStoreCore {
         
         let _storeURL = storeURL ?? applicationDocumentsDirectory?.appendingPathComponent(Constants.dataModelName + ".sqlite")
         guard let storeLocation = _storeURL else {
-            errorLogger?.display(StorageError.applicationDocumentsDirectory)
+            errorLogger?.display(StorageError.unableToLocateDataBase)
             return nil
         }
         
