@@ -62,6 +62,10 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         setupAutosaveTimer()
     }
     
+    deinit {
+        autosaveTimer?.deactivate()
+    }
+    
     // MARK: - Private
     
     private func setupAccumulator() {

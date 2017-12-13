@@ -25,15 +25,10 @@ internal class Countdown {
         self.repeats = repeats
     }
     
-    deinit {
-        deactivate()
-    }
-    
     // MARK: - Public
     
     func activate() {
         timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(timerFireMethod(_:)), userInfo: nil, repeats: repeats)
-        RunLoop.current.add(timer!, forMode: .defaultRunLoopMode)
     }
     
     func deactivate() {
