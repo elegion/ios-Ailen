@@ -13,12 +13,12 @@ class DefaultStorageTests: StorageTestCase {
     private struct Constants {
         static let autosaveCount = 2
         static let autosaveInterval: TimeInterval = 3
-        static let storeInterval: TimeInterval = 10
+        static let lifeTime: TimeInterval = 10
         static let msg = "DefaultStorageTests.testAutosaveInterval.message"
     }
     
     private enum ConfigType {
-        case autosaveCount, autosaveInterval, storeInterval
+        case autosaveCount, autosaveInterval, lifeTime
     }
     
     func testAutosaveCount() {
@@ -65,12 +65,12 @@ class DefaultStorageTests: StorageTestCase {
         waitForExpectations(timeout: Constants.autosaveInterval * 3)
     }
     
-    func testStoreInterval() {
-        let setup = instances(config: .storeInterval)
+    func testlifeTime() {
+        let setup = instances(config: .lifeTime)
         let logger = setup.logger
         let storage = setup.storage
         
-        let storeIntervalExpectation = expectation(description: "Store interval expectation")
+        let lifeTimeExpectation = expectation(description: "Store interval expectation")
         
         XCTAssertEqual(storage.filter.data.count, 0)
         
@@ -78,14 +78,14 @@ class DefaultStorageTests: StorageTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertEqual(storage.filter.data.count, 1)
             
-            let deadline: DispatchTime = .now() + Constants.storeInterval * 2
+            let deadline: DispatchTime = .now() + Constants.lifeTime * 2
             DispatchQueue.main.asyncAfter(deadline: deadline) {
                 XCTAssertEqual(storage.filter.data.count, 0)
-                storeIntervalExpectation.fulfill()
+                lifeTimeExpectation.fulfill()
             }
         }
         
-        waitForExpectations(timeout: Constants.storeInterval * 3)
+        waitForExpectations(timeout: Constants.lifeTime * 3)
     }
     
     // MARK: - Private
@@ -97,8 +97,8 @@ class DefaultStorageTests: StorageTestCase {
             settings = DefaultStorage.Settings(autosaveCount: Constants.autosaveCount)
         case .autosaveInterval:
             settings = DefaultStorage.Settings(autosaveCount: Int.max, autosaveInterval: Constants.autosaveInterval)
-        case .storeInterval:
-            settings = DefaultStorage.Settings(autosaveCount: 0, storeInterval: Constants.storeInterval)
+        case .lifeTime:
+            settings = DefaultStorage.Settings(autosaveCount: 0, lifeTime: Constants.lifeTime)
         }
         
         guard let _core = core else {
