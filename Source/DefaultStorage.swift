@@ -143,7 +143,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         
         let messages = fetchMessages(predicate: predicate, in: context)
         
-        messages.forEach { context.delete($0) }
+        messages.forEach(context.delete)
         
         core.saveContext(context)
     }

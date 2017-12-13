@@ -50,7 +50,7 @@ public class Ailen {
     // MARK: - Private
     
     private func log(_ messages: [Message], in output: Output) {
-        messages.forEach { output.proccess($0) }
+        messages.forEach(output.proccess)
     }
         
     private func convert(_ source: Any, for token: Token) -> String? {
