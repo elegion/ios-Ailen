@@ -25,17 +25,3 @@ struct ErrLog: ErrorLogger {
         print("ErrorLogger -->> \(error.localizedDescription)")
     }
 }
-
-class ExampleProcessor: Processor {
-    func process(token: Token, object: Any) -> String? {
-        let str = String(describing: object)
-        return "ExampleProcessor say: \(str)"
-    }
-}
-
-class ExampleOutput: DefaultOutput {
-    override func display(_ message: Message) {
-        
-        print(message.payload)
-    }
-}
