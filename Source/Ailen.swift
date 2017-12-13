@@ -31,12 +31,6 @@ public class Ailen {
     
     // MARK: - Public
     
-    public func set(enabled: Bool, for token: Token) {
-        perform(on: token.qos) {
-            self.outputs.forEach { $0.set(enabled: enabled, for: token) }
-        }
-    }
-    
     public func log(as token: Token, tags: [Tag] = [], values: Any...) {
         perform(on: token.qos) {
             let mapped: [Message] = values.flatMap({
@@ -52,7 +46,7 @@ public class Ailen {
     private func log(_ messages: [Message], in output: Output) {
         messages.forEach(output.proccess)
     }
-        
+    
     private func convert(_ source: Any, for token: Token) -> String? {
         for processor in internalProcessors {
             if let processed = processor.process(token: token, object: source) {

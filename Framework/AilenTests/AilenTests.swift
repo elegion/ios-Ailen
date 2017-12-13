@@ -81,40 +81,4 @@ class AilenTests: XCTestCase {
         
         waitForExpectations(timeout: 10)
     }
-    
-    func testEnablingDisablingToken() {
-        guard let logger = logger else {
-            XCTFail("Logger uninitialized")
-            return
-        }
-        
-        let output = TestingDefaultOutput()
-        logger.outputs = [output]
-        XCTAssertEqual(logger.outputs.count, 1)
-        
-        let logExpectation = expectation(description: "Async logging waiting")
-        let token = Token.UI
-        
-        logger.log(as: token, values: [Constants.msg])
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertEqual(output.messagesDisplayed, 1)
-            
-            logger.set(enabled: false, for: token)
-            logger.log(as: token, values: [Constants.msg])
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                XCTAssertEqual(output.messagesDisplayed, 1)
-                
-                logger.set(enabled: true, for: token)
-                logger.log(as: token, values: [Constants.msg])
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    XCTAssertEqual(output.messagesDisplayed, 2)
-                    logExpectation.fulfill()
-                }
-            }
-        }
-        
-        waitForExpectations(timeout: 10)
-    }
 }
