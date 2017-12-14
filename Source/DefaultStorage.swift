@@ -12,8 +12,9 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     public struct Settings {
         public let autosaveCount: Int
         public let autosaveInterval: TimeInterval?
+        public let lifeTime: TimeInterval?
         
-        public init(autosaveCount: Int = 20, autosaveInterval: TimeInterval? = nil) {
+        public init(autosaveCount: Int = 20, autosaveInterval: TimeInterval? = nil, lifeTime: TimeInterval? = nil) {
             if autosaveInterval != nil && autosaveCount < 0 {
                 self.autosaveCount = 1
                 preconditionFailure("You should define autosaveCount to use buffering.")
@@ -21,6 +22,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             
             self.autosaveCount = autosaveCount
             self.autosaveInterval = autosaveInterval
+            self.lifeTime = lifeTime
         }
     }
     
@@ -86,6 +88,10 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     }
     
     private func save(_ messages: [Message]) {
+        if let lifeTimeInterval = settings.lifeTime {
+            let tillDate = Date(timeInterval: -lifeTimeInterval, since: Date())
+            persistent.deleteAll(till: tillDate)
+        }
         persistent.save(messages)
     }
     

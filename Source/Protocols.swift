@@ -50,4 +50,5 @@ extension EntityDescribing {
 public protocol PersistentStoraging {
     var filter: FilterStore { get }
     func save(_ messages: [Message])
+    func deleteAll(till date: Date)
 }

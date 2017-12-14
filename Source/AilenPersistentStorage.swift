@@ -15,14 +15,12 @@ public class AilenPersistentStorage: PersistentStoraging {
     // MARK: - Properties
     
     private let core: PersistentStoreCore
-    public let lifeTime: TimeInterval?
     public var delegate: AilenPersistentStorageDelegate?
     
     // MARK: - Life cycle
     
-    public init(core: PersistentStoreCore, lifeTime: TimeInterval? = nil) {
+    public init(core: PersistentStoreCore) {
         self.core = core
-        self.lifeTime = lifeTime
     }
     
     // MARK: - Private
@@ -62,17 +60,7 @@ public class AilenPersistentStorage: PersistentStoraging {
     }
     
     private func fetchAll() -> [ELNMessage] {
-        removeOldRecordsIfNeeded()
         return fetchMessages(predicate: nil)
-    }
-    
-    private func removeOldRecordsIfNeeded() {
-        guard let interval = lifeTime else { return }
-        
-        let date = Date(timeIntervalSinceNow: -interval)
-        let predicate = NSPredicate(format: "date < %@", argumentArray: [date])
-        
-        removeMessages(predicate: predicate)
     }
     
     private func handleSaveContextError(_ error: Error) {
@@ -86,7 +74,7 @@ public class AilenPersistentStorage: PersistentStoraging {
         let mapped = fetched.flatMap { DefaultDataConverter.convert($0) }
         return FilterStore(data: mapped)
     }
-
+    
     public func save(_ messages: [Message]) {
         let context = core.writeManagedObjectContext
         
@@ -116,5 +104,11 @@ public class AilenPersistentStorage: PersistentStoraging {
                 self?.handleSaveContextError(_error)
             }
         }
+    }
+    
+    public func deleteAll(till date: Date) {
+        let predicate = NSPredicate(format: "date < %@", argumentArray: [date])
+        
+        removeMessages(predicate: predicate)
     }
 }
