@@ -5,13 +5,18 @@
 
 import CoreData
 
-class AilenPersistentStorage: PersistentStoraging {
+public protocol AilenPersistentStorageDelegate: class {
+    func storageDidFailSaving(_ persistentStorage: AilenPersistentStorage, with error: Error)
+    func storageDidFailFetchMessages(_ persistentStorage: AilenPersistentStorage, predicate: NSPredicate?, with error: Error)
+}
+
+public class AilenPersistentStorage: PersistentStoraging {
     
     // MARK: - Properties
     
     private let core: PersistentStoreCore
     public let lifeTime: TimeInterval?
-    public var errorLogger: ErrorLogger?
+    public var delegate: AilenPersistentStorageDelegate?
     
     // MARK: - Life cycle
     
@@ -36,7 +41,7 @@ class AilenPersistentStorage: PersistentStoraging {
         do {
             return try context.fetch(request)
         } catch {
-            errorLogger?.display(error)
+            delegate?.storageDidFailFetchMessages(self, predicate: predicate, with: error)
             return [ELNMessage]()
         }
     }
@@ -51,7 +56,7 @@ class AilenPersistentStorage: PersistentStoraging {
         core.saveContext(context) {
             [weak self] (error) in
             if let _error = error {
-                self?.errorLogger?.display(_error)
+                self?.handleSaveContextError(_error)
             }
         }
     }
@@ -70,6 +75,10 @@ class AilenPersistentStorage: PersistentStoraging {
         removeMessages(predicate: predicate)
     }
     
+    private func handleSaveContextError(_ error: Error) {
+        delegate?.storageDidFailSaving(self, with: error)
+    }
+    
     // MARK: - PersistentStoraging
     
     public var filter: FilterStore {
@@ -77,7 +86,7 @@ class AilenPersistentStorage: PersistentStoraging {
         let mapped = fetched.flatMap { DefaultDataConverter.convert($0) }
         return FilterStore(data: mapped)
     }
-    
+
     public func save(_ messages: [Message]) {
         let context = core.writeManagedObjectContext
         
@@ -104,7 +113,7 @@ class AilenPersistentStorage: PersistentStoraging {
         core.saveContext(context) {
             [weak self] (error) in
             if let _error = error {
-                self?.errorLogger?.display(_error)
+                self?.handleSaveContextError(_error)
             }
         }
     }

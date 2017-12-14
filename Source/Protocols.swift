@@ -31,10 +31,6 @@ public protocol PersistentStoreCore {
     func saveContext(_ context: NSManagedObjectContext, completion: ((Error?) -> Void)?)
 }
 
-public protocol ErrorLogger {
-    func display(_ error: Error)
-}
-
 public protocol TokenLocking {
     func lock(token: Token)
     func unlock(token: Token)
