@@ -116,7 +116,12 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
             messageObj.payload = current.payload
         }
         
-        core.saveContext(context)
+        core.saveContext(context) {
+            [weak self] (error) in
+            if let _error = error {
+                self?.errorLogger?.display(_error)
+            }
+        }
     }
     
     private func managedObject<Result>(for name: String, in context: NSManagedObjectContext) -> Result {
@@ -145,7 +150,12 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         
         messages.forEach(context.delete)
         
-        core.saveContext(context)
+        core.saveContext(context) {
+            [weak self] (error) in
+            if let _error = error {
+                self?.errorLogger?.display(_error)
+            }
+        }
     }
     
     private func fetchAll() -> [ELNMessage] {

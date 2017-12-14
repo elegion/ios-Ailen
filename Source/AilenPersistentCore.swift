@@ -40,11 +40,10 @@ public class AilenPersistentCore: PersistentStoreCore {
         context.persistentStoreCoordinator = persistentStoreCoordinator
         return context
     }()
-    public var errorLogger: ErrorLogger?
     
     // MARK: - Life cycle
     
-    public init?(storeURL: URL? = nil) {
+    public init(storeURL: URL? = nil) throws {
         let bundle: Bundle
         
         if ProcessInfo.processInfo.arguments.contains(Constants.testLaunchArguments) {
@@ -54,8 +53,7 @@ public class AilenPersistentCore: PersistentStoreCore {
             let podBundle = Bundle(for: AilenPersistentCore.self)
             guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
                 let _bundle = Bundle(url: bundleURL) else {
-                    errorLogger?.display(StorageError.unableToLocateBundle)
-                    return nil
+                    throw StorageError.unableToLocateBundle
             }
             bundle = _bundle
         }
@@ -63,13 +61,11 @@ public class AilenPersistentCore: PersistentStoreCore {
         guard let urlString = bundle.path(forResource: Constants.dataModelName, ofType: "momd"),
             let url = URL(string: urlString)
             else {
-                errorLogger?.display(StorageError.unableToLocateDataModel)
-                return nil
+                throw StorageError.unableToLocateDataModel
         }
         
         guard let mom = NSManagedObjectModel(contentsOf: url) else {
-            errorLogger?.display(StorageError.unableToInstantiateManagedObjectModel)
-            return nil
+            throw StorageError.unableToInstantiateManagedObjectModel
         }
         
         self.managedObjectModel = mom
@@ -77,21 +73,14 @@ public class AilenPersistentCore: PersistentStoreCore {
         
         let _storeURL = storeURL ?? applicationDocumentsDirectory?.appendingPathComponent(Constants.dataModelName + ".sqlite")
         guard let storeLocation = _storeURL else {
-            errorLogger?.display(StorageError.unableToLocateDataBase)
-            return nil
+            throw StorageError.unableToLocateDataBase
         }
         
         do {
             try setupPersistentStore(storeURL: storeLocation)
         } catch {
-            errorLogger?.display(error)
-            do {
-                try removePersistentModel(storeURL: storeLocation)
-                try setupPersistentStore(storeURL: storeLocation)
-            } catch  {
-                errorLogger?.display(error)
-                return nil
-            }
+            try removePersistentModel(storeURL: storeLocation)
+            try setupPersistentStore(storeURL: storeLocation)
         }
     }
     
@@ -105,12 +94,13 @@ public class AilenPersistentCore: PersistentStoreCore {
         try FileManager.default.removeItem(at: storeURL)
     }
     
-    private func saveParentContext() {
+    private func saveParentContext(completion: ((Error?) -> Void)?) {
         parentMoc.perform {
             do {
                 try self.parentMoc.save()
+                completion?(nil)
             } catch {
-                self.errorLogger?.display(error)
+                completion?(error)
             }
         }
     }
@@ -133,13 +123,16 @@ public class AilenPersistentCore: PersistentStoreCore {
         return Thread.isMainThread ? readManagedObjectContext : writeManagedObjectContext
     }
     
-    public func saveContext(_ context: NSManagedObjectContext) {
+    public func saveContext(_ context: NSManagedObjectContext, completion: ((Error?) -> Void)?) {
         guard context.hasChanges else { return }
-        do {
-            try context.save()
-            saveParentContext()
-        } catch {
-            errorLogger?.display(error)
+        
+        context.perform {
+            do {
+                try context.save()
+                self.saveParentContext(completion: completion)
+            } catch {
+                completion?(error)
+            }
         }
     }
 }

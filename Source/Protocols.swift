@@ -28,7 +28,7 @@ public protocol PersistentStoreCore {
     var writeManagedObjectContext: NSManagedObjectContext { get }
     var currentManagedObjectContext: NSManagedObjectContext { get }
     
-    func saveContext(_ context: NSManagedObjectContext)
+    func saveContext(_ context: NSManagedObjectContext, completion: ((Error?) -> Void)?)
 }
 
 public protocol Storaging: Output {

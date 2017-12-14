@@ -13,11 +13,13 @@ class StorageTestCase: XCTestCase {
     
     private var testModelPath: String?
     var core: AilenPersistentCore? {
-        guard let modelPath = testModelPath,
-            let core = AilenPersistentCore(storeURL: URL(fileURLWithPath: modelPath)) else {
-                return nil
+        guard let modelPath = testModelPath else { return nil }
+        
+        do {
+            return try AilenPersistentCore(storeURL: URL(fileURLWithPath: modelPath))
+        } catch {
+            return nil
         }
-        return core
     }
     
     override func setUp() {
