@@ -12,9 +12,9 @@ class StorageTestCase: XCTestCase {
     }
     
     private var testModelPath: String?
-    var core: DefaultStorageCore? {
+    var core: AilenPersistentCore? {
         guard let modelPath = testModelPath,
-            let core = DefaultStorageCore(storeURL: URL(fileURLWithPath: modelPath)) else {
+            let core = AilenPersistentCore(storeURL: URL(fileURLWithPath: modelPath)) else {
                 return nil
         }
         return core

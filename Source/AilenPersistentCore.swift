@@ -5,7 +5,7 @@
 
 import CoreData
 
-public class DefaultStorageCore: PersistentStoreCore {
+public class AilenPersistentCore: PersistentStoreCore {
     
     // MARK: - Definitions
     
@@ -48,10 +48,10 @@ public class DefaultStorageCore: PersistentStoreCore {
         let bundle: Bundle
         
         if ProcessInfo.processInfo.arguments.contains(Constants.testLaunchArguments) {
-            bundle = Bundle(for: DefaultStorageCore.self)
+            bundle = Bundle(for: AilenPersistentCore.self)
             
         } else {
-            let podBundle = Bundle(for: DefaultStorageCore.self)
+            let podBundle = Bundle(for: AilenPersistentCore.self)
             guard let bundleURL = podBundle.url(forResource: "ios-logger", withExtension: "bundle"),
                 let _bundle = Bundle(url: bundleURL) else {
                     errorLogger?.display(StorageError.unableToLocateBundle)
