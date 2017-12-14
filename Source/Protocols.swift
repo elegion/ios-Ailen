@@ -31,10 +31,6 @@ public protocol PersistentStoreCore {
     func saveContext(_ context: NSManagedObjectContext, completion: ((Error?) -> Void)?)
 }
 
-public protocol Storaging: Output {
-    var filter: FilterStore { get }
-}
-
 public protocol ErrorLogger {
     func display(_ error: Error)
 }
@@ -53,4 +49,9 @@ extension EntityDescribing {
     static var entityName: String {
         return String(describing: Self.self)
     }
+}
+
+public protocol PersistentStoraging {
+    var filter: FilterStore { get }
+    func save(_ messages: [Message])
 }

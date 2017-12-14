@@ -25,7 +25,8 @@ class DefaultDataConverterTests: StorageTestCase {
         }
         
         let settings = DefaultStorage.Settings(autosaveCount: 0)
-        output = DefaultStorage(core: _core, settings: settings)
+        let persistent = AilenPersistentStorage(core: _core)
+        output = DefaultStorage(settings: settings, persistent: persistent)
         
         logger = Ailen(outputs: [output!], processors: [])
     }
