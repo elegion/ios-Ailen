@@ -11,7 +11,6 @@
 		EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */; };
 		EA1915F11FD01E84003A823C /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DC1FD01E84003A823C /* Countdown.swift */; };
 		EA1915F21FD01E84003A823C /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DD1FD01E84003A823C /* DebugProcessor.swift */; };
-		EA1915F31FD01E84003A823C /* DefaultBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DE1FD01E84003A823C /* DefaultBlocker.swift */; };
 		EA1915F41FD01E84003A823C /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */; };
 		EA1915F51FD01E84003A823C /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E01FD01E84003A823C /* DefaultOutput.swift */; };
 		EA1915F61FD01E84003A823C /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E11FD01E84003A823C /* DefaultStorage.swift */; };
@@ -57,7 +56,6 @@
 		EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
 		EA1915DC1FD01E84003A823C /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		EA1915DD1FD01E84003A823C /* DebugProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
-		EA1915DE1FD01E84003A823C /* DefaultBlocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlocker.swift; sourceTree = "<group>"; };
 		EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
 		EA1915E01FD01E84003A823C /* DefaultOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
 		EA1915E11FD01E84003A823C /* DefaultStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */,
 				EA1915DC1FD01E84003A823C /* Countdown.swift */,
 				EA1915DD1FD01E84003A823C /* DebugProcessor.swift */,
-				EA1915DE1FD01E84003A823C /* DefaultBlocker.swift */,
 				EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */,
 				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
 				EA48469E1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift */,
@@ -337,7 +334,6 @@
 				EA1916051FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
 				EA1915F61FD01E84003A823C /* DefaultStorage.swift in Sources */,
 				EA1915FB1FD01E84003A823C /* ELNMessage+CoreDataClass.swift in Sources */,
-				EA1915F31FD01E84003A823C /* DefaultBlocker.swift in Sources */,
 				EA1915F41FD01E84003A823C /* DefaultDataConverter.swift in Sources */,
 				EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */,
 				EA1915F21FD01E84003A823C /* DebugProcessor.swift in Sources */,

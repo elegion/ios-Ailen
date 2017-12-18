@@ -9,7 +9,7 @@ open class DefaultOutput: Output {
     
     // MARK: - Properties
     
-    private let blocker = DefaultTokenBlocker()
+    private var blockedTokens = Set<Token>()
     
     // MARK: - Life cycle
     
@@ -21,18 +21,32 @@ open class DefaultOutput: Output {
         preconditionFailure("Abstract")
     }
     
+    // MARK: - Private
+    
+    private func lock(token: Token) {
+        blockedTokens.insert(token)
+    }
+    
+    private func unlock(token: Token) {
+        blockedTokens.remove(token)
+    }
+    
+    private func isLocked(token: Token) -> Bool {
+        return blockedTokens.contains(token)
+    }
+    
     // MARK: - Output
     
     public func set(enabled: Bool, for token: Token) {
         if enabled {
-            blocker.unlock(token: token)
+            unlock(token: token)
         } else {
-            blocker.lock(token: token)
+            lock(token: token)
         }
     }
     
     public func proccess(_ message: Message) {
-        guard !blocker.isLocked(token: message.token) else { return }
+        guard !isLocked(token: message.token) else { return }
         
         display(message)
     }

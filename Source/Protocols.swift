@@ -31,12 +31,6 @@ public protocol PersistentStoreCore {
     func saveContext(_ context: NSManagedObjectContext, completion: ((Error?) -> Void)?)
 }
 
-public protocol TokenLocking {
-    func lock(token: Token)
-    func unlock(token: Token)
-    func isLocked(token: Token) -> Bool
-}
-
 protocol EntityDescribing {
     static var entityName: String { get }
 }
