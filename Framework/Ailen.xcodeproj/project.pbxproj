@@ -32,7 +32,6 @@
 		EAE663341FC2DEB30047F285 /* CountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663331FC2DEB30047F285 /* CountdownTests.swift */; };
 		EAE663361FC2DEBE0047F285 /* AilenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663351FC2DEBE0047F285 /* AilenTests.swift */; };
 		EAE663381FC2DEC50047F285 /* DebugProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */; };
-		EAE6633A1FC2DECD0047F285 /* DefaultTokenBlockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663391FC2DECD0047F285 /* DefaultTokenBlockerTests.swift */; };
 		EAE6633C1FC2DED60047F285 /* DefaultDataConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */; };
 		EAE6633E1FC2DEE20047F285 /* DefaultOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */; };
 		EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */; };
@@ -78,7 +77,6 @@
 		EAE663331FC2DEB30047F285 /* CountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTests.swift; sourceTree = "<group>"; };
 		EAE663351FC2DEBE0047F285 /* AilenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AilenTests.swift; sourceTree = "<group>"; };
 		EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessorTests.swift; sourceTree = "<group>"; };
-		EAE663391FC2DECD0047F285 /* DefaultTokenBlockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTokenBlockerTests.swift; sourceTree = "<group>"; };
 		EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataConverterTests.swift; sourceTree = "<group>"; };
 		EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultOutputTests.swift; sourceTree = "<group>"; };
 		EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageTests.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */,
 				EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */,
 				EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */,
-				EAE663391FC2DECD0047F285 /* DefaultTokenBlockerTests.swift */,
 				EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */,
 				EAE663451FC2E2A20047F285 /* Helpers */,
 				EAE6632C1FC2D9870047F285 /* Info.plist */,
@@ -320,7 +317,6 @@
 				EAE663361FC2DEBE0047F285 /* AilenTests.swift in Sources */,
 				EAE663381FC2DEC50047F285 /* DebugProcessorTests.swift in Sources */,
 				EAE663341FC2DEB30047F285 /* CountdownTests.swift in Sources */,
-				EAE6633A1FC2DECD0047F285 /* DefaultTokenBlockerTests.swift in Sources */,
 				EAD8CCE01FC40C6300CF0A58 /* TestingHelperClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

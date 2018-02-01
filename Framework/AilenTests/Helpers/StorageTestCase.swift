@@ -22,6 +22,14 @@ class StorageTestCase: XCTestCase {
         }
     }
     
+    var persistant: AilenPersistentStorage? {
+        
+        guard let _core = core else { return nil }
+        
+        return AilenPersistentStorage(core: _core)
+        
+    }
+    
     override func setUp() {
         super.setUp()
         

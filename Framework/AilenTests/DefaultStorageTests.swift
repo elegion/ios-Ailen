@@ -8,7 +8,7 @@ import Ailen
 
 class DefaultStorageTests: StorageTestCase {
     
-    private typealias InstancesType = (logger: Ailen, storage: DefaultStorage)
+    private typealias InstancesType = (logger: Ailen, storage: DefaultStorage, persistant: PersistentStoraging)
     
     private struct Constants {
         static let autosaveCount = 2
@@ -24,19 +24,20 @@ class DefaultStorageTests: StorageTestCase {
     func testAutosaveCount() {
         let setup = instances(config: .autosaveCount)
         let logger = setup.logger
-        let storage = setup.storage
+        //let storage = setup.storage
+        let persistant = setup.persistant
         
         let savingExpectation = expectation(description: "Autosave by count wait")
         
-        XCTAssertEqual(storage.filter.data.count, 0)
+        XCTAssertEqual(persistant.filter.data.count, 0)
         
         logger.log(as: .UI, values: [Constants.msg])
-        XCTAssertEqual(storage.filter.data.count, 0)
+        XCTAssertEqual(persistant.filter.data.count, 0)
         
         logger.log(as: .error, values: [Constants.msg])
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            XCTAssertEqual(storage.filter.data.count, 2)
+            XCTAssertEqual(persistant.filter.data.count, 2)
             savingExpectation.fulfill()
         }
         
@@ -46,19 +47,19 @@ class DefaultStorageTests: StorageTestCase {
     func testAutosaveInterval() {
         let setup = instances(config: .autosaveInterval)
         let logger = setup.logger
-        let storage = setup.storage
-        
+        //let storage = setup.storage
+        let persistant = setup.persistant
         let autosaveExpectation = expectation(description: "Autosave timer expectation")
         
-        XCTAssertEqual(storage.filter.data.count, 0)
+        XCTAssertEqual(persistant.filter.data.count, 0)
         
         logger.log(as: .UI, values: [Constants.msg])
         logger.log(as: .response, values: [Constants.msg])
-        XCTAssertEqual(storage.filter.data.count, 0)
+        XCTAssertEqual(persistant.filter.data.count, 0)
         
         let deadline: DispatchTime = .now() + Constants.autosaveInterval * 2
         DispatchQueue.main.asyncAfter(deadline: deadline) {
-            XCTAssertEqual(storage.filter.data.count, 2)
+            XCTAssertEqual(persistant.filter.data.count, 2)
             autosaveExpectation.fulfill()
         }
         
@@ -68,19 +69,20 @@ class DefaultStorageTests: StorageTestCase {
     func testlifeTime() {
         let setup = instances(config: .lifeTime)
         let logger = setup.logger
-        let storage = setup.storage
+        //let storage = setup.storage
+        let persistant = setup.persistant
         
         let lifeTimeExpectation = expectation(description: "Store interval expectation")
         
-        XCTAssertEqual(storage.filter.data.count, 0)
+        XCTAssertEqual(persistant.filter.data.count, 0)
         
         logger.log(as: .UI, values: [Constants.msg])
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            XCTAssertEqual(storage.filter.data.count, 1)
+            XCTAssertEqual(persistant.filter.data.count, 1)
             
             let deadline: DispatchTime = .now() + Constants.lifeTime * 2
             DispatchQueue.main.asyncAfter(deadline: deadline) {
-                XCTAssertEqual(storage.filter.data.count, 0)
+                XCTAssertEqual(persistant.filter.data.count, 0)
                 lifeTimeExpectation.fulfill()
             }
         }
@@ -101,12 +103,16 @@ class DefaultStorageTests: StorageTestCase {
             settings = DefaultStorage.Settings(autosaveCount: 0, lifeTime: Constants.lifeTime)
         }
         
-        guard let _core = core else {
+        guard let _persistant = persistant else {
             XCTFail("CoreData stack uninitialized")
             fatalError()
         }
         
-        let storage = DefaultStorage(core: _core, settings: settings)
-        return (Ailen(outputs: [storage]), storage)
+        
+        
+        let storage = DefaultStorage(settings: settings, persistent: _persistant)
+        
+//        let storage = DefaultStorage(core: _core, settings: settings)
+        return (Ailen(outputs: [storage]), storage, _persistant)
     }
 }

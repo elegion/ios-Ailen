@@ -15,7 +15,7 @@ class DefaultDataConverterTests: StorageTestCase {
     
     private var output: DefaultStorage?
     private var logger: Ailen?
-    
+    private var persistent: PersistentStoraging!
     override func setUp() {
         super.setUp()
         
@@ -25,7 +25,7 @@ class DefaultDataConverterTests: StorageTestCase {
         }
         
         let settings = DefaultStorage.Settings(autosaveCount: 0)
-        let persistent = AilenPersistentStorage(core: _core)
+        persistent = AilenPersistentStorage(core: _core)
         output = DefaultStorage(settings: settings, persistent: persistent)
         
         logger = Ailen(outputs: [output!], processors: [])
@@ -41,15 +41,20 @@ class DefaultDataConverterTests: StorageTestCase {
             return
         }
         
-        XCTAssertEqual(_output.filter.data.count, 0)
+        guard let _persistent  = persistent else {
+            XCTFail("Persistent uninitialized")
+            return
+        }
+        
+        XCTAssertEqual(_persistent.filter.data.count, 0)
         
         let logExpectation = expectation(description: "Save data wait")
         
         _logger.log(as: .UI, tags: [.client, .internal], values: Constants.msg)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            XCTAssertEqual(_output.filter.data.count, 1)
+            XCTAssertEqual(_persistent.filter.data.count, 1)
             
-            let message = _output.filter.data.first!
+            let message = _persistent.filter.data.first!
             
             XCTAssertEqual(message.token, "UI.Token")
             XCTAssertEqual(message.message, Constants.msg)
