@@ -5,11 +5,11 @@
 
 import Foundation
 
-public protocol Message {
-    var token: Token { get }
-    var tags: [Tag] { get }
-    var date: Date { get }
-    var payload: String { get }
+public struct Message {
+    let token: Token
+    let tags: [Tag]
+    let date: Date = Date()
+    let payload: String
 }
 
 public protocol Output {

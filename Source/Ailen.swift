@@ -35,7 +35,7 @@ public class Ailen {
         perform(on: token.qos) {
             let mapped: [Message] = values.flatMap({
                 guard let processed = self.convert($0, for: token) else { return nil }
-                return LogMessage(token: token, tags: tags, payload: processed)
+                return Message(token: token, tags: tags, payload: processed)
             })
             self.outputs.forEach { self.log(mapped, in: $0) }
         }
@@ -68,13 +68,4 @@ public class Ailen {
             qos.queue.sync { block() }
         }
     }
-}
-
-// MARK: -
-
-internal struct LogMessage: Message {
-    let token: Token
-    let tags: [Tag]
-    let date: Date = Date()
-    let payload: String
 }
