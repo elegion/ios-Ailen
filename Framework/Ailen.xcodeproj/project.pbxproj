@@ -106,15 +106,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA1915D91FD01E84003A823C /* Source */ = {
+		A6C5D0332023525A006D65CB /* CoreDataOutput */ = {
 			isa = PBXGroup;
 			children = (
-				EA1915DA1FD01E84003A823C /* Ailen.swift */,
-				EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */,
 				EA1915DC1FD01E84003A823C /* Countdown.swift */,
-				EA1915DD1FD01E84003A823C /* DebugProcessor.swift */,
 				EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */,
-				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
 				EA48469E1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift */,
 				EA1915E11FD01E84003A823C /* DefaultStorage.swift */,
 				EA1915E71FD01E84003A823C /* AilenPersistentCore.swift */,
@@ -124,9 +120,21 @@
 				EA1915EB1FD01E84003A823C /* ELNTag+CoreDataProperties.swift */,
 				EA1915EC1FD01E84003A823C /* ELNToken+CoreDataClass.swift */,
 				EA1915ED1FD01E84003A823C /* ELNToken+CoreDataProperties.swift */,
-				EA1915E21FD01E84003A823C /* Entities.swift */,
 				EA1915E31FD01E84003A823C /* FilterStore.swift */,
+			);
+			path = CoreDataOutput;
+			sourceTree = "<group>";
+		};
+		EA1915D91FD01E84003A823C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EA1915DA1FD01E84003A823C /* Ailen.swift */,
+				EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */,
+				EA1915DD1FD01E84003A823C /* DebugProcessor.swift */,
+				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
+				EA1915E21FD01E84003A823C /* Entities.swift */,
 				EA1915EE1FD01E84003A823C /* Protocols.swift */,
+				A6C5D0332023525A006D65CB /* CoreDataOutput */,
 			);
 			name = Source;
 			path = ../../Source;
