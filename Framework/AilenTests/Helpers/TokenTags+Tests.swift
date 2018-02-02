@@ -5,14 +5,22 @@
 
 import Ailen
 
-extension Token {
-    static let response = Token(rawValue: "Response.Token")
-    static let error = Token(rawValue: "Error.Token")
-    static let UI = Token(rawValue: "UI.Token", qos: .main(async: false))
+enum TokenKeys: String {
+    case responce = "Response.Token"
+    case error = "Error.Token"
+    case UI = "UI.Token"
 }
 
-extension Tag {
-    static let client = Tag(rawValue: "Client.Tag")
-    static let server = Tag(rawValue: "Server.Tag")
-    static let `internal` = Tag(rawValue: "Internal.Tag")
+extension Token {
+    static let response = Token(tokenKey: TokenKeys.responce)
+    static let error = Token(tokenKey: TokenKeys.error)
+    static let UI = Token(tokenKey: TokenKeys.UI, qos: .main(async: false))
+}
+
+enum Tag: String {
+    case client = "Client.Tag"
+    case server = "Server.Tag"
+    case `internal` = "Internal.Tag"
+    case response = "Response"
+    case fake = "FakeTag.value"
 }

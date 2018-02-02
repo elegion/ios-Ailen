@@ -31,11 +31,16 @@ public class Ailen {
     
     // MARK: - Public
     
-    public func log(as token: Token, tags: [Tag] = [], values: Any...) {
+    public func log (as token: Token, values: Any...)  {
+        self.log(as: token, tags: [EmptyTag](), values: values)
+    }
+    
+    public func log<Tag: RawRepresentable> (as token: Token, tags: [Tag], values: Any...) where Tag.RawValue == String {
         perform(on: token.qos) {
             let mapped: [Message] = values.flatMap({
                 guard let processed = self.convert($0, for: token) else { return nil }
-                return Message(token: token, tags: tags, payload: processed)
+                let tagsArray = tags.map { $0.rawValue }
+                return Message(token: token, tags: tagsArray, payload: processed)
             })
             self.outputs.forEach { self.log(mapped, in: $0) }
         }

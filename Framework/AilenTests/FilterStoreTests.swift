@@ -44,15 +44,13 @@ class FilterStoreTests: XCTestCase {
     func testFiltering() {
         XCTAssertFalse(store.data.isEmpty)
         
-        let fakeTag = Tag(rawValue: "FakeTag.value")
-        
         let responseStore = store.containing(tag: Tag.response.rawValue)
         XCTAssertEqual(responseStore.data.count, 2)
 
         let clientStore = store.containing(tag: Tag.client.rawValue)
         XCTAssertEqual(clientStore.data.count, 3)
         
-        let fakeTagStore = store.containing(tag: fakeTag.rawValue)
+        let fakeTagStore = store.containing(tag: Tag.fake.rawValue)
         XCTAssertEqual(fakeTagStore.data.count, 0)
         
         let emptyTagStore = store.containing(tag: "")

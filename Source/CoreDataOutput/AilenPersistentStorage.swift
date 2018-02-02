@@ -86,7 +86,7 @@ public class AilenPersistentStorage: PersistentStoraging {
             
             let tagEntities: [ELNTag] = current.tags.map({
                 let tagObj: ELNTag = managedObject(for: ELNTag.entityName, in: context)
-                tagObj.value = $0.rawValue
+                tagObj.value = $0
                 return tagObj
             })
             

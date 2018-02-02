@@ -54,7 +54,7 @@ class DefaultStorageTests: StorageTestCase {
         XCTAssertEqual(persistant.filter.data.count, 0)
         
         logger.log(as: .UI, values: [Constants.msg])
-        logger.log(as: .response, values: [Constants.msg])
+        logger.log(as: Token.response, values: [Constants.msg])
         XCTAssertEqual(persistant.filter.data.count, 0)
         
         let deadline: DispatchTime = .now() + Constants.autosaveInterval * 2

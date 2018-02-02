@@ -50,7 +50,7 @@ class DefaultDataConverterTests: StorageTestCase {
         
         let logExpectation = expectation(description: "Save data wait")
         
-        _logger.log(as: .UI, tags: [.client, .internal], values: Constants.msg)
+        _logger.log(as: .UI, tags: [Tag.client, Tag.internal], values: Constants.msg)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertEqual(_persistent.filter.data.count, 1)
             

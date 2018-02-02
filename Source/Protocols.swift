@@ -7,7 +7,7 @@ import Foundation
 
 public struct Message {
     let token: Token
-    let tags: [Tag]
+    let tags: [String]
     let date: Date = Date()
     let payload: String
 }

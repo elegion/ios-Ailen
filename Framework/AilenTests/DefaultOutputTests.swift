@@ -7,14 +7,7 @@ import XCTest
 @testable import Ailen
 
 class DefaultOutputTests: XCTestCase {
-    
-    private struct InnerMessage: Message {
-        let token: Token
-        let tags: [Tag]
-        let date: Date = Date()
-        let payload: String
-    }
-    
+
     private struct Constants {
         enum Message: String {
             case msg1 = "UnitTest.DefaultOutputTests.msg1"
@@ -30,11 +23,11 @@ class DefaultOutputTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let msg1 = InnerMessage(token: .request, tags: [], payload: Constants.Message.msg1.rawValue)
-        let msg2 = InnerMessage(token: .response, tags: [], payload: Constants.Message.msg2.rawValue)
-        let msg3 = InnerMessage(token: .request, tags: [], payload: Constants.Message.msg3.rawValue)
-        let msg4 = InnerMessage(token: .UI, tags: [], payload: Constants.Message.msg4.rawValue)
-        let msg5 = InnerMessage(token: .error, tags: [], payload: Constants.Message.msg5.rawValue)
+        let msg1 = Message(token: .request, tags: [], payload: Constants.Message.msg1.rawValue)
+        let msg2 = Message(token: .response, tags: [], payload: Constants.Message.msg2.rawValue)
+        let msg3 = Message(token: .request, tags: [], payload: Constants.Message.msg3.rawValue)
+        let msg4 = Message(token: .UI, tags: [], payload: Constants.Message.msg4.rawValue)
+        let msg5 = Message(token: .error, tags: [], payload: Constants.Message.msg5.rawValue)
         
         messages = [msg1, msg2, msg3, msg4, msg5]
     }

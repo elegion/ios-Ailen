@@ -33,9 +33,14 @@ public struct Token: RawRepresentable, Hashable {
     
     // MARK: - Properties
     
-    public var qos = Qos.global(async: true)
+    public var qos: Qos = Qos.global(async: true)
     
     // MARK: - Life cycle
+    
+    public init<RR: RawRepresentable>(tokenKey: RR, qos: Qos = Qos.global(async: true))
+        where RR.RawValue == String {
+        self.init(rawValue: tokenKey.rawValue, qos: qos )
+    }
     
     public init(rawValue: String, qos: Qos) {
         self.init(rawValue: rawValue)
@@ -59,7 +64,7 @@ public struct Token: RawRepresentable, Hashable {
 
 extension Token {
     //TODO: define default tokens here
-    
+
     static let request = Token(rawValue: "Request")
 }
 
