@@ -29,8 +29,15 @@ extension EntityDescribing {
     }
 }
 
+public struct PersistentMessage {
+    let token: String
+    let tags: [String]
+    let date: Date
+    let payload: String
+}
+
 public protocol PersistentStoraging {
     var filter: FilterStore { get }
-    func save(_ messages: [Message])
+    func save(_ messages: [PersistentMessage])
     func deleteAll(till date: Date)
 }

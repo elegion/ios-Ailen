@@ -10,7 +10,7 @@ internal class TestingDefaultOutput: DefaultOutput {
     
     private(set) var messagesDisplayed = 0
     
-    override func display(_ message: Message) {
+    override func display<TokenType: Token>(_ message: Message<TokenType>) {
         DispatchQueue.main.async {
             self.messagesDisplayed += 1
         }
@@ -18,7 +18,7 @@ internal class TestingDefaultOutput: DefaultOutput {
 }
 
 internal class TestingProcessor: Processor {
-    func process(token: Token, object: Any) -> String? {
+    func process<TokenType: Token>(token: TokenType, object: Any) -> String? {
         return nil
     }
 }

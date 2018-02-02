@@ -9,7 +9,7 @@ open class DefaultOutput: Output {
     
     // MARK: - Properties
     
-    private var blockedTokens = Set<Token>()
+    private var blockedTokens = Set<AnyHashable>()
     
     // MARK: - Life cycle
     
@@ -17,27 +17,27 @@ open class DefaultOutput: Output {
     
     // MARK: - Public
     
-    open func display(_ message: Message) {
+    open func display<TokenType>(_ message: Message<TokenType>) {
         preconditionFailure("Abstract")
     }
     
     // MARK: - Private
     
-    private func lock(token: Token) {
-        blockedTokens.insert(token)
+    private func lock<TokenType: Token>(token: TokenType) {
+        let _ = blockedTokens.insert(token)
     }
     
-    private func unlock(token: Token) {
+    private func unlock<TokenType: Token>(token: TokenType) {
         blockedTokens.remove(token)
     }
     
-    private func isLocked(token: Token) -> Bool {
+    private func isLocked<TokenType: Token>(token: TokenType) -> Bool {
         return blockedTokens.contains(token)
     }
     
     // MARK: - Output
     
-    public func set(enabled: Bool, for token: Token) {
+    public func set<TokenType: Token>(enabled: Bool, for token: TokenType) {
         if enabled {
             unlock(token: token)
         } else {
@@ -45,7 +45,7 @@ open class DefaultOutput: Output {
         }
     }
     
-    public func proccess(_ message: Message) {
+    public func proccess<TokenType>(_ message: Message<TokenType>) {
         guard !isLocked(token: message.token) else { return }
         
         display(message)

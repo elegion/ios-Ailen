@@ -27,16 +27,16 @@ class FilterStoreTests: XCTestCase {
         let hourBefore = Date(timeInterval: -(60 * 60), since: now)
         let fourHoursBefore = Date(timeInterval: -(60 * 60 * 4), since: now)
         
-        let tagSet1 = [Tag.client.rawValue, Tag.response.rawValue]
-        let tagSet2 = [Tag.internal.rawValue, Tag.client.rawValue]
-        let tagSet3 = [Tag.server.rawValue]
+        let tagSet1 = [TestTag.client.rawValue, TestTag.response.rawValue]
+        let tagSet2 = [TestTag.internal.rawValue, TestTag.client.rawValue]
+        let tagSet3 = [TestTag.server.rawValue]
         let emptyTagSet = [String]()
         
-        let msg1: FilterStore.Message = (tagSet1, Token.response.rawValue, fourHoursBefore, Constants.Message.msg1.rawValue)
-        let msg2: FilterStore.Message = (tagSet3, Token.response.rawValue, fourHoursBefore, Constants.Message.msg2.rawValue)
-        let msg3: FilterStore.Message = (tagSet2, Token.UI.rawValue, hourBefore, Constants.Message.msg3.rawValue)
-        let msg4: FilterStore.Message = (tagSet1, Token.error.rawValue, now, Constants.Message.msg4.rawValue)
-        let msg5: FilterStore.Message = (emptyTagSet, Token.UI.rawValue, now, Constants.Message.msg5.rawValue)
+        let msg1: FilterStore.Message = (tagSet1, TestToken.response.rawValue, fourHoursBefore, Constants.Message.msg1.rawValue)
+        let msg2: FilterStore.Message = (tagSet3, TestToken.response.rawValue, fourHoursBefore, Constants.Message.msg2.rawValue)
+        let msg3: FilterStore.Message = (tagSet2, TestToken.UI.rawValue, hourBefore, Constants.Message.msg3.rawValue)
+        let msg4: FilterStore.Message = (tagSet1, TestToken.error.rawValue, now, Constants.Message.msg4.rawValue)
+        let msg5: FilterStore.Message = (emptyTagSet, TestToken.UI.rawValue, now, Constants.Message.msg5.rawValue)
         
         store = FilterStore(data: [msg1, msg2, msg3, msg4, msg5])
     }
@@ -44,13 +44,13 @@ class FilterStoreTests: XCTestCase {
     func testFiltering() {
         XCTAssertFalse(store.data.isEmpty)
         
-        let responseStore = store.containing(tag: Tag.response.rawValue)
+        let responseStore = store.containing(tag: TestTag.response.rawValue)
         XCTAssertEqual(responseStore.data.count, 2)
 
-        let clientStore = store.containing(tag: Tag.client.rawValue)
+        let clientStore = store.containing(tag: TestTag.client.rawValue)
         XCTAssertEqual(clientStore.data.count, 3)
         
-        let fakeTagStore = store.containing(tag: Tag.fake.rawValue)
+        let fakeTagStore = store.containing(tag: TestTag.fake.rawValue)
         XCTAssertEqual(fakeTagStore.data.count, 0)
         
         let emptyTagStore = store.containing(tag: "")

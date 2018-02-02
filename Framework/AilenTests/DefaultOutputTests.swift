@@ -18,16 +18,16 @@ class DefaultOutputTests: XCTestCase {
         }
     }
     
-    private var messages = [Message]()
+    private var messages = [Message<TestToken>]()
     
     override func setUp() {
         super.setUp()
         
-        let msg1 = Message(token: .request, tags: [], payload: Constants.Message.msg1.rawValue)
-        let msg2 = Message(token: .response, tags: [], payload: Constants.Message.msg2.rawValue)
-        let msg3 = Message(token: .request, tags: [], payload: Constants.Message.msg3.rawValue)
-        let msg4 = Message(token: .UI, tags: [], payload: Constants.Message.msg4.rawValue)
-        let msg5 = Message(token: .error, tags: [], payload: Constants.Message.msg5.rawValue)
+        let msg1 = Message(token: TestToken.request, tags: [], payload: Constants.Message.msg1.rawValue)
+        let msg2 = Message(token: TestToken.response, tags: [], payload: Constants.Message.msg2.rawValue)
+        let msg3 = Message(token: TestToken.request, tags: [], payload: Constants.Message.msg3.rawValue)
+        let msg4 = Message(token: TestToken.UI, tags: [], payload: Constants.Message.msg4.rawValue)
+        let msg5 = Message(token: TestToken.error, tags: [], payload: Constants.Message.msg5.rawValue)
         
         messages = [msg1, msg2, msg3, msg4, msg5]
     }
@@ -51,7 +51,7 @@ class DefaultOutputTests: XCTestCase {
         let logExpectation = expectation(description: "Messages displaying expectation")
         
         let output = TestingDefaultOutput()
-        output.set(enabled: false, for: .request)
+        output.set(enabled: false, for: TestToken.request)
         messages.forEach(output.proccess)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

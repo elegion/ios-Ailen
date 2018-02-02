@@ -5,18 +5,18 @@
 
 import Foundation
 
-public struct Message {
-    let token: Token
+public struct Message<TokenType: Token> {
+    let token: TokenType
     let tags: [String]
     let date: Date = Date()
     let payload: String
 }
 
 public protocol Output {
-    func proccess(_ message: Message)
-    func set(enabled: Bool, for token: Token)
+    func proccess<TokenType>(_ message: Message<TokenType>)
+    func set<TokenType: Token>(enabled: Bool, for token: TokenType)
 }
 
 public protocol Processor {
-    func process(token: Token, object: Any) -> String?
+    func process<TokenType: Token>(token: TokenType, object: Any) -> String?
 }

@@ -12,7 +12,7 @@ class DebugProcessorTests: XCTestCase {
     
     func testObjectRepresentation() {
         let source = "Pharetra Tortor Lorem"
-        guard let processed = processor.process(token: .response, object: source) else {
+        guard let processed = processor.process(token: TestToken.response, object: source) else {
             XCTFail("DebugProcessor did fail proccessing for \(type(of: source))")
             return
             
@@ -22,7 +22,7 @@ class DebugProcessorTests: XCTestCase {
 
     func testPrimitiveRepresentation() {
         let source = 154
-        guard let processed = processor.process(token: .response, object: source) else {
+        guard let processed = processor.process(token: TestToken.response, object: source) else {
             XCTFail("DebugProcessor did fail proccessing for \(type(of: source))")
             return
             

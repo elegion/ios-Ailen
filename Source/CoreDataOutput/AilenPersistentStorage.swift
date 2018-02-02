@@ -75,14 +75,14 @@ public class AilenPersistentStorage: PersistentStoraging {
         return FilterStore(data: mapped)
     }
     
-    public func save(_ messages: [Message]) {
+    public func save(_ messages: [PersistentMessage]) {
         let context = core.writeManagedObjectContext
         
         messages.forEach {
             (current) in
             
             let tokenObj: ELNToken = managedObject(for: ELNToken.entityName, in: context)
-            tokenObj.value = current.token.rawValue
+            tokenObj.value = current.token
             
             let tagEntities: [ELNTag] = current.tags.map({
                 let tagObj: ELNTag = managedObject(for: ELNTag.entityName, in: context)

@@ -31,10 +31,10 @@ class DefaultStorageTests: StorageTestCase {
         
         XCTAssertEqual(persistant.filter.data.count, 0)
         
-        logger.log(as: .UI, values: [Constants.msg])
+        logger.log(as: TestToken.UI, values: [Constants.msg])
         XCTAssertEqual(persistant.filter.data.count, 0)
         
-        logger.log(as: .error, values: [Constants.msg])
+        logger.log(as: TestToken.error, values: [Constants.msg])
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertEqual(persistant.filter.data.count, 2)
@@ -53,8 +53,8 @@ class DefaultStorageTests: StorageTestCase {
         
         XCTAssertEqual(persistant.filter.data.count, 0)
         
-        logger.log(as: .UI, values: [Constants.msg])
-        logger.log(as: Token.response, values: [Constants.msg])
+        logger.log(as: TestToken.UI, values: [Constants.msg])
+        logger.log(as: TestToken.response, values: [Constants.msg])
         XCTAssertEqual(persistant.filter.data.count, 0)
         
         let deadline: DispatchTime = .now() + Constants.autosaveInterval * 2
@@ -76,7 +76,7 @@ class DefaultStorageTests: StorageTestCase {
         
         XCTAssertEqual(persistant.filter.data.count, 0)
         
-        logger.log(as: .UI, values: [Constants.msg])
+        logger.log(as: TestToken.UI, values: [Constants.msg])
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertEqual(persistant.filter.data.count, 1)
             

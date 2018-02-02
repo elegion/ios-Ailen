@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A6C5D0352023539B006D65CB /* CoreDataOutputProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D0342023539B006D65CB /* CoreDataOutputProtocols.swift */; };
-		A6C5D039202466B2006D65CB /* EmptyTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D038202466B2006D65CB /* EmptyTag.swift */; };
+		A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D03A2024AA5D006D65CB /* Qos.swift */; };
 		EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DA1FD01E84003A823C /* Ailen.swift */; };
 		EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */; };
 		EA1915F11FD01E84003A823C /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DC1FD01E84003A823C /* Countdown.swift */; };
@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		A6C5D0342023539B006D65CB /* CoreDataOutputProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOutputProtocols.swift; sourceTree = "<group>"; };
-		A6C5D038202466B2006D65CB /* EmptyTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTag.swift; sourceTree = "<group>"; };
+		A6C5D03A2024AA5D006D65CB /* Qos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qos.swift; sourceTree = "<group>"; };
 		EA1915DA1FD01E84003A823C /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
 		EA1915DC1FD01E84003A823C /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 				EA1915DD1FD01E84003A823C /* DebugProcessor.swift */,
 				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
 				EA1915E21FD01E84003A823C /* Token.swift */,
-				A6C5D038202466B2006D65CB /* EmptyTag.swift */,
 				EA1915EE1FD01E84003A823C /* Protocols.swift */,
+				A6C5D03A2024AA5D006D65CB /* Qos.swift */,
 				A6C5D0332023525A006D65CB /* CoreDataOutput */,
 			);
 			name = Source;
@@ -342,7 +342,7 @@
 				EA1915FE1FD01E84003A823C /* ELNTag+CoreDataProperties.swift in Sources */,
 				EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */,
 				EA1916051FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
-				A6C5D039202466B2006D65CB /* EmptyTag.swift in Sources */,
+				A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */,
 				EA1915F61FD01E84003A823C /* DefaultStorage.swift in Sources */,
 				EA1915FB1FD01E84003A823C /* ELNMessage+CoreDataClass.swift in Sources */,
 				A6C5D0352023539B006D65CB /* CoreDataOutputProtocols.swift in Sources */,

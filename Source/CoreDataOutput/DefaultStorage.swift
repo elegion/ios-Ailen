@@ -32,8 +32,8 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     private let autosaveTimer: Countdown?
     private let settings: Settings
     private let persistent: PersistentStoraging
-    private var _accumulator: [Message]?
-    private var accumulator: [Message]? {
+    private var _accumulator: [PersistentMessage]?
+    private var accumulator: [PersistentMessage]? {
         get { return queue.sync { self._accumulator } }
         set { queue.async { self._accumulator = newValue } }
     }
@@ -64,7 +64,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     private func setupAccumulator() {
         if settings.autosaveCount > 0 {
-            accumulator = [Message]()
+            accumulator = [PersistentMessage]()
         }
     }
     
@@ -87,7 +87,7 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
         accumulator?.removeAll()
     }
     
-    private func save(_ messages: [Message]) {
+    private func save(_ messages: [PersistentMessage]) {
         if let lifeTimeInterval = settings.lifeTime {
             let tillDate = Date(timeInterval: -lifeTimeInterval, since: Date())
             persistent.deleteAll(till: tillDate)
@@ -97,12 +97,13 @@ public class DefaultStorage: DefaultOutput, CountdownDelegate {
     
     // MARK: - Output
     
-    open override func display(_ message: Message) {
+    open override func display<TokenType: Token>(_ message: Message<TokenType>) {
+        let persistentMessage =  PersistentMessage(token: message.token.rawValue, tags: message.tags, date: message.date, payload: message.payload)
         if self.accumulator != nil {
-            self.accumulator!.append(message)
+            self.accumulator!.append(persistentMessage)
             self.saveAccumulatedMessagesIfNeeded()
         } else {
-            self.save([message])
+            self.save([persistentMessage])
         }
     }
     

@@ -5,19 +5,23 @@
 
 import Ailen
 
-enum TokenKeys: String {
-    case responce = "Response.Token"
+enum TestToken: String, Token {
+    case response = "Response.Token"
     case error = "Error.Token"
     case UI = "UI.Token"
+    case request
+    
+    var qos: Qos {
+        switch self {
+        case .UI:
+            return Qos.main(async: false)
+        default:
+            return Qos.global(async: true)
+        }
+    }
 }
 
-extension Token {
-    static let response = Token(tokenKey: TokenKeys.responce)
-    static let error = Token(tokenKey: TokenKeys.error)
-    static let UI = Token(tokenKey: TokenKeys.UI, qos: .main(async: false))
-}
-
-enum Tag: String {
+enum TestTag: String {
     case client = "Client.Tag"
     case server = "Server.Tag"
     case `internal` = "Internal.Tag"

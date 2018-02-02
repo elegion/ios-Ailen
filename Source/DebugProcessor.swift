@@ -13,7 +13,7 @@ public class DebugProcessor: Processor {
     
     // MARK: - Processor
     
-    public func process(token: Token, object: Any) -> String? {
+    public func process<TokenType: Token>(token: TokenType, object: Any) -> String? {
         return String(describing: object)
     }
 }
