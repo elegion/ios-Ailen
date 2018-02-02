@@ -63,23 +63,4 @@ extension Token {
     static let request = Token(rawValue: "Request")
 }
 
-// MARK: -
 
-public struct Tag: RawRepresentable {
-    
-    // MARK: - RawRepresentable
-    
-    public init(rawValue: String) {
-        self.rawValue = rawValue
-    }
-    
-    public var rawValue: String
-}
-
-
-public extension Tag {
-    
-    //TODO: define default tags here
-    
-    static let response = Tag(rawValue: "Response")
-}
