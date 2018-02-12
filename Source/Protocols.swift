@@ -6,10 +6,10 @@
 import Foundation
 
 public struct Message<TokenType: Token> {
-    let token: TokenType
-    let tags: [String]
-    let date: Date = Date()
-    let payload: String
+    public let token: TokenType
+    public let tags: [String]
+    public let date: Date = Date()
+    public let payload: String
 }
 
 public protocol Output {
