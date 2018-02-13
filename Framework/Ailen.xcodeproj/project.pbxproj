@@ -7,37 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6C5D0352023539B006D65CB /* CoreDataOutputProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D0342023539B006D65CB /* CoreDataOutputProtocols.swift */; };
 		A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D03A2024AA5D006D65CB /* Qos.swift */; };
 		EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DA1FD01E84003A823C /* Ailen.swift */; };
 		EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */; };
-		EA1915F11FD01E84003A823C /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DC1FD01E84003A823C /* Countdown.swift */; };
-		EA1915F21FD01E84003A823C /* DebugProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DD1FD01E84003A823C /* DebugProcessor.swift */; };
-		EA1915F41FD01E84003A823C /* DefaultDataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */; };
 		EA1915F51FD01E84003A823C /* DefaultOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E01FD01E84003A823C /* DefaultOutput.swift */; };
-		EA1915F61FD01E84003A823C /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E11FD01E84003A823C /* DefaultStorage.swift */; };
 		EA1915F71FD01E84003A823C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E21FD01E84003A823C /* Token.swift */; };
-		EA1915F81FD01E84003A823C /* FilterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E31FD01E84003A823C /* FilterStore.swift */; };
-		EA1915FA1FD01E84003A823C /* AilenPersistentCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E71FD01E84003A823C /* AilenPersistentCore.swift */; };
-		EA1915FB1FD01E84003A823C /* ELNMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E81FD01E84003A823C /* ELNMessage+CoreDataClass.swift */; };
-		EA1915FC1FD01E84003A823C /* ELNMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915E91FD01E84003A823C /* ELNMessage+CoreDataProperties.swift */; };
-		EA1915FD1FD01E84003A823C /* ELNTag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915EA1FD01E84003A823C /* ELNTag+CoreDataClass.swift */; };
-		EA1915FE1FD01E84003A823C /* ELNTag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915EB1FD01E84003A823C /* ELNTag+CoreDataProperties.swift */; };
-		EA1915FF1FD01E84003A823C /* ELNToken+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915EC1FD01E84003A823C /* ELNToken+CoreDataClass.swift */; };
-		EA1916001FD01E84003A823C /* ELNToken+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915ED1FD01E84003A823C /* ELNToken+CoreDataProperties.swift */; };
 		EA1916011FD01E84003A823C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915EE1FD01E84003A823C /* Protocols.swift */; };
 		EA1916051FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA1916031FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld */; };
-		EA48469F1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48469E1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift */; };
-		EA523D381FCC080600F82690 /* StorageTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA523D371FCC080600F82690 /* StorageTestCase.swift */; };
 		EAD8CCE01FC40C6300CF0A58 /* TestingHelperClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8CCDF1FC40C6300CF0A58 /* TestingHelperClasses.swift */; };
 		EAE6632D1FC2D9870047F285 /* Ailen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE9CCAA1FBAE0A000C1B9F2 /* Ailen.framework */; };
-		EAE663341FC2DEB30047F285 /* CountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663331FC2DEB30047F285 /* CountdownTests.swift */; };
 		EAE663361FC2DEBE0047F285 /* AilenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663351FC2DEBE0047F285 /* AilenTests.swift */; };
-		EAE663381FC2DEC50047F285 /* DebugProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */; };
-		EAE6633C1FC2DED60047F285 /* DefaultDataConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */; };
 		EAE6633E1FC2DEE20047F285 /* DefaultOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */; };
-		EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */; };
-		EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */; };
 		EAE663471FC2E2BE0047F285 /* TokenTags+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */; };
 		EAE9CCAF1FBAE0A000C1B9F2 /* Ailen.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE9CCAD1FBAE0A000C1B9F2 /* Ailen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -53,38 +33,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A6C5D0342023539B006D65CB /* CoreDataOutputProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOutputProtocols.swift; sourceTree = "<group>"; };
 		A6C5D03A2024AA5D006D65CB /* Qos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qos.swift; sourceTree = "<group>"; };
 		EA1915DA1FD01E84003A823C /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
-		EA1915DC1FD01E84003A823C /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
-		EA1915DD1FD01E84003A823C /* DebugProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugProcessor.swift; sourceTree = "<group>"; };
-		EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultDataConverter.swift; sourceTree = "<group>"; };
 		EA1915E01FD01E84003A823C /* DefaultOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultOutput.swift; sourceTree = "<group>"; };
-		EA1915E11FD01E84003A823C /* DefaultStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
 		EA1915E21FD01E84003A823C /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		EA1915E31FD01E84003A823C /* FilterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterStore.swift; sourceTree = "<group>"; };
-		EA1915E71FD01E84003A823C /* AilenPersistentCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AilenPersistentCore.swift; sourceTree = "<group>"; };
-		EA1915E81FD01E84003A823C /* ELNMessage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EA1915E91FD01E84003A823C /* ELNMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EA1915EA1FD01E84003A823C /* ELNTag+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EA1915EB1FD01E84003A823C /* ELNTag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNTag+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EA1915EC1FD01E84003A823C /* ELNToken+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EA1915ED1FD01E84003A823C /* ELNToken+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELNToken+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EA1915EE1FD01E84003A823C /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		EA1916041FD01ECF003A823C /* DefaultStorageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultStorageDataModel.xcdatamodel; sourceTree = "<group>"; };
-		EA48469E1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AilenPersistentStorage.swift; sourceTree = "<group>"; };
-		EA523D371FCC080600F82690 /* StorageTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTestCase.swift; sourceTree = "<group>"; };
 		EAD8CCDF1FC40C6300CF0A58 /* TestingHelperClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingHelperClasses.swift; sourceTree = "<group>"; };
 		EAE663281FC2D9870047F285 /* AilenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AilenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE6632C1FC2D9870047F285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAE663331FC2DEB30047F285 /* CountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTests.swift; sourceTree = "<group>"; };
 		EAE663351FC2DEBE0047F285 /* AilenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AilenTests.swift; sourceTree = "<group>"; };
-		EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugProcessorTests.swift; sourceTree = "<group>"; };
-		EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataConverterTests.swift; sourceTree = "<group>"; };
 		EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultOutputTests.swift; sourceTree = "<group>"; };
-		EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageTests.swift; sourceTree = "<group>"; };
-		EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStoreTests.swift; sourceTree = "<group>"; };
 		EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenTags+Tests.swift"; sourceTree = "<group>"; };
 		EAE9CCAA1FBAE0A000C1B9F2 /* Ailen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ailen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE9CCAD1FBAE0A000C1B9F2 /* Ailen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ailen.h; sourceTree = "<group>"; };
@@ -110,37 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A6C5D0332023525A006D65CB /* CoreDataOutput */ = {
-			isa = PBXGroup;
-			children = (
-				EA1915DC1FD01E84003A823C /* Countdown.swift */,
-				A6C5D0342023539B006D65CB /* CoreDataOutputProtocols.swift */,
-				EA1915DF1FD01E84003A823C /* DefaultDataConverter.swift */,
-				EA48469E1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift */,
-				EA1915E11FD01E84003A823C /* DefaultStorage.swift */,
-				EA1915E71FD01E84003A823C /* AilenPersistentCore.swift */,
-				EA1915E81FD01E84003A823C /* ELNMessage+CoreDataClass.swift */,
-				EA1915E91FD01E84003A823C /* ELNMessage+CoreDataProperties.swift */,
-				EA1915EA1FD01E84003A823C /* ELNTag+CoreDataClass.swift */,
-				EA1915EB1FD01E84003A823C /* ELNTag+CoreDataProperties.swift */,
-				EA1915EC1FD01E84003A823C /* ELNToken+CoreDataClass.swift */,
-				EA1915ED1FD01E84003A823C /* ELNToken+CoreDataProperties.swift */,
-				EA1915E31FD01E84003A823C /* FilterStore.swift */,
-			);
-			path = CoreDataOutput;
-			sourceTree = "<group>";
-		};
 		EA1915D91FD01E84003A823C /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				EA1915DA1FD01E84003A823C /* Ailen.swift */,
 				EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */,
-				EA1915DD1FD01E84003A823C /* DebugProcessor.swift */,
 				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
 				EA1915E21FD01E84003A823C /* Token.swift */,
 				EA1915EE1FD01E84003A823C /* Protocols.swift */,
 				A6C5D03A2024AA5D006D65CB /* Qos.swift */,
-				A6C5D0332023525A006D65CB /* CoreDataOutput */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -159,12 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE663351FC2DEBE0047F285 /* AilenTests.swift */,
-				EAE663331FC2DEB30047F285 /* CountdownTests.swift */,
-				EAE663371FC2DEC50047F285 /* DebugProcessorTests.swift */,
-				EAE6633B1FC2DED60047F285 /* DefaultDataConverterTests.swift */,
 				EAE6633D1FC2DEE20047F285 /* DefaultOutputTests.swift */,
-				EAE6633F1FC2DEE90047F285 /* DefaultStorageTests.swift */,
-				EAE663411FC2DEF20047F285 /* FilterStoreTests.swift */,
 				EAE663451FC2E2A20047F285 /* Helpers */,
 				EAE6632C1FC2D9870047F285 /* Info.plist */,
 			);
@@ -174,7 +107,6 @@
 		EAE663451FC2E2A20047F285 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EA523D371FCC080600F82690 /* StorageTestCase.swift */,
 				EAD8CCDF1FC40C6300CF0A58 /* TestingHelperClasses.swift */,
 				EAE663461FC2E2BE0047F285 /* TokenTags+Tests.swift */,
 			);
@@ -322,15 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE6633C1FC2DED60047F285 /* DefaultDataConverterTests.swift in Sources */,
-				EA523D381FCC080600F82690 /* StorageTestCase.swift in Sources */,
-				EAE663401FC2DEE90047F285 /* DefaultStorageTests.swift in Sources */,
-				EAE663421FC2DEF20047F285 /* FilterStoreTests.swift in Sources */,
 				EAE663471FC2E2BE0047F285 /* TokenTags+Tests.swift in Sources */,
 				EAE6633E1FC2DEE20047F285 /* DefaultOutputTests.swift in Sources */,
 				EAE663361FC2DEBE0047F285 /* AilenTests.swift in Sources */,
-				EAE663381FC2DEC50047F285 /* DebugProcessorTests.swift in Sources */,
-				EAE663341FC2DEB30047F285 /* CountdownTests.swift in Sources */,
 				EAD8CCE01FC40C6300CF0A58 /* TestingHelperClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,27 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1915FE1FD01E84003A823C /* ELNTag+CoreDataProperties.swift in Sources */,
 				EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */,
 				EA1916051FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
 				A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */,
-				EA1915F61FD01E84003A823C /* DefaultStorage.swift in Sources */,
-				EA1915FB1FD01E84003A823C /* ELNMessage+CoreDataClass.swift in Sources */,
-				A6C5D0352023539B006D65CB /* CoreDataOutputProtocols.swift in Sources */,
-				EA1915F41FD01E84003A823C /* DefaultDataConverter.swift in Sources */,
 				EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */,
-				EA1915F21FD01E84003A823C /* DebugProcessor.swift in Sources */,
-				EA1915FF1FD01E84003A823C /* ELNToken+CoreDataClass.swift in Sources */,
-				EA48469F1FE2B9A0007DF9F2 /* AilenPersistentStorage.swift in Sources */,
 				EA1916011FD01E84003A823C /* Protocols.swift in Sources */,
-				EA1916001FD01E84003A823C /* ELNToken+CoreDataProperties.swift in Sources */,
 				EA1915F71FD01E84003A823C /* Token.swift in Sources */,
-				EA1915F81FD01E84003A823C /* FilterStore.swift in Sources */,
-				EA1915F11FD01E84003A823C /* Countdown.swift in Sources */,
 				EA1915F51FD01E84003A823C /* DefaultOutput.swift in Sources */,
-				EA1915FA1FD01E84003A823C /* AilenPersistentCore.swift in Sources */,
-				EA1915FC1FD01E84003A823C /* ELNMessage+CoreDataProperties.swift in Sources */,
-				EA1915FD1FD01E84003A823C /* ELNTag+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
