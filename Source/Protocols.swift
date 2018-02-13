@@ -9,7 +9,7 @@ public struct Message<TokenType: Token> {
     public let token: TokenType
     public let tags: [String]
     public let date: Date = Date()
-    public let payload: String
+    public let payload: Any
 }
 
 public protocol Output {
