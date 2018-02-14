@@ -17,7 +17,7 @@ open class DefaultOutput: Output {
     
     // MARK: - Public
     
-    open func display<TokenType>(_ message: Message<TokenType>) {
+    open func display<TokenType, PayloadType>(_ message: Message<TokenType, PayloadType>) {
         preconditionFailure("Abstract")
     }
     
@@ -45,7 +45,7 @@ open class DefaultOutput: Output {
         }
     }
     
-    public func proccess<TokenType>(_ message: Message<TokenType>) {
+    public func proccess<TokenType, PayloadType>(_ message: Message<TokenType, PayloadType>) {
         guard !isLocked(token: message.token) else { return }
         
         display(message)

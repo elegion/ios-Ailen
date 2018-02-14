@@ -7,7 +7,7 @@ import Foundation
 
 public class ConsoleOutput: DefaultOutput {
     
-    public override func display<TokenType>(_ message: Message<TokenType>) {
+    public override func display<TokenType, PayloadType>(_ message: Message<TokenType, PayloadType>) {
         print("Token: \(message.token) | Payload: \(message.payload)")
     }
 }

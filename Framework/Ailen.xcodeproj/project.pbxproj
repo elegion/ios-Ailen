@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A66F185720344106005CA9B7 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F185620344106005CA9B7 /* Processor.swift */; };
 		A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5D03A2024AA5D006D65CB /* Qos.swift */; };
 		EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DA1FD01E84003A823C /* Ailen.swift */; };
 		EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A66F185620344106005CA9B7 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
 		A6C5D03A2024AA5D006D65CB /* Qos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qos.swift; sourceTree = "<group>"; };
 		EA1915DA1FD01E84003A823C /* Ailen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ailen.swift; sourceTree = "<group>"; };
 		EA1915DB1FD01E84003A823C /* ConsoleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				EA1915E01FD01E84003A823C /* DefaultOutput.swift */,
 				EA1915E21FD01E84003A823C /* Token.swift */,
 				EA1915EE1FD01E84003A823C /* Protocols.swift */,
+				A66F185620344106005CA9B7 /* Processor.swift */,
 				A6C5D03A2024AA5D006D65CB /* Qos.swift */,
 			);
 			name = Source;
@@ -267,6 +270,7 @@
 			files = (
 				EA1915F01FD01E84003A823C /* ConsoleOutput.swift in Sources */,
 				EA1916051FD01ECF003A823C /* com.e-legion.DefaultStorageDataModel.xcdatamodeld in Sources */,
+				A66F185720344106005CA9B7 /* Processor.swift in Sources */,
 				A6C5D03B2024AA5D006D65CB /* Qos.swift in Sources */,
 				EA1915EF1FD01E84003A823C /* Ailen.swift in Sources */,
 				EA1916011FD01E84003A823C /* Protocols.swift in Sources */,
