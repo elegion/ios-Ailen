@@ -8,6 +8,11 @@ import Foundation
 public struct Message<TokenType: Token, PayloadType> {
     public let token: TokenType
     public let payload: PayloadType
+    
+    public init(token: TokenType, payload: PayloadType) {
+        self.token = token
+        self.payload = payload
+    }
 }
 
 public protocol Output {
